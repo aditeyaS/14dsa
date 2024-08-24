@@ -33,7 +33,7 @@ const topicList: Topic[] = [
 
 export const Home: React.FC = () => {
   return (
-    <div className="grid grid-cols-3">
+    <div className="grid grid-cols-3 justify-center">
       {topicList.map((topic) => (
         <Link to={topic.url} key={topic.url}>
           <div>
