@@ -5,6 +5,15 @@ import { Stack } from "../pages/stack";
 import { Home } from "../pages";
 import { Dictionary } from "../pages/dictionary";
 import { Set } from "../pages/set";
+import { Queue } from "../pages/queue";
+import { LinkedList } from "../pages/linked-list";
+import { Heap } from "../pages/heap";
+import { BitMagic } from "../pages/bit-magic";
+import { Analysis } from "../pages/analysis";
+import { Recursion } from "../pages/recursion";
+import { String } from "../pages/string";
+import { Sorting } from "../pages/sorting";
+import { Matrix } from "../pages/matrix";
 
 export const router = createBrowserRouter([
   {
@@ -29,6 +38,42 @@ export const router = createBrowserRouter([
       {
         path: "/set",
         element: <Set />,
+      },
+      {
+        path: "/queue",
+        element: <Queue />,
+      },
+      {
+        path: "/linked-list",
+        element: <LinkedList />,
+      },
+      {
+        path: "/heap",
+        element: <Heap />,
+      },
+      {
+        path: "/bit-magic",
+        element: <BitMagic />,
+      },
+      {
+        path: "/analysis",
+        element: <Analysis />,
+      },
+      {
+        path: "/recursion",
+        element: <Recursion />,
+      },
+      {
+        path: "/string",
+        element: <String />,
+      },
+      {
+        path: "/sorting",
+        element: <Sorting />,
+      },
+      {
+        path: "/matrix",
+        element: <Matrix />,
       },
     ],
   },

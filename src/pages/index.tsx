@@ -1,6 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { DictionaryIcon, ListIcon, SetIcon, StackIcon } from "../icons";
+import {
+  AnalysisIcon,
+  BitMagicIcon,
+  DictionaryIcon,
+  HeapIcon,
+  LinkedListIcon,
+  ListIcon,
+  MatrixIcon,
+  QueueIcon,
+  RecursionIcon,
+  SetIcon,
+  SortingIcon,
+  StackIcon,
+  StringIcon,
+} from "../icons";
 
 type Topic = {
   url: string;
@@ -9,6 +23,11 @@ type Topic = {
 };
 
 const topicList: Topic[] = [
+  {
+    url: "analysis",
+    name: "Analysis",
+    icon: <AnalysisIcon />,
+  },
   {
     url: "list",
     name: "List",
@@ -28,6 +47,46 @@ const topicList: Topic[] = [
     url: "set",
     name: "Set",
     icon: <SetIcon />,
+  },
+  {
+    url: "queue",
+    name: "Queue",
+    icon: <QueueIcon />,
+  },
+  {
+    url: "linked-list",
+    name: "Linked List",
+    icon: <LinkedListIcon />,
+  },
+  {
+    url: "heap",
+    name: "Heap",
+    icon: <HeapIcon />,
+  },
+  {
+    url: "bit-magic",
+    name: "Bit Magic",
+    icon: <BitMagicIcon />,
+  },
+  {
+    url: "recursion",
+    name: "Recursion",
+    icon: <RecursionIcon />,
+  },
+  {
+    url: "string",
+    name: "String",
+    icon: <StringIcon />,
+  },
+  {
+    url: "sorting",
+    name: "Sorting",
+    icon: <SortingIcon />,
+  },
+  {
+    url: "matrix",
+    name: "Matrix",
+    icon: <MatrixIcon />,
   },
 ];
 
