@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html[data-theme='light'] {
+    --base: 0 0% 100%;
+    --base-content: 222.2 47.4% 11.2%;
+    --primary: 250 33% 32%;
+    --primary-content: 0 0% 100%;
+    --accent: 11 100% 63%;
+  }
+
+  html[data-theme='dark'] {
+    --base: 224 71% 4%;
+    --base-content: 0 0% 100%;
+    --primary: 250 33% 32%;
+    --primary-content: 0 0% 100%;
+    --accent: 11 100% 63%;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-base text-base-content;
+    /* font-feature-settings: "rlig" 1, "calt" 1; */
+  }
+}
