@@ -4,7 +4,7 @@ import { QueueIcon } from "../../icons";
 
 export const Queue: React.FC = () => {
   return (
-    <PageContainer title="Stack" icon={<QueueIcon />}>
+    <PageContainer title="Queue" icon={<QueueIcon />}>
       Queue
     </PageContainer>
   );
