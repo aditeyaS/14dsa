@@ -14,6 +14,7 @@ import { Recursion } from "../pages/recursion";
 import { String } from "../pages/string";
 import { Sorting } from "../pages/sorting";
 import { Matrix } from "../pages/matrix";
+import { BinaryTree } from "../pages/binary-tree";
 
 export const router = createBrowserRouter([
   {
@@ -74,6 +75,10 @@ export const router = createBrowserRouter([
       {
         path: "/matrix",
         element: <Matrix />,
+      },
+      {
+        path: "/binary-tree",
+        element: <BinaryTree />,
       },
     ],
   },

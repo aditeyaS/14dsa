@@ -22,6 +22,9 @@ export default {
       red: {
         DEFAULT: "hsl(var(--red))",
       },
+      blue: {
+        DEFAULT: "hsl(var(--blue))",
+      },
     },
     extend: {},
   },

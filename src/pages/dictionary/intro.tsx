@@ -49,8 +49,12 @@ export const Intro = () => {
       <CodeBlock>{del}</CodeBlock>
       <PageHeading>Others</PageHeading>
       <CodeBlock>{others}</CodeBlock>
-      <Alert type="Important">from collections import defaultdict</Alert>
-      <Alert type="Tip">{ddTip}</Alert>
+      <Alert type="Important">
+        <CodeBlock>from collections import defaultdict</CodeBlock>
+      </Alert>
+      <Alert type="Tip">
+        <CodeBlock>{ddTip}</CodeBlock>
+      </Alert>
     </div>
   );
 };

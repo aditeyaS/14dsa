@@ -16,3 +16,5 @@ export { ImportantIcon } from "./important";
 export { SunIcon } from "./sun";
 export { MoonIcon } from "./moon";
 export { CautionIcon } from "./caution";
+export { BinaryTreeIcon } from "./binary-tree";
+export { NoteIcon } from "./note";

@@ -1,6 +1,6 @@
 import * as React from "react";
 import { cn } from "../lib/utils";
-import { CautionIcon, ImportantIcon, TipIcon } from "../icons";
+import { CautionIcon, ImportantIcon, NoteIcon, TipIcon } from "../icons";
 
 interface AlertProps extends React.HTMLAttributes<HTMLDivElement> {
   type: "Note" | "Tip" | "Important" | "Warning" | "Caution";
@@ -17,6 +17,8 @@ export const Alert: React.FC<AlertProps> = ({ type, children, className }) => {
       color = "border-green";
     } else if (type === "Caution") {
       color = "border-red";
+    } else if (type === "Note") {
+      color = "border-blue";
     }
     return color;
   };
@@ -30,7 +32,12 @@ export const Alert: React.FC<AlertProps> = ({ type, children, className }) => {
       )}
     >
       <div>
-        {type === "Note" && <div>{type}</div>}
+        {type === "Note" && (
+          <div className="flex gap-2 text-blue">
+            <NoteIcon />
+            {type}
+          </div>
+        )}
         {type === "Tip" && (
           <div className="flex gap-2 text-yellow">
             <TipIcon />
@@ -51,7 +58,8 @@ export const Alert: React.FC<AlertProps> = ({ type, children, className }) => {
         )}
         {type === "Warning" && <div></div>}
       </div>
-      <pre className="p-2 whitespace-pre">{children}</pre>
+      {children}
+      {/* <pre className="p-2 whitespace-pre">{children}</pre> */}
     </div>
   );
 };

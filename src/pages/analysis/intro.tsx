@@ -59,7 +59,7 @@ export const Intro: React.FC = () => {
         options={options}
       />
       <PageHeading>Big O</PageHeading>
-      <ul>
+      <ul className="list-disc list-inside">
         <li>
           {
             "We say f(n)=O(g(n)) iff there exists constants c and n0 such that f(n)<=cg(n) for all n>=n0"
@@ -71,7 +71,7 @@ export const Intro: React.FC = () => {
         <li>{"Upper bound"}</li>
       </ul>
       <PageHeading>Omega</PageHeading>
-      <ul>
+      <ul className="list-disc list-inside">
         <li>
           {
             "f(n) = Ω(g(n)) iff there exists positive constants c and n0 such that 0<=cg(n)<=f(n) for all n>=n0"
@@ -81,7 +81,7 @@ export const Intro: React.FC = () => {
         <li>{"useful when we have lower bound"}</li>
       </ul>
       <PageHeading>Theta</PageHeading>
-      <ul>
+      <ul className="list-disc list-inside">
         <li>
           {
             "f(n)=θ(g(n)) iff there exist constants c1, c2 (where c1>0 and c2>0) and n0 (where n0>=0) such that c1g(n) <= f(n) <= c2g(n) for all n>=n0"
@@ -90,7 +90,7 @@ export const Intro: React.FC = () => {
         <li>{"Exact bound"}</li>
       </ul>
       <PageHeading>Space Complexity</PageHeading>
-      <ul>
+      <ul className="list-disc list-inside">
         <li>
           {
             "Auxiallary space: Order of growth of extra space (space other than i/o)"

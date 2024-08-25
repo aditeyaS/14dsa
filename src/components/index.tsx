@@ -5,3 +5,4 @@ export { CodeBlock } from "./code-block";
 export { PageHeading } from "./page-heading";
 export { Alert } from "./alert";
 export { ArticleListItem } from "./article-list-item";
+export { QuestionListItem } from "./question-list-item";

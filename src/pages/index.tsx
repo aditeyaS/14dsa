@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import {
   AnalysisIcon,
+  BinaryTreeIcon,
   BitMagicIcon,
   DictionaryIcon,
   HeapIcon,
@@ -88,6 +89,11 @@ const topicList: Topic[] = [
     url: "matrix",
     name: "Matrix",
     icon: <MatrixIcon />,
+  },
+  {
+    url: "binary-tree",
+    name: "Binary Tree",
+    icon: <BinaryTreeIcon />,
   },
 ];
 
