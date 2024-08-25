@@ -1,13 +1,19 @@
 import React from "react";
+import { CodeBlock as CB, oneDark, oneLight } from "@react-email/code-block";
+import { useTheme } from "./theme-provider";
 
 interface CodeBlockProps {
-  children: React.ReactNode;
+  children: string;
 }
 
 export const CodeBlock: React.FC<CodeBlockProps> = ({ children }) => {
+  const { theme } = useTheme();
   return (
-    <div className="border-l border-base-2">
-      <pre className="p-2 whitespace-pre text-lg">{children}</pre>
-    </div>
+    <CB
+      language="python"
+      lineNumbers={false}
+      theme={theme === "dark" ? oneDark : oneLight}
+      code={children}
+    />
   );
 };
