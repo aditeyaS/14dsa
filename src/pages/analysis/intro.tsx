@@ -89,6 +89,14 @@ export const Intro: React.FC = () => {
         </li>
         <li>{"Exact bound"}</li>
       </ul>
+      <PageHeading>Space Complexity</PageHeading>
+      <ul>
+        <li>
+          {
+            "Auxiallary space: Order of growth of extra space (space other than i/o)"
+          }
+        </li>
+      </ul>
     </div>
   );
 };

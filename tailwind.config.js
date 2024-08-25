@@ -13,14 +13,14 @@ export default {
         DEFAULT: "hsl(var(--primary))",
         content: "hsl(var(--primary-content))",
       },
-      accent: {
-        DEFAULT: "hsl(var(--accent))",
-      },
       yellow: {
         DEFAULT: "hsl(var(--yellow))",
       },
       green: {
         DEFAULT: "hsl(var(--green))",
+      },
+      red: {
+        DEFAULT: "hsl(var(--red))",
       },
     },
     extend: {},

@@ -8,11 +8,11 @@
     --base-1: 0 0% 90.2%;
     --base-2: 0 0% 85.1%;
     --base-content: 222.2 47.4% 11.2%;
-    --primary: 250 33% 32%;
+    --primary: 266 39% 56%;
     --primary-content: 0 0% 100%;
-    --accent: 11 100% 63%;
     --yellow: 41 89% 61%;
     --green: 145 63% 49%;
+    --red: 5 76% 55%;
   }
 
   html[data-theme='dark'] {
@@ -20,11 +20,11 @@
     --base-1: 0 0% 20;
     --base-2: 0 0% 32.2%;
     --base-content: 0 0% 100%;
-    --primary: 250 33% 32%;
+    --primary: 254 37% 41%;
     --primary-content: 0 0% 100%;
-    --accent: 11 100% 63%;
     --yellow: 41 89% 61%;
     --green: 145 63% 49%;
+    --red: 5 76% 55%;
   }
 }
 

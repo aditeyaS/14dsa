@@ -3,7 +3,7 @@ import React from "react";
 export const ListIcon: React.FC = () => {
   return (
     <svg
-      className="w-24 h-24 stroke-accent"
+      className="w-24 h-24 stroke-primary"
       viewBox="0 0 24 24"
       fill="none"
       strokeWidth="2"

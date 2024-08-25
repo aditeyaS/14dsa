@@ -19,7 +19,7 @@ export const ArticleListItem: React.FC<ArticleListItemProps> = ({
     >
       <span>{name}</span>
       <div>
-        <span className="bg-accent rounded-xl px-2 py-0.5">{source}</span>
+        <span className="bg-primary rounded-xl px-2 py-0.5">{source}</span>
       </div>
     </a>
   );

@@ -93,15 +93,18 @@ const topicList: Topic[] = [
 
 export const Home: React.FC = () => {
   return (
-    <div className="grid grid-cols-3 gap-2 justify-items-stretch	">
-      {topicList.map((topic) => (
-        <Link to={topic.url} key={topic.url}>
-          <div className="bg-primary p-2 rounded hover:bg-primary/50 flex flex-col items-center">
-            {topic.icon}
-            <span className="text-primary-content text-xl">{topic.name}</span>
-          </div>
-        </Link>
-      ))}
+    <div className="px-24">
+      <h1 className="text-4xl mb-10 font-bold">Topics</h1>
+      <div className="grid grid-cols-3 gap-4 justify-items-stretch">
+        {topicList.map((topic) => (
+          <Link to={topic.url} key={topic.url}>
+            <div className="bg-base-1 p-2 drop-shadow rounded hover:bg-base-2 flex flex-col items-center">
+              {topic.icon}
+              <span className=" text-xl">{topic.name}</span>
+            </div>
+          </Link>
+        ))}
+      </div>
     </div>
   );
 };

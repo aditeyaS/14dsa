@@ -14,10 +14,10 @@ export const PageContainer: React.FC<PageContainerProps> = ({
   return (
     <div className="flex flex-col">
       <div className="flex flex-col items-center gap-2">
-        <div className="p-5 ring rounded-full ring-accent">{icon}</div>
-        <h1 className="text-4xl">{title}</h1>
+        <div className="p-5 ring rounded-full ring-primary">{icon}</div>
+        <h1 className="text-4xl text-primary">{title}</h1>
       </div>
-      <div className="p-8">{children}</div>
+      <div className="mt-10 px-24">{children}</div>
     </div>
   );
 };

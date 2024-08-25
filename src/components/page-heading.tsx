@@ -9,7 +9,7 @@ export const PageHeading: React.FC<PageHeadingProps> = ({
   ...props
 }) => {
   return (
-    <h2 className={cn("text-2xl", className)} {...props}>
+    <h2 className={cn("text-2xl font-bold", className)} {...props}>
       {children}
     </h2>
   );
