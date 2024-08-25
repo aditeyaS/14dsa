@@ -4,6 +4,7 @@ import {
   AnalysisIcon,
   BinaryTreeIcon,
   BitMagicIcon,
+  DequeIcon,
   DictionaryIcon,
   HeapIcon,
   LinkedListIcon,
@@ -40,20 +41,24 @@ const topicList: Topic[] = [
     icon: <ListIcon />,
   },
   {
+    url: "deque",
+    name: "Deque",
+    icon: <DequeIcon />,
+  },
+  {
     url: "stack",
     name: "Stack",
     icon: <StackIcon />,
-  },
-
-  {
-    url: "set",
-    name: "Set",
-    icon: <SetIcon />,
   },
   {
     url: "queue",
     name: "Queue",
     icon: <QueueIcon />,
+  },
+  {
+    url: "set",
+    name: "Set",
+    icon: <SetIcon />,
   },
   {
     url: "linked-list",

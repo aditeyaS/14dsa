@@ -1,11 +1,11 @@
 import React from "react";
 import { PageContainer } from "../../components";
-import { QueueIcon } from "../../icons";
+import { DequeIcon } from "../../icons";
 import { Intro } from "./intro";
 
-export const Queue: React.FC = () => {
+export const Deque: React.FC = () => {
   return (
-    <PageContainer title="Queue" icon={<QueueIcon />}>
+    <PageContainer title="Deque" icon={<DequeIcon />}>
       <Intro />
     </PageContainer>
   );

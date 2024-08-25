@@ -15,6 +15,7 @@ import { String } from "../pages/string";
 import { Sorting } from "../pages/sorting";
 import { Matrix } from "../pages/matrix";
 import { BinaryTree } from "../pages/binary-tree";
+import { Deque } from "../pages/deque";
 
 export const router = createBrowserRouter([
   {
@@ -79,6 +80,10 @@ export const router = createBrowserRouter([
       {
         path: "/binary-tree",
         element: <BinaryTree />,
+      },
+      {
+        path: "/deque",
+        element: <Deque />,
       },
     ],
   },
