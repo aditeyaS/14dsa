@@ -29,6 +29,11 @@ const topicList: Topic[] = [
     icon: <AnalysisIcon />,
   },
   {
+    url: "dictionary",
+    name: "Dictionary",
+    icon: <DictionaryIcon />,
+  },
+  {
     url: "list",
     name: "List",
     icon: <ListIcon />,
@@ -38,11 +43,7 @@ const topicList: Topic[] = [
     name: "Stack",
     icon: <StackIcon />,
   },
-  {
-    url: "dictionary",
-    name: "Dictionary",
-    icon: <DictionaryIcon />,
-  },
+
   {
     url: "set",
     name: "Set",
@@ -92,12 +93,12 @@ const topicList: Topic[] = [
 
 export const Home: React.FC = () => {
   return (
-    <div className="grid grid-cols-3 justify-center">
+    <div className="grid grid-cols-3 gap-2 justify-items-stretch	">
       {topicList.map((topic) => (
         <Link to={topic.url} key={topic.url}>
-          <div>
+          <div className="bg-primary p-2 rounded hover:bg-primary/50 flex flex-col items-center">
             {topic.icon}
-            <span>{topic.name}</span>
+            <span className="text-primary-content text-xl">{topic.name}</span>
           </div>
         </Link>
       ))}

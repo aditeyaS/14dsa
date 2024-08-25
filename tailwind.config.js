@@ -5,6 +5,8 @@ export default {
     colors: {
       base: {
         DEFAULT: "hsl(var(--base))",
+        1: "hsl(var(--base-1))",
+        2: "hsl(var(--base-2))",
         content: "hsl(var(--base-content))",
       },
       primary: {
