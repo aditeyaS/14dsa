@@ -43,7 +43,12 @@ s1.issubset(s2)
 
 export const Intro = () => {
   return (
-    <>
+    <div className="flex flex-col gap-4">
+      <ul className="text-xl list-disc list-inside">
+        <li>distinct elements</li>
+        <li>unordered</li>
+        <li>O(1) for search, insert, delete</li>
+      </ul>
       <h2 className="text-2xl">Init</h2>
       <CodeBlock>{init}</CodeBlock>
       <h2 className="text-2xl">Insert</h2>
@@ -52,6 +57,6 @@ export const Intro = () => {
       <CodeBlock>{del}</CodeBlock>
       <h2 className="text-2xl">Others</h2>
       <CodeBlock>{others}</CodeBlock>
-    </>
+    </div>
   );
 };

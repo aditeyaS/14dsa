@@ -39,6 +39,11 @@ d['fruits'].append('apple')
 export const Intro = () => {
   return (
     <div className="flex flex-col gap-4">
+      <ul className="text-xl list-disc list-inside">
+        <li>key value pairs</li>
+        <li>unordered</li>
+        <li>O(1) for search, insert, delete</li>
+      </ul>
       <PageHeading>Initialization</PageHeading>
       <CodeBlock>{init}</CodeBlock>
       <PageHeading>Insert</PageHeading>

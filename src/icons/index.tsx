@@ -19,3 +19,4 @@ export { CautionIcon } from "./caution";
 export { BinaryTreeIcon } from "./binary-tree";
 export { NoteIcon } from "./note";
 export { DequeIcon } from "./deque";
+export { WarningIcon } from "./warning";

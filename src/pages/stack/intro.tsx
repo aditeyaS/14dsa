@@ -18,7 +18,9 @@ len(s) # size
 export const Intro = () => {
   return (
     <div className="flex flex-col gap-4">
-      <span className="text-xl">Stack is a LIFO data structure</span>
+      <ul className="text-xl list-disc list-inside">
+        <li>Stack is a LIFO data structure</li>
+      </ul>
       <PageHeading>Implementation with List</PageHeading>
       <CodeBlock>{listImplementation}</CodeBlock>
       <PageHeading>Implementation with Deque</PageHeading>

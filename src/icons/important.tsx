@@ -3,7 +3,7 @@ import React from "react";
 export const ImportantIcon: React.FC = () => {
   return (
     <svg
-      className="w-6 h-6 stroke-green"
+      className="w-6 h-6 stroke-purple"
       viewBox="0 0 24 24"
       fill="none"
       strokeWidth="2"

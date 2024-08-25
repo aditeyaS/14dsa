@@ -36,6 +36,11 @@ const topicList: Topic[] = [
     icon: <DictionaryIcon />,
   },
   {
+    url: "set",
+    name: "Set",
+    icon: <SetIcon />,
+  },
+  {
     url: "list",
     name: "List",
     icon: <ListIcon />,
@@ -54,11 +59,6 @@ const topicList: Topic[] = [
     url: "queue",
     name: "Queue",
     icon: <QueueIcon />,
-  },
-  {
-    url: "set",
-    name: "Set",
-    icon: <SetIcon />,
   },
   {
     url: "linked-list",
