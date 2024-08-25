@@ -14,6 +14,12 @@ export default {
       accent: {
         DEFAULT: "hsl(var(--accent))",
       },
+      yellow: {
+        DEFAULT: "hsl(var(--yellow))",
+      },
+      green: {
+        DEFAULT: "hsl(var(--green))",
+      },
     },
     extend: {},
   },

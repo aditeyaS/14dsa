@@ -1,4 +1,4 @@
-import { CodeBlock } from "../../components";
+import { Alert, CodeBlock, PageHeading } from "../../components";
 
 const init = `d = {} 
 d = dict()
@@ -23,22 +23,34 @@ const others = `len(d)
 if "h" in d
 from collections import defaultdict
 d = defaultdict(list)
+`;
 
+const ddTip = `use defaultdict(list) if values are list
+
+# with defalutdict
+d['fruits'].append('apple')
+
+# without defaultdict
+if 'fruits' not in d:
+    d['fruits'] = []
+d['fruits'].append('apple')
 `;
 
 export const Intro = () => {
   return (
-    <>
-      <h2 className="text-2xl">Init</h2>
+    <div className="flex flex-col gap-4">
+      <PageHeading>Initialization</PageHeading>
       <CodeBlock>{init}</CodeBlock>
-      <h2 className="text-2xl">Insert</h2>
+      <PageHeading>Insert</PageHeading>
       <CodeBlock>{insert}</CodeBlock>
-      <h2 className="text-2xl">Access</h2>
+      <PageHeading>Access</PageHeading>
       <CodeBlock>{access}</CodeBlock>
-      <h2 className="text-2xl">Delete</h2>
+      <PageHeading>Delete</PageHeading>
       <CodeBlock>{del}</CodeBlock>
-      <h2 className="text-2xl">Others</h2>
+      <PageHeading>Others</PageHeading>
       <CodeBlock>{others}</CodeBlock>
-    </>
+      <Alert type="Important">from collections import defaultdict</Alert>
+      <Alert type="Tip">{ddTip}</Alert>
+    </div>
   );
 };

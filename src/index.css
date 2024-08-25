@@ -9,6 +9,8 @@
     --primary: 250 33% 32%;
     --primary-content: 0 0% 100%;
     --accent: 11 100% 63%;
+    --yellow: 41 89% 61%;
+    --green: 145 63% 49%;
   }
 
   html[data-theme='dark'] {
@@ -17,6 +19,8 @@
     --primary: 250 33% 32%;
     --primary-content: 0 0% 100%;
     --accent: 11 100% 63%;
+    --yellow: 41 89% 61%;
+    --green: 145 63% 49%;
   }
 }
 

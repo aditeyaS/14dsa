@@ -11,3 +11,5 @@ export { RecursionIcon } from "./recursion";
 export { StringIcon } from "./string";
 export { SortingIcon } from "./sorting";
 export { MatrixIcon } from "./matrix";
+export { TipIcon } from "./tip";
+export { ImportantIcon } from "./important";
