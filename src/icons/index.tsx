@@ -20,3 +20,5 @@ export { BinaryTreeIcon } from "./binary-tree";
 export { NoteIcon } from "./note";
 export { DequeIcon } from "./deque";
 export { WarningIcon } from "./warning";
+export { TreeIcon } from "./tree";
+export { FavoriteIcon } from "./favorite";

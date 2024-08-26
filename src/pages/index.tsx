@@ -16,6 +16,7 @@ import {
   SortingIcon,
   StackIcon,
   StringIcon,
+  TreeIcon,
 } from "../icons";
 
 type Topic = {
@@ -99,6 +100,11 @@ const topicList: Topic[] = [
     url: "binary-tree",
     name: "Binary Tree",
     icon: <BinaryTreeIcon />,
+  },
+  {
+    url: "tree",
+    name: "Tree",
+    icon: <TreeIcon />,
   },
 ];
 

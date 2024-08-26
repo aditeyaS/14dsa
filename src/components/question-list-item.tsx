@@ -1,5 +1,6 @@
 import React from "react";
 import { cn } from "../lib/utils";
+import { FavoriteIcon } from "../icons";
 
 interface QuestionListItemProps {
   index: number;
@@ -36,17 +37,21 @@ export const QuestionListItem: React.FC<QuestionListItemProps> = ({
       target="_blank"
     >
       <div className="flex gap-2 items-center">
-        {isRecommended && <span className="text-xs">⭐</span>}
         <span>{name}</span>
         <span className={cn("rounded-xl px-2 text-xs", getBadgeColor(level))}>
           {level}
         </span>
+        {isRecommended && (
+          <span className="text-xs">
+            <FavoriteIcon />
+          </span>
+        )}
       </div>
       <div className="flex gap-1">
         {topics.map((t, i) => (
           <span
             key={`btqt-${index}-${i}`}
-            className="border border-primary rounded-xl px-2 py-0.5 text-sm"
+            className="border border-primary rounded-xl px-2 py-0.5 text-sm text-primary"
           >
             {t}
           </span>
