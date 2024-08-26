@@ -15,12 +15,16 @@ export const NavBar: React.FC = () => {
   };
 
   return (
-    <div className="w-full flex justify-between  p-2 px-4 bg-base-1">
-      <Link to="/">
+    <div className="w-full flex justify-between items-center  p-2 px-4 bg-base-1">
+      <Link
+        to="/"
+        className="flex hover:bg-base-2 p-1 rounded items-center gap-2"
+      >
+        <img className="w-8 h-8" src="/logo.svg" />
         <span className="text-xl">PythonDSA</span>
       </Link>
       <button
-        className="p-1 bg-base-2 hover:bg-primary/90 rounded-full"
+        className="p-1 hover:bg-base-2 rounded-full"
         onClick={onThemeChange}
       >
         {theme === "light" ? <MoonIcon /> : <SunIcon />}

@@ -25,7 +25,9 @@ export const Intro = () => {
       <CodeBlock>{listImplementation}</CodeBlock>
       <PageHeading>Implementation with Deque</PageHeading>
       <CodeBlock>{dequeImplementation}</CodeBlock>
-      <Alert type="Important">from collections import deque</Alert>
+      <Alert type="Important">
+        <CodeBlock>from collections import deque</CodeBlock>
+      </Alert>
       <Alert type="Tip">Use deque for stack</Alert>
     </div>
   );
