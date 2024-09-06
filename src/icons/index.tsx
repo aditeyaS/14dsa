@@ -22,3 +22,5 @@ export { DequeIcon } from "./deque";
 export { WarningIcon } from "./warning";
 export { TreeIcon } from "./tree";
 export { FavoriteIcon } from "./favorite";
+export { LogoIcon } from "./logo";
+export { TupleIcon } from "./tuple";

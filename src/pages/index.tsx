@@ -17,6 +17,7 @@ import {
   StackIcon,
   StringIcon,
   TreeIcon,
+  TupleIcon,
 } from "../icons";
 
 type Topic = {
@@ -30,6 +31,11 @@ const topicList: Topic[] = [
     url: "analysis",
     name: "Analysis",
     icon: <AnalysisIcon />,
+  },
+  {
+    url: "tuple",
+    name: "Tuple",
+    icon: <TupleIcon />,
   },
   {
     url: "dictionary",

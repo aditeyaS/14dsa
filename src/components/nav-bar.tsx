@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { MoonIcon, SunIcon } from "../icons";
 import { useTheme } from "./theme-provider";
+import { LogoIcon } from "../icons";
 
 export const NavBar: React.FC = () => {
   const { theme, setTheme } = useTheme();
@@ -20,7 +21,7 @@ export const NavBar: React.FC = () => {
         to="/"
         className="flex hover:bg-base-2 p-1 rounded items-center gap-2"
       >
-        <img className="w-8 h-8" src="/logo.svg" />
+        <LogoIcon className="w-8 h-8" />
         <span className="text-xl">PythonDSA</span>
       </Link>
       <button

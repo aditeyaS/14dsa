@@ -1,11 +1,11 @@
 import React from "react";
 import { PageContainer } from "../../components";
-import { LinkedListIcon } from "../../icons";
+import { TupleIcon } from "../../icons";
 import { Intro } from "./intro";
 
-export const LinkedList: React.FC = () => {
+export const Tuple: React.FC = () => {
   return (
-    <PageContainer title="Linked List" icon={<LinkedListIcon />}>
+    <PageContainer title="Tuple" icon={<TupleIcon />}>
       <Intro />
     </PageContainer>
   );

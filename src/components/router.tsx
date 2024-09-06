@@ -17,6 +17,7 @@ import { Matrix } from "../pages/matrix";
 import { BinaryTree } from "../pages/binary-tree";
 import { Deque } from "../pages/deque";
 import { Tree } from "../pages/tree";
+import { Tuple } from "../pages/tuple";
 
 export const router = createBrowserRouter([
   {
@@ -89,6 +90,10 @@ export const router = createBrowserRouter([
       {
         path: "/tree",
         element: <Tree />,
+      },
+      {
+        path: "/tuple",
+        element: <Tuple />,
       },
     ],
   },
