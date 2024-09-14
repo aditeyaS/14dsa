@@ -1,23 +1,25 @@
 import { createBrowserRouter } from "react-router-dom";
 import { AppContainer } from "./app-container";
-import { List } from "../pages/list";
-import { Stack } from "../pages/stack";
+import { Tuple } from "../pages/data-structures/tuple";
+import { Dictionary } from "../pages/data-structures/dictionary";
+import { Set } from "../pages/data-structures/set";
+import { List } from "../pages/data-structures/list";
+import { String } from "../pages/data-structures/string";
+import { LinkedList } from "../pages/data-structures/linked-list";
+import { Matrix } from "../pages/data-structures/matrix";
+import { Deque } from "../pages/data-structures/deque";
+import { Stack } from "../pages/data-structures/stack";
+import { Queue } from "../pages/data-structures/queue";
+import { Heap } from "../pages/data-structures/heap";
+// after this
 import { Home } from "../pages";
-import { Dictionary } from "../pages/dictionary";
-import { Set } from "../pages/set";
-import { Queue } from "../pages/queue";
-import { LinkedList } from "../pages/linked-list";
-import { Heap } from "../pages/heap";
-import { BitMagic } from "../pages/bit-magic";
-import { Analysis } from "../pages/analysis";
+import { Analysis } from "../pages/basics/analysis";
+import { Math } from "../pages/basics/math";
+import { BitMagic } from "../pages/basics/bit-magic";
 import { Recursion } from "../pages/recursion";
-import { String } from "../pages/string";
 import { Sorting } from "../pages/sorting";
-import { Matrix } from "../pages/matrix";
 import { BinaryTree } from "../pages/binary-tree";
-import { Deque } from "../pages/deque";
-import { Tree } from "../pages/tree";
-import { Tuple } from "../pages/tuple";
+import { Tree } from "../pages/data-structures/tree";
 
 export const router = createBrowserRouter([
   {
@@ -28,72 +30,89 @@ export const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/list",
-        element: <List />,
+        path: "/basics",
+        children: [
+          {
+            path: "bit-magic",
+            element: <BitMagic />,
+          },
+          {
+            path: "analysis",
+            element: <Analysis />,
+          },
+          {
+            path: "math",
+            element: <Math />,
+          },
+        ],
       },
       {
-        path: "/stack",
-        element: <Stack />,
+        path: "/data-structures",
+        children: [
+          {
+            path: "tuple",
+            element: <Tuple />,
+          },
+          {
+            path: "dictionary",
+            element: <Dictionary />,
+          },
+          {
+            path: "set",
+            element: <Set />,
+          },
+          {
+            path: "list",
+            element: <List />,
+          },
+          {
+            path: "string",
+            element: <String />,
+          },
+          {
+            path: "linked-list",
+            element: <LinkedList />,
+          },
+          {
+            path: "matrix",
+            element: <Matrix />,
+          },
+          {
+            path: "deque",
+            element: <Deque />,
+          },
+          {
+            path: "stack",
+            element: <Stack />,
+          },
+          {
+            path: "queue",
+            element: <Queue />,
+          },
+          {
+            path: "heap",
+            element: <Heap />,
+          },
+          {
+            path: "tree",
+            element: <Tree />,
+          },
+        ],
       },
-      {
-        path: "/dictionary",
-        element: <Dictionary />,
-      },
-      {
-        path: "/set",
-        element: <Set />,
-      },
-      {
-        path: "/queue",
-        element: <Queue />,
-      },
-      {
-        path: "/linked-list",
-        element: <LinkedList />,
-      },
-      {
-        path: "/heap",
-        element: <Heap />,
-      },
-      {
-        path: "/bit-magic",
-        element: <BitMagic />,
-      },
-      {
-        path: "/analysis",
-        element: <Analysis />,
-      },
+
       {
         path: "/recursion",
         element: <Recursion />,
       },
-      {
-        path: "/string",
-        element: <String />,
-      },
+
       {
         path: "/sorting",
         element: <Sorting />,
       },
-      {
-        path: "/matrix",
-        element: <Matrix />,
-      },
+
       {
         path: "/binary-tree",
         element: <BinaryTree />,
-      },
-      {
-        path: "/deque",
-        element: <Deque />,
-      },
-      {
-        path: "/tree",
-        element: <Tree />,
-      },
-      {
-        path: "/tuple",
-        element: <Tuple />,
       },
     ],
   },

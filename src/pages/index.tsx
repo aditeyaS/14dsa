@@ -9,6 +9,7 @@ import {
   HeapIcon,
   LinkedListIcon,
   ListIcon,
+  MathIcon,
   MatrixIcon,
   QueueIcon,
   RecursionIcon,
@@ -26,12 +27,7 @@ type Topic = {
   icon: React.ReactNode;
 };
 
-const topicList: Topic[] = [
-  {
-    url: "analysis",
-    name: "Analysis",
-    icon: <AnalysisIcon />,
-  },
+const dataStructures: Topic[] = [
   {
     url: "tuple",
     name: "Tuple",
@@ -53,6 +49,21 @@ const topicList: Topic[] = [
     icon: <ListIcon />,
   },
   {
+    url: "string",
+    name: "String",
+    icon: <StringIcon />,
+  },
+  {
+    url: "linked-list",
+    name: "Linked List",
+    icon: <LinkedListIcon />,
+  },
+  {
+    url: "matrix",
+    name: "Matrix",
+    icon: <MatrixIcon />,
+  },
+  {
     url: "deque",
     name: "Deque",
     icon: <DequeIcon />,
@@ -68,44 +79,9 @@ const topicList: Topic[] = [
     icon: <QueueIcon />,
   },
   {
-    url: "linked-list",
-    name: "Linked List",
-    icon: <LinkedListIcon />,
-  },
-  {
     url: "heap",
     name: "Heap",
     icon: <HeapIcon />,
-  },
-  {
-    url: "bit-magic",
-    name: "Bit Magic",
-    icon: <BitMagicIcon />,
-  },
-  {
-    url: "recursion",
-    name: "Recursion",
-    icon: <RecursionIcon />,
-  },
-  {
-    url: "string",
-    name: "String",
-    icon: <StringIcon />,
-  },
-  {
-    url: "sorting",
-    name: "Sorting",
-    icon: <SortingIcon />,
-  },
-  {
-    url: "matrix",
-    name: "Matrix",
-    icon: <MatrixIcon />,
-  },
-  {
-    url: "binary-tree",
-    name: "Binary Tree",
-    icon: <BinaryTreeIcon />,
   },
   {
     url: "tree",
@@ -114,13 +90,62 @@ const topicList: Topic[] = [
   },
 ];
 
+const basics: Topic[] = [
+  {
+    url: "analysis",
+    name: "Analysis",
+    icon: <AnalysisIcon />,
+  },
+  {
+    url: "math",
+    name: "Math",
+    icon: <MathIcon />,
+  },
+  {
+    url: "bit-magic",
+    name: "Bit Magic",
+    icon: <BitMagicIcon />,
+  },
+];
+
+const topicList: Topic[] = [
+  {
+    url: "recursion",
+    name: "Recursion",
+    icon: <RecursionIcon />,
+  },
+
+  {
+    url: "sorting",
+    name: "Sorting",
+    icon: <SortingIcon />,
+  },
+
+  {
+    url: "binary-tree",
+    name: "Binary Tree",
+    icon: <BinaryTreeIcon />,
+  },
+];
+
 export const Home: React.FC = () => {
   return (
     <div className="px-24">
-      <h1 className="text-4xl mb-10 font-bold">DSA Topics</h1>
+      <h1 className="text-4xl mb-10 font-bold">Basic</h1>
       <div className="grid grid-cols-3 gap-4 justify-items-stretch">
-        {topicList.map((topic) => (
-          <Link to={topic.url} key={topic.url}>
+        {basics.map((topic) => (
+          <Link to={`basics/${topic.url}`} key={topic.url}>
+            <div className="bg-base-1 p-2 drop-shadow rounded hover:bg-base-2 flex flex-col items-center">
+              {topic.icon}
+              <span className="text-xl text-primary">{topic.name}</span>
+            </div>
+          </Link>
+        ))}
+      </div>
+      <h1 className="text-4xl my-10 font-bold">Data Structures</h1>
+      <div className="grid grid-cols-3 gap-4 justify-items-stretch">
+        {dataStructures.map((topic) => (
+          <Link to={`data-structures/${topic.url}`} key={topic.url}>
             <div className="bg-base-1 p-2 drop-shadow rounded hover:bg-base-2 flex flex-col items-center">
               {topic.icon}
               <span className="text-xl text-primary">{topic.name}</span>

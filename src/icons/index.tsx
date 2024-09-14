@@ -24,3 +24,4 @@ export { TreeIcon } from "./tree";
 export { FavoriteIcon } from "./favorite";
 export { LogoIcon } from "./logo";
 export { TupleIcon } from "./tuple";
+export { MathIcon } from "./math";
