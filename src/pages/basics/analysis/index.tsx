@@ -3,10 +3,12 @@ import { PageContainer } from "../../../components";
 import { AnalysisIcon } from "../../../icons";
 import { Intro } from "./intro";
 
-export const Analysis: React.FC = () => {
+const Analysis: React.FC = () => {
   return (
     <PageContainer title="Analysis" icon={<AnalysisIcon />}>
       <Intro />
     </PageContainer>
   );
 };
+
+export default Analysis;

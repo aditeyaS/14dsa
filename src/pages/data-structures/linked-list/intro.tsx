@@ -1,4 +1,4 @@
-import { CodeBlock, PageHeading } from "../../../components";
+import { CodeBlock, H2 } from "../../../components";
 
 const init = `class Node:
     def __init__(self, val):
@@ -11,9 +11,9 @@ export const Intro = () => {
       <ul className="text-xl list-disc list-inside">
         <li>Nodes stored in non contiguous memory</li>
       </ul>
-      <PageHeading>Node</PageHeading>
+      <H2>Node</H2>
       <CodeBlock>{init}</CodeBlock>
-      <PageHeading>Other types of LL:</PageHeading>
+      <H2>Other types of LL:</H2>
       <ul className="text-xl list-disc list-inside">
         <li>Doubly Ended Queue</li>
         <li>Circular Queue</li>

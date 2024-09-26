@@ -1,4 +1,4 @@
-import { Alert, CodeBlock } from "../../../components";
+import { Alert, CodeBlock, H2 } from "../../../components";
 
 const init = `import heapq
 pq = [5,20,1,30,4]
@@ -11,8 +11,7 @@ heapq.nlargest(2,pq) #[30,20]
 heapq.nsmallest(2,pq) #[1,4]
 
 heapq.pushpop(pq,2)
-heapq.heapreplace(pq,-1)
-`;
+heapq.heapreplace(pq,-1)`;
 
 export const Intro = () => {
   return (
@@ -25,7 +24,7 @@ export const Intro = () => {
         <li>Max Heap (highest priority item assigned highest value)</li>
         <li>left(i) = 2i + 1; right(i) = 2i + 2; parent(i) = (i-1)//2</li>
       </ul>
-      <h2 className="text-2xl">Usage</h2>
+      <H2>Usage</H2>
       <CodeBlock>{init}</CodeBlock>
       <Alert type="Important">Python implements heapq as min heap.</Alert>
       <Alert type="Tip">

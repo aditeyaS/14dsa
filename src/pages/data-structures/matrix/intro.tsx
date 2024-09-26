@@ -1,4 +1,4 @@
-import { CodeBlock, PageHeading } from "../../../components";
+import { CodeBlock, H2 } from "../../../components";
 
 const init = `cols = 4
 rows = 2
@@ -7,8 +7,7 @@ rows = 2
 mat = [[0] * cols] * rows 
 
 # correct way
-mat = [[0 for i in range(cols)] for j in range(rows)]
-`;
+mat = [[0 for i in range(cols)] for j in range(rows)]`;
 
 const spiral = `m, n = len(matrix), len(matrix[0])
 L, R = 0, n - 1
@@ -35,9 +34,9 @@ export const Intro = () => {
       <ul className="text-xl list-disc list-inside">
         <li>2D array</li>
       </ul>
-      <PageHeading>Initialization</PageHeading>
+      <H2>Initialization</H2>
       <CodeBlock>{init}</CodeBlock>
-      <PageHeading>Spiral</PageHeading>
+      <H2>Spiral</H2>
       <CodeBlock>{spiral}</CodeBlock>
     </div>
   );

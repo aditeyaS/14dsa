@@ -1,25 +1,28 @@
+import { lazy } from "react";
 import { createBrowserRouter } from "react-router-dom";
 import { AppContainer } from "./app-container";
-import { Tuple } from "../pages/data-structures/tuple";
-import { Dictionary } from "../pages/data-structures/dictionary";
-import { Set } from "../pages/data-structures/set";
-import { List } from "../pages/data-structures/list";
-import { String } from "../pages/data-structures/string";
-import { LinkedList } from "../pages/data-structures/linked-list";
-import { Matrix } from "../pages/data-structures/matrix";
-import { Deque } from "../pages/data-structures/deque";
-import { Stack } from "../pages/data-structures/stack";
-import { Queue } from "../pages/data-structures/queue";
-import { Heap } from "../pages/data-structures/heap";
-// after this
 import { Home } from "../pages";
-import { Analysis } from "../pages/basics/analysis";
-import { Math } from "../pages/basics/math";
-import { BitMagic } from "../pages/basics/bit-magic";
 import { Recursion } from "../pages/recursion";
 import { Sorting } from "../pages/sorting";
 import { BinaryTree } from "../pages/binary-tree";
-import { Tree } from "../pages/data-structures/tree";
+
+// basic
+const Analysis = lazy(() => import("../pages/basics/analysis"));
+const Math = lazy(() => import("../pages/basics/math"));
+const BitMagic = lazy(() => import("../pages/basics/bit-magic"));
+// data structures
+const Tuple = lazy(() => import("../pages/data-structures/tuple"));
+const Dictionary = lazy(() => import("../pages/data-structures/dictionary"));
+const Set = lazy(() => import("../pages/data-structures/set"));
+const List = lazy(() => import("../pages/data-structures/list"));
+const String = lazy(() => import("../pages/data-structures/string"));
+const LinkedList = lazy(() => import("../pages/data-structures/linked-list"));
+const Matrix = lazy(() => import("../pages/data-structures/matrix"));
+const Deque = lazy(() => import("../pages/data-structures/deque"));
+const Stack = lazy(() => import("../pages/data-structures/stack"));
+const Queue = lazy(() => import("../pages/data-structures/queue"));
+const Heap = lazy(() => import("../pages/data-structures/heap"));
+const Tree = lazy(() => import("../pages/data-structures/tree"));
 
 export const router = createBrowserRouter([
   {
@@ -33,16 +36,16 @@ export const router = createBrowserRouter([
         path: "/basics",
         children: [
           {
-            path: "bit-magic",
-            element: <BitMagic />,
-          },
-          {
             path: "analysis",
             element: <Analysis />,
           },
           {
             path: "math",
             element: <Math />,
+          },
+          {
+            path: "bit-magic",
+            element: <BitMagic />,
           },
         ],
       },

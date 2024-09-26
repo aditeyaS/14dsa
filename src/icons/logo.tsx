@@ -1,9 +1,9 @@
 import React from "react";
 import { cn } from "../lib/utils";
 
-interface LogoIconProps extends React.SVGAttributes<SVGAElement> {}
-
-export const LogoIcon: React.FC<LogoIconProps> = ({ className }) => {
+export const LogoIcon: React.FC<React.SVGAttributes<SVGAElement>> = ({
+  className,
+}) => {
   return (
     <svg
       className={cn(className)}

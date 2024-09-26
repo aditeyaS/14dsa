@@ -6,3 +6,7 @@ export { PageHeading } from "./page-heading";
 export { Alert } from "./alert";
 export { ArticleListItem } from "./article-list-item";
 export { QuestionListItem } from "./question-list-item";
+export { SolutionBlock } from "./solution-block";
+export { H1 } from "./h1";
+export { H2 } from "./h2";
+export { Loader } from "./loader";

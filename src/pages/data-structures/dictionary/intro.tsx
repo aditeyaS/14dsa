@@ -1,29 +1,24 @@
-import { Alert, CodeBlock, PageHeading } from "../../../components";
+import { Alert, CodeBlock, H2 } from "../../../components";
 
 const init = `d = {} 
-d = dict()
-`;
+d = dict()`;
 
-const insert = `d["h"] = 20
-`;
+const insert = `d["h"] = 20`;
 
 const access = `print(d["h"]) # 20
 d.get("h", 0) # 0 is default value
 for v in d.values()
 for k in d.keys()
-for k,v in d.items()
-`;
+for k,v in d.items()`;
 
 const del = `del d["h"] # delete
 d.pop("h") # delete and return
-d.popitem() # removes and returns the last inserted
-`;
+d.popitem() # removes and returns the last inserted`;
 
 const others = `len(d)
 if "h" in d
 from collections import defaultdict
-d = defaultdict(list)
-`;
+d = defaultdict(list)`;
 
 const ddTip = `use defaultdict(list) if values are list
 
@@ -33,8 +28,7 @@ d['fruits'].append('apple')
 # without defaultdict
 if 'fruits' not in d:
     d['fruits'] = []
-d['fruits'].append('apple')
-`;
+d['fruits'].append('apple')`;
 
 export const Intro = () => {
   return (
@@ -44,15 +38,15 @@ export const Intro = () => {
         <li>unordered</li>
         <li>O(1) for search, insert, delete</li>
       </ul>
-      <PageHeading>Initialization</PageHeading>
+      <H2>Initialization</H2>
       <CodeBlock>{init}</CodeBlock>
-      <PageHeading>Insert</PageHeading>
+      <H2>Insert</H2>
       <CodeBlock>{insert}</CodeBlock>
-      <PageHeading>Access</PageHeading>
+      <H2>Access</H2>
       <CodeBlock>{access}</CodeBlock>
-      <PageHeading>Delete</PageHeading>
+      <H2>Delete</H2>
       <CodeBlock>{del}</CodeBlock>
-      <PageHeading>Others</PageHeading>
+      <H2>Others</H2>
       <CodeBlock>{others}</CodeBlock>
       <Alert type="Caution">
         The dictionary key should be immutable. Use tuple instead of list.

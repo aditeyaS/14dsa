@@ -25,3 +25,6 @@ export { FavoriteIcon } from "./favorite";
 export { LogoIcon } from "./logo";
 export { TupleIcon } from "./tuple";
 export { MathIcon } from "./math";
+export { DownIcon } from "./down";
+export { UpIcon } from "./up";
+export { BrainIcon } from "./brain";

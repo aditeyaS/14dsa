@@ -20,6 +20,7 @@ import {
   TreeIcon,
   TupleIcon,
 } from "../icons";
+import { H1 } from "../components";
 
 type Topic = {
   url: string;
@@ -131,7 +132,7 @@ const topicList: Topic[] = [
 export const Home: React.FC = () => {
   return (
     <div className="px-24">
-      <h1 className="text-4xl mb-10 font-bold">Basic</h1>
+      <H1>Basic</H1>
       <div className="grid grid-cols-3 gap-4 justify-items-stretch">
         {basics.map((topic) => (
           <Link to={`basics/${topic.url}`} key={topic.url}>
@@ -142,7 +143,7 @@ export const Home: React.FC = () => {
           </Link>
         ))}
       </div>
-      <h1 className="text-4xl my-10 font-bold">Data Structures</h1>
+      <H1>Data Structures</H1>
       <div className="grid grid-cols-3 gap-4 justify-items-stretch">
         {dataStructures.map((topic) => (
           <Link to={`data-structures/${topic.url}`} key={topic.url}>

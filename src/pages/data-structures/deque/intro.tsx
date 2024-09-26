@@ -1,4 +1,4 @@
-import { Alert, CodeBlock, PageHeading } from "../../../components";
+import { Alert, CodeBlock, H2 } from "../../../components";
 
 const init = `from collections import deque
 d = deque()`;
@@ -27,13 +27,13 @@ d[-1]`;
 export const Intro = () => {
   return (
     <div className="flex flex-col gap-4">
-      <PageHeading>Initialization</PageHeading>
+      <H2>Initialization</H2>
       <CodeBlock>{init}</CodeBlock>
-      <PageHeading>Left operations</PageHeading>
+      <H2>Left operations</H2>
       <CodeBlock>{leftOp}</CodeBlock>
-      <PageHeading>Right operations</PageHeading>
+      <H2>Right operations</H2>
       <CodeBlock>{rightOp}</CodeBlock>
-      <PageHeading>Others</PageHeading>
+      <H2>Others</H2>
       <CodeBlock>{others}</CodeBlock>
       <Alert type="Caution">Slicing is not allowed in deque</Alert>
     </div>

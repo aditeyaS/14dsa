@@ -3,10 +3,12 @@ import { PageContainer } from "../../../components";
 import { TreeIcon } from "../../../icons";
 import { Questions } from "./questions";
 
-export const Tree: React.FC = () => {
+const Tree: React.FC = () => {
   return (
     <PageContainer title="Tree" icon={<TreeIcon />}>
       <Questions />
     </PageContainer>
   );
 };
+
+export default Tree;

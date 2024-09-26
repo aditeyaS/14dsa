@@ -1,5 +1,5 @@
 import React from "react";
-import { PageHeading } from "../../../components";
+import { H2 } from "../../../components";
 import { Chart } from "react-google-charts";
 import { useTheme } from "../../../components/theme-provider";
 
@@ -45,8 +45,8 @@ export const Intro: React.FC = () => {
   };
   return (
     <div className="flex flex-col gap-4">
-      <PageHeading>Order of growth</PageHeading>
-      <span className="text-2xl">
+      <H2>Order of growth</H2>
+      <span className="text-xl">
         {
           "c < log(log n) < log n < n^1/3 < n^1/2 < n < n^2 < n^3 < n^4 < 2^n < n^n"
         }
@@ -58,7 +58,7 @@ export const Intro: React.FC = () => {
         width="100%"
         options={options}
       />
-      <PageHeading>Big O</PageHeading>
+      <H2>Big O</H2>
       <ul className="list-disc list-inside">
         <li>
           {
@@ -70,7 +70,7 @@ export const Intro: React.FC = () => {
         </li>
         <li>{"Upper bound"}</li>
       </ul>
-      <PageHeading>Omega</PageHeading>
+      <H2>Omega</H2>
       <ul className="list-disc list-inside">
         <li>
           {
@@ -80,7 +80,7 @@ export const Intro: React.FC = () => {
         <li>{"{n/4, n^2,..., n^n} ∈ Ω(n)"}</li>
         <li>{"useful when we have lower bound"}</li>
       </ul>
-      <PageHeading>Theta</PageHeading>
+      <H2>Theta</H2>
       <ul className="list-disc list-inside">
         <li>
           {
@@ -89,7 +89,7 @@ export const Intro: React.FC = () => {
         </li>
         <li>{"Exact bound"}</li>
       </ul>
-      <PageHeading>Space Complexity</PageHeading>
+      <H2>Space Complexity</H2>
       <ul className="list-disc list-inside">
         <li>
           {

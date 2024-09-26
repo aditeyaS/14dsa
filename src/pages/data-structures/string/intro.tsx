@@ -1,18 +1,15 @@
-import { CodeBlock } from "../../../components";
+import { CodeBlock, H2 } from "../../../components";
 
 const init = `s = "Hello World"
 
 l = list(s)
-''.join(l)
-`;
+''.join(l)`;
 
 const access = `s[0] # 'H'
-s[-1] # 'd'
-`;
+s[-1] # 'd'`;
 
 const deleteCode = `del s[2] # Error
-s = s[0:2] + s[3:]
-`;
+s = s[0:2] + s[3:]`;
 
 const strFormatting = `# Default order
 s = "{} {} {}".format('Geeks', 'For', 'Life')
@@ -26,8 +23,7 @@ s = "{l} {f} {g}".format(g='Geeks', f='For', l='Life')
 # Rounding off Integers
 s = "{0:.2f}".format(1/6) # 0.17
 
-s = f"Hello {name}!"
-`;
+s = f"Hello {name}!"`;
 
 const others = `len(s)
 
@@ -39,8 +35,7 @@ print(ord('a')) # 97
 print(chr(97)) # a
 
 "a" in s
-"a" not in s
-`;
+"a" not in s`;
 
 const stringMethods = `s.count("Hello") # count
 s.endswith(".") # ends with
@@ -63,8 +58,7 @@ s.strip()
 s.replace("hello", "hi")
 
 # string.split(separator, maxsplit)
-s.split(", ")
-`;
+s.split(", ")`;
 
 export const Intro = () => {
   return (
@@ -72,17 +66,17 @@ export const Intro = () => {
       <ul className="text-xl list-disc list-inside">
         <li>immutable</li>
       </ul>
-      <h2 className="text-2xl">Init</h2>
+      <H2>Init</H2>
       <CodeBlock>{init}</CodeBlock>
-      <h2 className="text-2xl">Access</h2>
+      <H2>Access</H2>
       <CodeBlock>{access}</CodeBlock>
-      <h2 className="text-2xl">Delete</h2>
+      <H2>Delete</H2>
       <CodeBlock>{deleteCode}</CodeBlock>
-      <h2 className="text-2xl">String formatting</h2>
+      <H2>String formatting</H2>
       <CodeBlock>{strFormatting}</CodeBlock>
-      <h2 className="text-2xl">Others</h2>
+      <H2>Others</H2>
       <CodeBlock>{others}</CodeBlock>
-      <h2 className="text-2xl">String methods</h2>
+      <H2>String methods</H2>
       <CodeBlock>{stringMethods}</CodeBlock>
     </div>
   );

@@ -1,12 +1,11 @@
-import { CodeBlock, PageHeading } from "../../../components";
+import { CodeBlock, H2 } from "../../../components";
 
 const shift = `x=5 # 101
 x<<1 # 1010
 x<<2 # 10100
 x>>1 # 010
 x>>3 # 000
-1 << n # 2^n
-`;
+1 << n # 2^n`;
 
 export const Intro = () => {
   return (
@@ -19,7 +18,7 @@ export const Intro = () => {
         <li>{`Right Shift: >>`}</li>
         <li>Bitwise Not: ~</li>
       </ul>
-      <PageHeading>Shift operators</PageHeading>
+      <H2>Shift operators</H2>
       <CodeBlock>{shift}</CodeBlock>
     </div>
   );

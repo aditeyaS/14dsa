@@ -4,7 +4,7 @@ import { LinkedListIcon } from "../../../icons";
 import { Intro } from "./intro";
 import { Questions } from "./questions";
 
-export const LinkedList: React.FC = () => {
+const LinkedList: React.FC = () => {
   return (
     <PageContainer title="Linked List" icon={<LinkedListIcon />}>
       <Intro />
@@ -12,3 +12,4 @@ export const LinkedList: React.FC = () => {
     </PageContainer>
   );
 };
+export default LinkedList;

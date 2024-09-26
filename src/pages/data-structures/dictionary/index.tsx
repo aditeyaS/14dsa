@@ -4,7 +4,7 @@ import { DictionaryIcon } from "../../../icons";
 import { Intro } from "./intro";
 import { Articles } from "./articles";
 
-export const Dictionary: React.FC = () => {
+const Dictionary: React.FC = () => {
   return (
     <PageContainer title="Dictionary" icon={<DictionaryIcon />}>
       <Intro />
@@ -12,3 +12,5 @@ export const Dictionary: React.FC = () => {
     </PageContainer>
   );
 };
+
+export default Dictionary;
