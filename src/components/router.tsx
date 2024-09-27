@@ -2,12 +2,9 @@ import { lazy } from "react";
 import { createBrowserRouter } from "react-router-dom";
 import { AppContainer } from "./app-container";
 import { Home } from "../pages";
-import { Recursion } from "../pages/recursion";
-import { Sorting } from "../pages/sorting";
-import { BinaryTree } from "../pages/binary-tree";
-
 // basic
 const Analysis = lazy(() => import("../pages/basics/analysis"));
+const Recursion = lazy(() => import("../pages/basics/recursion"));
 const Math = lazy(() => import("../pages/basics/math"));
 const BitMagic = lazy(() => import("../pages/basics/bit-magic"));
 // data structures
@@ -23,6 +20,9 @@ const Stack = lazy(() => import("../pages/data-structures/stack"));
 const Queue = lazy(() => import("../pages/data-structures/queue"));
 const Heap = lazy(() => import("../pages/data-structures/heap"));
 const Tree = lazy(() => import("../pages/data-structures/tree"));
+const BinaryTree = lazy(() => import("../pages/data-structures/binary-tree"));
+// algorithms
+const BinarySearch = lazy(() => import("../pages/algorithms/binary-search"));
 
 export const router = createBrowserRouter([
   {
@@ -38,6 +38,10 @@ export const router = createBrowserRouter([
           {
             path: "analysis",
             element: <Analysis />,
+          },
+          {
+            path: "recursion",
+            element: <Recursion />,
           },
           {
             path: "math",
@@ -100,22 +104,20 @@ export const router = createBrowserRouter([
             path: "tree",
             element: <Tree />,
           },
+          {
+            path: "binary-tree",
+            element: <BinaryTree />,
+          },
         ],
       },
-
       {
-        path: "/recursion",
-        element: <Recursion />,
-      },
-
-      {
-        path: "/sorting",
-        element: <Sorting />,
-      },
-
-      {
-        path: "/binary-tree",
-        element: <BinaryTree />,
+        path: "/algorithms",
+        children: [
+          {
+            path: "binary-search",
+            element: <BinarySearch />,
+          },
+        ],
       },
     ],
   },

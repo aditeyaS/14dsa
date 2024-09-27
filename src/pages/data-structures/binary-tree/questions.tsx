@@ -1,6 +1,6 @@
 import React from "react";
-import { PageHeading, QuestionListItem } from "../../components";
-import { Question } from "../../types";
+import { H1, QuestionListItem } from "../../../components";
+import { Question } from "../../../types";
 
 const questions: Question[] = [
   {
@@ -15,7 +15,7 @@ const questions: Question[] = [
 export const Questions: React.FC = () => {
   return (
     <div className="mt-8 flex flex-col gap-4">
-      <PageHeading>Related Questions</PageHeading>
+      <H1>Related Questions</H1>
       <div className="flex flex-col gap-2">
         {questions.map((question, index) => (
           <QuestionListItem

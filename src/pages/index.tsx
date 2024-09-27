@@ -14,18 +14,26 @@ import {
   QueueIcon,
   RecursionIcon,
   SetIcon,
-  SortingIcon,
   StackIcon,
   StringIcon,
   TreeIcon,
   TupleIcon,
 } from "../icons";
-import { H1 } from "../components";
+import { H1, H2 } from "../components";
 
 type Topic = {
   url: string;
   name: string;
   icon: React.ReactNode;
+};
+
+type AlgorithmListType = {
+  url: string;
+  name: string;
+};
+type Algorithm = {
+  dataStructure: string;
+  algos: AlgorithmListType[];
 };
 
 const dataStructures: Topic[] = [
@@ -89,6 +97,11 @@ const dataStructures: Topic[] = [
     name: "Tree",
     icon: <TreeIcon />,
   },
+  {
+    url: "binary-tree",
+    name: "Binary Tree",
+    icon: <BinaryTreeIcon />,
+  },
 ];
 
 const basics: Topic[] = [
@@ -96,6 +109,11 @@ const basics: Topic[] = [
     url: "analysis",
     name: "Analysis",
     icon: <AnalysisIcon />,
+  },
+  {
+    url: "recursion",
+    name: "Recursion",
+    icon: <RecursionIcon />,
   },
   {
     url: "math",
@@ -109,23 +127,15 @@ const basics: Topic[] = [
   },
 ];
 
-const topicList: Topic[] = [
+const algorithmList: Algorithm[] = [
   {
-    url: "recursion",
-    name: "Recursion",
-    icon: <RecursionIcon />,
-  },
-
-  {
-    url: "sorting",
-    name: "Sorting",
-    icon: <SortingIcon />,
-  },
-
-  {
-    url: "binary-tree",
-    name: "Binary Tree",
-    icon: <BinaryTreeIcon />,
+    dataStructure: "List",
+    algos: [
+      {
+        url: "binary-search",
+        name: "Binary Search",
+      },
+    ],
   },
 ];
 
@@ -152,6 +162,23 @@ export const Home: React.FC = () => {
               <span className="text-xl text-primary">{topic.name}</span>
             </div>
           </Link>
+        ))}
+      </div>
+      <H1>Algorithms</H1>
+      <div className="flex flex-col gap-2">
+        {algorithmList.map((algorithm) => (
+          <>
+            <H2 className="text-base-content/75">{algorithm.dataStructure}</H2>
+            <div className="flex flex-col gap-1">
+              {algorithm.algos.map((algo) => (
+                <Link to={`algorithms/${algo.url}`} key={algo.url}>
+                  <div className="bg-base-1 p-2 drop-shadow rounded hover:bg-base-2 flex gap-1 items-center">
+                    <span className="text-xl text-primary">{algo.name}</span>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </>
         ))}
       </div>
     </div>

@@ -1,4 +1,4 @@
-import { Alert, CodeBlock, PageHeading } from "../../components";
+import { Alert, CodeBlock, H2 } from "../../../components";
 
 const init = `# Tail recursive
 def fun(n):
@@ -16,13 +16,12 @@ def fun(n):
 def fact(n):
     if n == 0:
         return 1
-    return n * fact(n-1)
-`;
+    return n * fact(n-1)`;
 
 export const Intro = () => {
   return (
     <div className="flex flex-col gap-4">
-      <PageHeading>Tail Recursion</PageHeading>
+      <H2>Tail Recursion</H2>
       <ul className="text-xl list-disc list-inside">
         <li>
           A function is tail recursive if the function does not do anything

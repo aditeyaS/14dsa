@@ -1,12 +1,14 @@
 import React from "react";
-import { PageContainer } from "../../components";
-import { RecursionIcon } from "../../icons";
 import { Intro } from "./intro";
+import { PageContainer } from "../../../components";
+import { RecursionIcon } from "../../../icons";
 
-export const Recursion: React.FC = () => {
+const Recursion: React.FC = () => {
   return (
     <PageContainer title="Recursion" icon={<RecursionIcon />}>
       <Intro />
     </PageContainer>
   );
 };
+
+export default Recursion;

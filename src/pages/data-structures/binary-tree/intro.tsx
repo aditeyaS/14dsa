@@ -1,4 +1,4 @@
-import { Alert, CodeBlock, PageHeading } from "../../components";
+import { Alert, CodeBlock, H2 } from "../../../components";
 
 const treeNode = `class Node:
     def __init__(self. k):
@@ -30,8 +30,7 @@ def inOrder(root):
         curr = curr.right
         while curr:
             st.append(curr)
-            curr = curr.left
-`;
+            curr = curr.left`;
 
 const preOrder = `# recursive
 def preorder(root):
@@ -67,8 +66,7 @@ def preorder(root):
                 st.append(curr.right)
             curr = curr.left
         if st:
-            curr = st.pop()
-`;
+            curr = st.pop()`;
 
 const postOrder = `def postorder(root):
     if root != None:
@@ -88,23 +86,23 @@ export const Intro = () => {
     <div className="flex flex-col gap-4">
       <span className="text-xl">At most 2 children</span>
       <CodeBlock>{treeNode}</CodeBlock>
-      <PageHeading>Tree Traversal</PageHeading>
+      <H2>Tree Traversal</H2>
       <ul className="list-disc list-inside [&_ul]:list-[revert]">
         <li>Breadth First (or Level order)</li>
         <li>Depth first (in-order, pre-order, post-order)</li>
       </ul>
       <div>
-        <PageHeading>In-Order</PageHeading>
+        <H2>In-Order</H2>
         <Alert type="Note">{`L -> P -> R (Left -> Parent -> Right)`}</Alert>
         <CodeBlock>{inOrder}</CodeBlock>
       </div>
       <div>
-        <PageHeading>Pre-Order</PageHeading>
+        <H2>Pre-Order</H2>
         <Alert type="Note">{`P -> L -> R (Parent -> Left -> Right)`}</Alert>
         <CodeBlock>{preOrder}</CodeBlock>
       </div>
       <div>
-        <PageHeading>Post-Order</PageHeading>
+        <H2>Post-Order</H2>
         <Alert type="Note">{`L -> R -> P (Left -> Right -> Parent)`}</Alert>
         <CodeBlock>{postOrder}</CodeBlock>
       </div>

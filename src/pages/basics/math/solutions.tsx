@@ -11,17 +11,32 @@ const gcd = `def gcd(a, b): # Euclidean algorithm
 def gcd(a, b): # Optimized
     if b == 0:
         return a
-    return gcd(b, a % b)
-`;
+    return gcd(b, a % b)`;
+
+const xPowerN = `def power(x, n):
+  if n == 0:
+    return 1
+  t = power(x, n // 2)
+  t = t * t
+  return t if n % 2 == 0 else t * x`;
 
 export const Solutions = () => {
   return (
     <div className="flex flex-col gap-4">
       <H1>Common solutions</H1>
-      <SolutionBlock title="GCD and LCM of 2 numbers">
-        <CodeBlock>{gcd}</CodeBlock>
-        <Alert type="Tip">To find LCM: a * b = gcd * lcm</Alert>
-      </SolutionBlock>
+      <ul className="flex flex-col gap-1">
+        <li>
+          <SolutionBlock title="GCD and LCM of 2 numbers">
+            <CodeBlock>{gcd}</CodeBlock>
+            <Alert type="Tip">To find LCM: a * b = gcd * lcm</Alert>
+          </SolutionBlock>
+        </li>
+        <li>
+          <SolutionBlock title="x power n">
+            <CodeBlock>{xPowerN}</CodeBlock>
+          </SolutionBlock>
+        </li>
+      </ul>
     </div>
   );
 };
