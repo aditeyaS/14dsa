@@ -135,6 +135,10 @@ const algorithmList: Algorithm[] = [
         url: "binary-search",
         name: "Binary Search",
       },
+      {
+        url: "sorting-1",
+        name: "Sorting 1: Bubble, Selection, and Insertion",
+      },
     ],
   },
 ];
