@@ -18,18 +18,34 @@ del arr[1:3]
 arr.remove(20) # remove item`;
 
 const others = `len(arr)
-if 15 in arr`;
+if 15 in arr
 
-const listOperations = `max(arr), min(arr), sum(arr)
+max(arr), min(arr), sum(arr)
 arr.reverse()
+
+arr.count(30) # counts the number of 30
+
+arr[start:stop:step] # slicing; stop -> exclusive
 
 arr.sort() # sorts in place, ASC
 arr.sort(reverse=True) # DESC
 
 sorted(arr) # creates new list
-arr.count(30) # counts the number of 30
 
-arr[start:stop:step] # slicing; stop -> exclusive`;
+def myFun(s):
+  return len(s)
+arr.sort(key=myFun)`;
+
+const listOperations = `class Point:
+  def __init__(self, x, y):
+    self.x = x
+    self.y = y
+
+def myFun(p):
+  return p.x
+
+l = [Point(2,3), Point(5,6)]
+l.sort(key=myFun)`;
 
 export const Intro = () => {
   return (
@@ -53,8 +69,11 @@ export const Intro = () => {
       </Alert>
       <H2>Others</H2>
       <CodeBlock>{others}</CodeBlock>
-      <H2>List operations</H2>
+      <H2>Sorting objects</H2>
       <CodeBlock>{listOperations}</CodeBlock>
+      <Alert type="Important">
+        sort() only works for array and sorted() works for any iterable
+      </Alert>
     </div>
   );
 };

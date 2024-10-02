@@ -23,6 +23,7 @@ const Tree = lazy(() => import("../pages/data-structures/tree"));
 const BinaryTree = lazy(() => import("../pages/data-structures/binary-tree"));
 // algorithms
 const BinarySearch = lazy(() => import("../pages/algorithms/binary-search"));
+const Sorting1 = lazy(() => import("../pages/algorithms/sorting-1"));
 
 export const router = createBrowserRouter([
   {
@@ -116,6 +117,10 @@ export const router = createBrowserRouter([
           {
             path: "binary-search",
             element: <BinarySearch />,
+          },
+          {
+            path: "sorting-1",
+            element: <Sorting1 />,
           },
         ],
       },
