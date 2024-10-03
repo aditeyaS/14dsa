@@ -1,5 +1,5 @@
 import React from "react";
-import { CodeBlock, PageContainer } from "../../../components";
+import { CodeBlock, PageContainer } from "../../../../components";
 
 const binarySearch = `l = 0
 r = len(arr) - 1

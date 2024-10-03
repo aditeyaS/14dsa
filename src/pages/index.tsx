@@ -129,7 +129,7 @@ const basics: Topic[] = [
 
 const algorithmList: Algorithm[] = [
   {
-    dataStructure: "List",
+    dataStructure: "list",
     algos: [
       {
         url: "binary-search",
@@ -138,6 +138,10 @@ const algorithmList: Algorithm[] = [
       {
         url: "sorting-1",
         name: "Sorting 1: Bubble, Selection, and Insertion",
+      },
+      {
+        url: "sorting-2",
+        name: "Sorting 2: Merge, Quick, Heap",
       },
     ],
   },
@@ -172,10 +176,15 @@ export const Home: React.FC = () => {
       <div className="flex flex-col gap-2">
         {algorithmList.map((algorithm) => (
           <>
-            <H2 className="text-base-content/75">{algorithm.dataStructure}</H2>
+            <H2 className="text-base-content/75 capitalize">
+              {algorithm.dataStructure}
+            </H2>
             <div className="flex flex-col gap-1">
               {algorithm.algos.map((algo) => (
-                <Link to={`algorithms/${algo.url}`} key={algo.url}>
+                <Link
+                  to={`algorithms/${algorithm.dataStructure}/${algo.url}`}
+                  key={algo.url}
+                >
                   <div className="bg-base-1 p-2 drop-shadow rounded hover:bg-base-2 flex gap-1 items-center">
                     <span className="text-xl text-primary">{algo.name}</span>
                   </div>
