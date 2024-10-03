@@ -27,3 +27,4 @@ export { MathIcon } from "./math";
 export { DownIcon } from "./down";
 export { UpIcon } from "./up";
 export { BrainIcon } from "./brain";
+export { ArrowUp } from "./arrow-up";
