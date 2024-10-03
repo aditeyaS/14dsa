@@ -8,7 +8,10 @@ export const H1: React.FC<React.HTMLAttributes<HTMLHeadingElement>> = ({
 }) => {
   return (
     <h1
-      className={cn("text-3xl font-bold text-center my-5", className)}
+      className={cn(
+        "text-3xl font-bold text-center my-5 cursor-default",
+        className
+      )}
       {...props}
     >
       {children}

@@ -22,8 +22,11 @@ const Heap = lazy(() => import("../pages/data-structures/heap"));
 const Tree = lazy(() => import("../pages/data-structures/tree"));
 const BinaryTree = lazy(() => import("../pages/data-structures/binary-tree"));
 // algorithms
-const BinarySearch = lazy(() => import("../pages/algorithms/binary-search"));
-const Sorting1 = lazy(() => import("../pages/algorithms/sorting-1"));
+const BinarySearch = lazy(
+  () => import("../pages/algorithms/list/binary-search")
+);
+const Sorting1 = lazy(() => import("../pages/algorithms/list/sorting-1"));
+const Sorting2 = lazy(() => import("../pages/algorithms/list/sorting-2"));
 
 export const router = createBrowserRouter([
   {
@@ -113,14 +116,24 @@ export const router = createBrowserRouter([
       },
       {
         path: "/algorithms",
+
         children: [
           {
-            path: "binary-search",
-            element: <BinarySearch />,
-          },
-          {
-            path: "sorting-1",
-            element: <Sorting1 />,
+            path: "list",
+            children: [
+              {
+                path: "binary-search",
+                element: <BinarySearch />,
+              },
+              {
+                path: "sorting-1",
+                element: <Sorting1 />,
+              },
+              {
+                path: "sorting-2",
+                element: <Sorting2 />,
+              },
+            ],
           },
         ],
       },

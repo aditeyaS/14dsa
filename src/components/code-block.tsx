@@ -14,6 +14,7 @@ export const CodeBlock: React.FC<CodeBlockProps> = ({ children }) => {
       lineNumbers={false}
       theme={theme === "dark" ? oneDark : oneLight}
       code={children}
+      style={{ fontSize: "0.875rem" }}
     />
   );
 };

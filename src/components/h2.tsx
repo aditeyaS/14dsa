@@ -7,7 +7,10 @@ export const H2: React.FC<React.HTMLAttributes<HTMLHeadingElement>> = ({
   ...props
 }) => {
   return (
-    <h2 className={cn("text-2xl underline", className)} {...props}>
+    <h2
+      className={cn("text-2xl underline cursor-default", className)}
+      {...props}
+    >
       {children}
     </h2>
   );

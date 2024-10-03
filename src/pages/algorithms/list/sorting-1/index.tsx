@@ -1,5 +1,5 @@
 import React from "react";
-import { CodeBlock, H2, PageContainer } from "../../../components";
+import { CodeBlock, H2, PageContainer } from "../../../../components";
 
 const bubbleSort = `for i in range(n - 1):
   isSwapped = False
@@ -36,7 +36,6 @@ const Sorting1: React.FC = () => {
           </li>
           <li>sort() and sorted() are stable</li>
         </ul>
-        <span className="text-xl"></span>
         <div className="flex flex-col gap-1">
           <H2>Bubble Sort</H2>
           <ul className="text-xl list-disc list-inside">
