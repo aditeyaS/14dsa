@@ -28,3 +28,4 @@ export { DownIcon } from "./down";
 export { UpIcon } from "./up";
 export { BrainIcon } from "./brain";
 export { ArrowUp } from "./arrow-up";
+export { CircularLinkedListIcon } from "./circular-linked-list";

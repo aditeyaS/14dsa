@@ -1,10 +1,11 @@
 import { CodeBlock } from "../../../components";
 
-const llNode = `class Node:
+const node = `class Node:
   def __init__(self, val):
     self.val = val
     self.next = None`;
-const llSearch = `def search(head, x):
+
+const search = `def search(head, x):
   curr = head
   i = 0
   while curr:
@@ -13,11 +14,13 @@ const llSearch = `def search(head, x):
     i += 1
     curr = curr.next
   return -1`;
-const llIAB = `def insertAtBeginning(head, x):
+
+const iab = `def insertAtBeginning(head, x):
   t = Node(x)
   t.next = head
   return t`;
-const llIAE = `def insertAtEnd(head, x):
+
+const iae = `def insertAtEnd(head, x):
   if not head:
     return Node(x)
   curr = head
@@ -26,7 +29,7 @@ const llIAE = `def insertAtEnd(head, x):
   curr.next = Node(x)
   return head`;
 
-const llIAI = `def insertAtIndex(head, x, p):
+const iai = `def insertAtIndex(head, x, p):
   t = Node(x)
   if p == 0:
     t.next = head 
@@ -40,12 +43,12 @@ const llIAI = `def insertAtIndex(head, x, p):
   curr.next = t
   return head`;
 
-const llDAB = `def delFirst(head):
+const df = `def delFirst(head):
   if head:
     return head.next
   return None`;
 
-const llDAE = `def delEnd(head):
+const de = `def delEnd(head):
   if head == None or head.next == None:
     return None
   curr = head
@@ -65,31 +68,31 @@ export const Intro = () => {
         </li>
         <li>
           Node
-          <CodeBlock>{llNode}</CodeBlock>
+          <CodeBlock>{node}</CodeBlock>
         </li>
         <li>
           Search
-          <CodeBlock>{llSearch}</CodeBlock>
+          <CodeBlock>{search}</CodeBlock>
         </li>
         <li>
           Insert at beginning
-          <CodeBlock>{llIAB}</CodeBlock>
+          <CodeBlock>{iab}</CodeBlock>
         </li>
         <li>
           Insert at end
-          <CodeBlock>{llIAE}</CodeBlock>
+          <CodeBlock>{iae}</CodeBlock>
         </li>
         <li>
           Insert at index
-          <CodeBlock>{llIAI}</CodeBlock>
+          <CodeBlock>{iai}</CodeBlock>
         </li>
         <li>
           Delete first
-          <CodeBlock>{llDAB}</CodeBlock>
+          <CodeBlock>{df}</CodeBlock>
         </li>
         <li>
           Delete end
-          <CodeBlock>{llDAE}</CodeBlock>
+          <CodeBlock>{de}</CodeBlock>
         </li>
       </ul>
     </div>

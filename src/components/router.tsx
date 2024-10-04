@@ -14,6 +14,9 @@ const Set = lazy(() => import("../pages/data-structures/set"));
 const List = lazy(() => import("../pages/data-structures/list"));
 const String = lazy(() => import("../pages/data-structures/string"));
 const LinkedList = lazy(() => import("../pages/data-structures/linked-list"));
+const CircularLinkedList = lazy(
+  () => import("../pages/data-structures/circular-linked-list")
+);
 const Matrix = lazy(() => import("../pages/data-structures/matrix"));
 const Deque = lazy(() => import("../pages/data-structures/deque"));
 const Stack = lazy(() => import("../pages/data-structures/stack"));
@@ -86,6 +89,10 @@ export const router = createBrowserRouter([
           {
             path: "linked-list",
             element: <LinkedList />,
+          },
+          {
+            path: "circular-linked-list",
+            element: <CircularLinkedList />,
           },
           {
             path: "matrix",

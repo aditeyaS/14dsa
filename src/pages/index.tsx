@@ -4,6 +4,7 @@ import {
   AnalysisIcon,
   BinaryTreeIcon,
   BitMagicIcon,
+  CircularLinkedListIcon,
   DequeIcon,
   DictionaryIcon,
   HeapIcon,
@@ -66,6 +67,11 @@ const dataStructures: Topic[] = [
     url: "linked-list",
     name: "Linked List",
     icon: <LinkedListIcon />,
+  },
+  {
+    url: "circular-linked-list",
+    name: "Circular Linked List",
+    icon: <CircularLinkedListIcon />,
   },
   {
     url: "matrix",
