@@ -3,16 +3,12 @@ import { Link } from "react-router-dom";
 import { MoonIcon, SunIcon } from "../icons";
 import { useTheme } from "./theme-provider";
 import { LogoIcon } from "../icons";
+import { CodeFontSizeSelect } from "./code-font-size-select";
 
 export const NavBar: React.FC = () => {
   const { theme, setTheme } = useTheme();
-
   const onThemeChange = () => {
-    if (theme === "dark") {
-      setTheme("light");
-    } else {
-      setTheme("dark");
-    }
+    setTheme(theme === "dark" ? "light" : "dark");
   };
 
   return (
@@ -24,6 +20,7 @@ export const NavBar: React.FC = () => {
         <LogoIcon className="w-8 h-8" />
         <span className="text-xl">PythonDSA</span>
       </Link>
+      <CodeFontSizeSelect />
       <button
         className="p-1 hover:bg-base-2 rounded-full"
         onClick={onThemeChange}

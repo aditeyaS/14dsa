@@ -4,13 +4,16 @@ import "./index.css";
 import { RouterProvider } from "react-router-dom";
 import { Loader, router } from "./components";
 import { ThemeProvider } from "./components/theme-provider";
+import { FontSizeProvider } from "./components/font-size-provider";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <ThemeProvider>
-      <Suspense fallback={<Loader />}>
-        <RouterProvider router={router} />
-      </Suspense>
+      <FontSizeProvider>
+        <Suspense fallback={<Loader />}>
+          <RouterProvider router={router} />
+        </Suspense>
+      </FontSizeProvider>
     </ThemeProvider>
   </StrictMode>
 );
