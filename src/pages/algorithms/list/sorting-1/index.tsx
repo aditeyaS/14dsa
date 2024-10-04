@@ -1,21 +1,21 @@
 import React from "react";
 import { CodeBlock, H2, PageContainer } from "../../../../components";
 
-const bubbleSort = `for i in range(n - 1):
-  isSwapped = False
+const bubbleSort = `for i in range(n):
+  swapped = False
   for j in range(n - i - 1):
     if arr[j] > arr[j + 1]:
-      isSwapped = True
       arr[j], arr[j + 1] = arr[j + 1], arr[j]
-  if not isSwapped:
+      swapped = True
+  if not swapped:
     break`;
 
-const selectionSort = `for i in range(n - 1):
+const selectionSort = `for i in range(n):
   minIdx = i
   for j in range(i + 1, n):
-    if arr[i] < arr[midIdx]:
-      midIdx = i
-  arr[midIdx], arr[i] = arr[i], arr[midIdx]`;
+    if arr[i] < arr[minIdx]:
+      minIdx = i
+  arr[minIdx], arr[i] = arr[i], arr[minIdx]`;
 
 const insertionSort = `for i in range(1, n):
   x = arr[i]

@@ -1,4 +1,5 @@
 import React from "react";
+import { H1 } from "./h1";
 
 interface PageContainerProps {
   title: string;
@@ -17,7 +18,7 @@ export const PageContainer: React.FC<PageContainerProps> = ({
         {icon && (
           <div className="p-5 ring rounded-full ring-primary">{icon}</div>
         )}
-        <h1 className="text-4xl text-primary">{title}</h1>
+        <H1>{title}</H1>
       </div>
       <div className="mt-10 px-24">{children}</div>
     </div>

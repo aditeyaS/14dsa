@@ -145,12 +145,21 @@ const algorithmList: Algorithm[] = [
       },
     ],
   },
+  {
+    dataStructure: "linked-list",
+    algos: [
+      {
+        url: "2-pointers",
+        name: "2 Pointers: Slow fast, cycle detection",
+      },
+    ],
+  },
 ];
 
 export const Home: React.FC = () => {
   return (
     <div className="px-24">
-      <H1>Basic</H1>
+      <H1 className="text-base-content">Basic</H1>
       <div className="grid grid-cols-3 gap-4 justify-items-stretch">
         {basics.map((topic) => (
           <Link to={`basics/${topic.url}`} key={topic.url}>
@@ -161,7 +170,7 @@ export const Home: React.FC = () => {
           </Link>
         ))}
       </div>
-      <H1>Data Structures</H1>
+      <H1 className="text-base-content">Data Structures</H1>
       <div className="grid grid-cols-3 gap-4 justify-items-stretch">
         {dataStructures.map((topic) => (
           <Link to={`data-structures/${topic.url}`} key={topic.url}>
@@ -172,12 +181,12 @@ export const Home: React.FC = () => {
           </Link>
         ))}
       </div>
-      <H1>Algorithms</H1>
+      <H1 className="text-base-content">Algorithms</H1>
       <div className="flex flex-col gap-2">
         {algorithmList.map((algorithm) => (
           <>
-            <H2 className="text-base-content/75 capitalize">
-              {algorithm.dataStructure}
+            <H2 className="text-base-content/50 capitalize">
+              {algorithm.dataStructure.replace("-", " ")}
             </H2>
             <div className="flex flex-col gap-1">
               {algorithm.algos.map((algo) => (

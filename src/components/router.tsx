@@ -27,6 +27,9 @@ const BinarySearch = lazy(
 );
 const Sorting1 = lazy(() => import("../pages/algorithms/list/sorting-1"));
 const Sorting2 = lazy(() => import("../pages/algorithms/list/sorting-2"));
+const C2Pointers = lazy(
+  () => import("../pages/algorithms/linked-list/2-pointers")
+);
 
 export const router = createBrowserRouter([
   {
@@ -116,7 +119,6 @@ export const router = createBrowserRouter([
       },
       {
         path: "/algorithms",
-
         children: [
           {
             path: "list",
@@ -132,6 +134,15 @@ export const router = createBrowserRouter([
               {
                 path: "sorting-2",
                 element: <Sorting2 />,
+              },
+            ],
+          },
+          {
+            path: "linked-list",
+            children: [
+              {
+                path: "2-pointers",
+                element: <C2Pointers />,
               },
             ],
           },
