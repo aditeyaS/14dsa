@@ -19,6 +19,7 @@ import {
   StackIcon,
   StringIcon,
   TreeIcon,
+  TrieIcon,
   TupleIcon,
 } from "../icons";
 import { H1, H2 } from "../components";
@@ -113,6 +114,11 @@ const dataStructures: Topic[] = [
     url: "binary-tree",
     name: "Binary Tree",
     icon: <BinaryTreeIcon />,
+  },
+  {
+    url: "trie",
+    name: "Trie",
+    icon: <TrieIcon />,
   },
 ];
 

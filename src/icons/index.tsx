@@ -30,3 +30,4 @@ export { BrainIcon } from "./brain";
 export { ArrowUp } from "./arrow-up";
 export { CircularLinkedListIcon } from "./circular-linked-list";
 export { DoublyLinkedListIcon } from "./doubly-linked-list";
+export { TrieIcon } from "./trie";
