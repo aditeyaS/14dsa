@@ -2,6 +2,7 @@ import { lazy } from "react";
 import { createBrowserRouter } from "react-router-dom";
 import { AppContainer } from "./app-container";
 import { Home } from "../pages";
+const NotFound = lazy(() => import("../pages/not-found"));
 // basic
 const Analysis = lazy(() => import("../pages/basics/analysis"));
 const Recursion = lazy(() => import("../pages/basics/recursion"));
@@ -40,6 +41,7 @@ const C2Pointers = lazy(
 export const router = createBrowserRouter([
   {
     element: <AppContainer />,
+    errorElement: <NotFound />,
     children: [
       {
         path: "/",
