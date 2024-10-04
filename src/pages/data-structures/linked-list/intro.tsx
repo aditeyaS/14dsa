@@ -1,4 +1,4 @@
-import { CodeBlock, H2 } from "../../../components";
+import { CodeBlock } from "../../../components";
 
 const llNode = `class Node:
   def __init__(self, val):
