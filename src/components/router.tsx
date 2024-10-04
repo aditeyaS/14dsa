@@ -17,6 +17,9 @@ const LinkedList = lazy(() => import("../pages/data-structures/linked-list"));
 const CircularLinkedList = lazy(
   () => import("../pages/data-structures/circular-linked-list")
 );
+const DoublyLinkedList = lazy(
+  () => import("../pages/data-structures/doubly-linked-list")
+);
 const Matrix = lazy(() => import("../pages/data-structures/matrix"));
 const Deque = lazy(() => import("../pages/data-structures/deque"));
 const Stack = lazy(() => import("../pages/data-structures/stack"));
@@ -93,6 +96,10 @@ export const router = createBrowserRouter([
           {
             path: "circular-linked-list",
             element: <CircularLinkedList />,
+          },
+          {
+            path: "doubly-linked-list",
+            element: <DoublyLinkedList />,
           },
           {
             path: "matrix",

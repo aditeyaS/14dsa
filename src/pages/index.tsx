@@ -7,6 +7,7 @@ import {
   CircularLinkedListIcon,
   DequeIcon,
   DictionaryIcon,
+  DoublyLinkedListIcon,
   HeapIcon,
   LinkedListIcon,
   ListIcon,
@@ -74,9 +75,9 @@ const dataStructures: Topic[] = [
     icon: <CircularLinkedListIcon />,
   },
   {
-    url: "matrix",
-    name: "Matrix",
-    icon: <MatrixIcon />,
+    url: "doubly-linked-list",
+    name: "Doubly Linked List",
+    icon: <DoublyLinkedListIcon />,
   },
   {
     url: "deque",
@@ -92,6 +93,11 @@ const dataStructures: Topic[] = [
     url: "queue",
     name: "Queue",
     icon: <QueueIcon />,
+  },
+  {
+    url: "matrix",
+    name: "Matrix",
+    icon: <MatrixIcon />,
   },
   {
     url: "heap",
