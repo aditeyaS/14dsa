@@ -174,7 +174,7 @@ const algorithmList: Algorithm[] = [
   },
 ];
 
-export const Home: React.FC = () => {
+const Home: React.FC = () => {
   return (
     <div className="px-24">
       <H1 className="text-base-content">Basic</H1>
@@ -224,3 +224,5 @@ export const Home: React.FC = () => {
     </div>
   );
 };
+
+export default Home;
