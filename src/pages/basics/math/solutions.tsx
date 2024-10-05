@@ -1,4 +1,10 @@
-import { Alert, CodeBlock, H1, SolutionBlock } from "../../../components";
+import {
+  Alert,
+  CodeBlock,
+  H1,
+  PageSectionContainer,
+  SolutionBlock,
+} from "../../../components";
 
 const gcd = `def gcd(a, b): # Euclidean algorithm
     while a != b:
@@ -22,7 +28,7 @@ const xPowerN = `def power(x, n):
 
 export const Solutions = () => {
   return (
-    <div className="flex flex-col gap-4">
+    <PageSectionContainer>
       <H1>Common solutions</H1>
       <ul className="flex flex-col gap-1">
         <li>
@@ -37,6 +43,6 @@ export const Solutions = () => {
           </SolutionBlock>
         </li>
       </ul>
-    </div>
+    </PageSectionContainer>
   );
 };

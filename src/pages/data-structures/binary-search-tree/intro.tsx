@@ -1,13 +1,15 @@
+import { LI, PageSectionContainer, UL } from "../../../components";
+
 export const Intro = () => {
   return (
-    <div className="flex flex-col gap-4">
-      <ul className="text-xl list-disc list-inside">
-        <li>{`left.val < right.val`}</li>
-        <li>all keys are typically distinct</li>
-        <li>search, insert, delete - O(log n)</li>
-        <li>find closest - O(log n)</li>
-        <li>sorted traversal - O(n)</li>
-      </ul>
-    </div>
+    <PageSectionContainer>
+      <UL>
+        <LI>{`left.val < right.val`}</LI>
+        <LI>all keys are typically distinct</LI>
+        <LI>search, insert, delete - O(log n)</LI>
+        <LI>find closest - O(log n)</LI>
+        <LI>sorted traversal - O(n)</LI>
+      </UL>
+    </PageSectionContainer>
   );
 };

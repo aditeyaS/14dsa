@@ -1,4 +1,11 @@
-import { CodeBlock } from "../../../components";
+import {
+  CodeBlock,
+  H2,
+  LI,
+  PageSectionContainer,
+  Section,
+  UL,
+} from "../../../components";
 
 const node = `class Node:
     def __init__(self, val):
@@ -42,35 +49,35 @@ const dl = `def delLast(head):
 
 export const Intro = () => {
   return (
-    <div className="flex flex-col gap-4">
-      <ul className="text-xl list-disc list-inside">
-        <li>the next of the last node points at head</li>
-        <li>
+    <PageSectionContainer>
+      <UL>
+        <LI>the next of the last node points at head</LI>
+        <LI>
           Advantage: traverse in both dir, insert/delete before node,
           insert/delete form both ends in O(1) by maintaining tail
-        </li>
-        <li>Disadvantages: extra space, complex code</li>
-        <li>
-          Node
-          <CodeBlock>{node}</CodeBlock>
-        </li>
-        <li>
-          Insert at beginning
-          <CodeBlock>{iab}</CodeBlock>
-        </li>
-        <li>
-          Insert at end
-          <CodeBlock>{iae}</CodeBlock>
-        </li>
-        <li>
-          Delete first
-          <CodeBlock>{df}</CodeBlock>
-        </li>
-        <li>
-          Delete last
-          <CodeBlock>{dl}</CodeBlock>
-        </li>
-      </ul>
-    </div>
+        </LI>
+        <LI>Disadvantages: extra space, complex code</LI>
+      </UL>
+      <Section>
+        <H2>Node</H2>
+        <CodeBlock>{node}</CodeBlock>
+      </Section>
+      <Section>
+        <H2>Insert at beginning</H2>
+        <CodeBlock>{iab}</CodeBlock>
+      </Section>
+      <Section>
+        <H2>Insert at end</H2>
+        <CodeBlock>{iae}</CodeBlock>
+      </Section>
+      <Section>
+        <H2>Delete first</H2>
+        <CodeBlock>{df}</CodeBlock>
+      </Section>
+      <Section>
+        <H2>Delete last</H2>
+        <CodeBlock>{dl}</CodeBlock>
+      </Section>
+    </PageSectionContainer>
   );
 };

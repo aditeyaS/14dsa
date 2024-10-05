@@ -1,5 +1,12 @@
 import React from "react";
-import { CodeBlock, H2 } from "../../../../components";
+import {
+  CodeBlock,
+  Complexity,
+  H2,
+  PageSectionContainer,
+  Section,
+  TEXT,
+} from "../../../../components";
 
 const searchR = `def search(root, x):
   if root == None:
@@ -47,26 +54,26 @@ const insertI = `def insert(root, x):
 
 const Intro: React.FC = () => {
   return (
-    <div className="flex flex-col gap-4">
-      <div className="flex flex-col gap-1">
+    <PageSectionContainer>
+      <Section>
         <H2>Search</H2>
-        <span>Recursive</span>
-        <span>Time: O(h) | Space: O(h)</span>
+        <TEXT>Recursive</TEXT>
+        <Complexity time="O(h)" space="O(h)" />
         <CodeBlock>{searchR}</CodeBlock>
-        <span>Iterative</span>
-        <span>Time: O(h) | Space: O(1)</span>
+        <TEXT>Iterative</TEXT>
+        <Complexity time="O(h)" space="O(1)" />
         <CodeBlock>{searchI}</CodeBlock>
-      </div>
-      <div className="flex flex-col gap-1">
+      </Section>
+      <Section>
         <H2>Insert</H2>
-        <span>Recursive</span>
-        <span>Time: O(h) | Space: O(h)</span>
+        <TEXT>Recursive</TEXT>
+        <Complexity time="O(h)" space="O(h)" />
         <CodeBlock>{insertR}</CodeBlock>
-        <span>Iterative</span>
-        <span>Time: O(h) | Space: O(1)</span>
+        <TEXT>Iterative</TEXT>
+        <Complexity time="O(h)" space="O(1)" />
         <CodeBlock>{insertI}</CodeBlock>
-      </div>
-    </div>
+      </Section>
+    </PageSectionContainer>
   );
 };
 

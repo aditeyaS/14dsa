@@ -1,4 +1,11 @@
-import { CodeBlock, H2 } from "../../../components";
+import {
+  CodeBlock,
+  H2,
+  LI,
+  PageSectionContainer,
+  Section,
+  UL,
+} from "../../../components";
 
 const init = `cols = 4
 rows = 2
@@ -30,14 +37,18 @@ while L <= R and T <= B:
 
 export const Intro = () => {
   return (
-    <div className="flex flex-col gap-4">
-      <ul className="text-xl list-disc list-inside">
-        <li>2D array</li>
-      </ul>
-      <H2>Initialization</H2>
-      <CodeBlock>{init}</CodeBlock>
-      <H2>Spiral</H2>
-      <CodeBlock>{spiral}</CodeBlock>
-    </div>
+    <PageSectionContainer>
+      <UL>
+        <LI>2D array</LI>
+      </UL>
+      <Section>
+        <H2>Initialization</H2>
+        <CodeBlock>{init}</CodeBlock>
+      </Section>
+      <Section>
+        <H2>Spiral</H2>
+        <CodeBlock>{spiral}</CodeBlock>
+      </Section>
+    </PageSectionContainer>
   );
 };

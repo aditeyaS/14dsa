@@ -1,4 +1,12 @@
-import { Alert, CodeBlock, H2 } from "../../../components";
+import {
+  Alert,
+  CodeBlock,
+  H2,
+  LI,
+  PageSectionContainer,
+  Section,
+  UL,
+} from "../../../components";
 
 const init = `from collections import deque
 d = deque()`;
@@ -26,21 +34,29 @@ d[-1]`;
 
 export const Intro = () => {
   return (
-    <div className="flex flex-col gap-4">
-      <ul className="text-xl list-disc list-inside">
-        <li>doubly ended queue</li>
-        <li>insert/delete at both ends - O(1)</li>
-        <li>Application: Stack & Queue; history of actions</li>
-      </ul>
-      <H2>Initialization</H2>
-      <CodeBlock>{init}</CodeBlock>
-      <H2>Left operations</H2>
-      <CodeBlock>{leftOp}</CodeBlock>
-      <H2>Right operations</H2>
-      <CodeBlock>{rightOp}</CodeBlock>
-      <H2>Others</H2>
-      <CodeBlock>{others}</CodeBlock>
+    <PageSectionContainer>
+      <UL>
+        <LI>doubly ended queue</LI>
+        <LI>insert/delete at both ends - O(1)</LI>
+        <LI>Application: Stack & Queue; history of actions</LI>
+      </UL>
+      <Section>
+        <H2>Initialization</H2>
+        <CodeBlock>{init}</CodeBlock>
+      </Section>
+      <Section>
+        <H2>Left operations</H2>
+        <CodeBlock>{leftOp}</CodeBlock>
+      </Section>
+      <Section>
+        <H2>Right operations</H2>
+        <CodeBlock>{rightOp}</CodeBlock>
+      </Section>
+      <Section>
+        <H2>Others</H2>
+        <CodeBlock>{others}</CodeBlock>
+      </Section>
       <Alert type="Caution">Slicing is not allowed in deque</Alert>
-    </div>
+    </PageSectionContainer>
   );
 };

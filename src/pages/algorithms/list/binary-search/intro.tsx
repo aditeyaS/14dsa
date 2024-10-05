@@ -1,5 +1,12 @@
 import React from "react";
-import { CodeBlock, LI, UL } from "../../../../components";
+import {
+  CodeBlock,
+  Complexity,
+  LI,
+  PageSectionContainer,
+  Section,
+  UL,
+} from "../../../../components";
 
 const binarySearch = `l = 0
 r = len(arr) - 1
@@ -15,13 +22,17 @@ return -1`;
 
 const Intro: React.FC = () => {
   return (
-    <div className="flex flex-col gap-4">
-      <UL>
-        <LI>Used for searching in sorted array</LI>
-        <LI>Time: O(log n)</LI>
-      </UL>
-      <CodeBlock>{binarySearch}</CodeBlock>
-    </div>
+    <PageSectionContainer>
+      <Section>
+        <UL>
+          <LI>Used for searching in sorted array</LI>
+          <LI>
+            <Complexity time="O(log n)" space="O(1)" />
+          </LI>
+        </UL>
+        <CodeBlock>{binarySearch}</CodeBlock>
+      </Section>
+    </PageSectionContainer>
   );
 };
 

@@ -1,4 +1,12 @@
-import { Alert, CodeBlock, H2 } from "../../../components";
+import {
+  Alert,
+  CodeBlock,
+  H2,
+  LI,
+  PageSectionContainer,
+  Section,
+  UL,
+} from "../../../components";
 
 const listImplementation = `s = []
 s.append(10) # push
@@ -30,32 +38,40 @@ const llImplementation = `class Stack:
 
 export const Intro = () => {
   return (
-    <div className="flex flex-col gap-4">
-      <ul className="text-xl list-disc list-inside">
-        <li>LIFO (last in first out) data structure</li>
-        <li>Underflow: pop or peek on empty stack</li>
-        <li>Overflow: push on a full stack</li>
-        <li>
+    <PageSectionContainer>
+      <UL>
+        <LI>LIFO (last in first out) data structure</LI>
+        <LI>Underflow: pop or peek on empty stack</LI>
+        <LI>Overflow: push on a full stack</LI>
+        <LI>
           Applications: recursive function calls; balanced parenthesis;
           undo/redo
-        </li>
-      </ul>
-      <H2>List implementation</H2>
-      <CodeBlock>{listImplementation}</CodeBlock>
-      <H2>Deque implementation</H2>
-      <CodeBlock>{dequeImplementation}</CodeBlock>
-      <Alert type="Important">
-        <CodeBlock>from collections import deque</CodeBlock>
-      </Alert>
-      <H2>Linked List implementation</H2>
-      <CodeBlock>{llImplementation}</CodeBlock>
-      <Alert type="Tip">
-        Use deque for stack; better performance (uses doubly linked list)
-      </Alert>
+        </LI>
+      </UL>
+      <Section>
+        <H2>List implementation</H2>
+        <CodeBlock>{listImplementation}</CodeBlock>
+      </Section>
+      <Section>
+        <H2>Deque implementation</H2>
+        <CodeBlock>{dequeImplementation}</CodeBlock>
+      </Section>
+      <Section>
+        <Alert type="Important">
+          <CodeBlock>from collections import deque</CodeBlock>
+        </Alert>
+        <Alert type="Tip">
+          Use deque for stack; better performance (uses doubly linked list)
+        </Alert>
+      </Section>
       <Alert type="Note">
         python also has LIFO queue; but its used in multithreading
         <CodeBlock>from queue import LifoQueue</CodeBlock>
       </Alert>
-    </div>
+      <Section>
+        <H2>Linked List implementation</H2>
+        <CodeBlock>{llImplementation}</CodeBlock>
+      </Section>
+    </PageSectionContainer>
   );
 };

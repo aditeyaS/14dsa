@@ -1,4 +1,12 @@
-import { Alert, CodeBlock, H2 } from "../../../components";
+import {
+  Alert,
+  CodeBlock,
+  H2,
+  LI,
+  PageSectionContainer,
+  Section,
+  UL,
+} from "../../../components";
 
 const init = `# Tail recursive
 def fun(n):
@@ -20,20 +28,29 @@ def fact(n):
 
 export const Intro = () => {
   return (
-    <div className="flex flex-col gap-4">
-      <H2>Tail Recursion</H2>
-      <ul className="text-xl list-disc list-inside">
-        <li>
-          A function is tail recursive if the function does not do anything
-          after the last recursive call
-        </li>
-        <li>
-          {`Modern compilers replace tail recursion with goto -> Tail call elimination`}
-        </li>
-        <li>Python does not do tail call elimination</li>
-      </ul>
-      <Alert type="Note">Python does not do tail call elimination</Alert>
-      <CodeBlock>{init}</CodeBlock>
-    </div>
+    <PageSectionContainer>
+      <Section>
+        <UL>
+          <LI>function that calls itself</LI>
+        </UL>
+      </Section>
+      <Section>
+        <H2>Tail Recursion</H2>
+        <UL>
+          <LI>
+            A function is tail recursive if the function does not do anything
+            after the last recursive call
+          </LI>
+          <LI>
+            {
+              "Modern compilers replace tail recursion with goto -> Tail call elimination"
+            }
+          </LI>
+          <LI>Python does not do tail call elimination</LI>
+        </UL>
+        <Alert type="Note">Python does not do tail call elimination</Alert>
+        <CodeBlock>{init}</CodeBlock>
+      </Section>
+    </PageSectionContainer>
   );
 };

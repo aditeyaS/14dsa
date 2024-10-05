@@ -1,7 +1,11 @@
-import { CodeBlock, H2 } from "../../../components";
+import {
+  CodeBlock,
+  H2,
+  PageSectionContainer,
+  Section,
+} from "../../../components";
 
 const init = `import math
-
 math.ceil(x)
 math.floor(x)
 math.gcd(*integers) # GCD or HCF
@@ -24,15 +28,23 @@ math.inf # similar to float("inf)
 
 export const Intro = () => {
   return (
-    <div className="flex flex-col gap-4">
-      <H2>Number-theoretic and representation functions</H2>
-      <CodeBlock>{init}</CodeBlock>
-      <H2>Power and log functions</H2>
-      <CodeBlock>{powerAndLog}</CodeBlock>
-      <H2>Dealing with max and min</H2>
-      <CodeBlock>{maxMin}</CodeBlock>
-      <H2>Constants</H2>
-      <CodeBlock>{constant}</CodeBlock>
-    </div>
+    <PageSectionContainer>
+      <Section>
+        <H2>Number-theoretic and representation functions</H2>
+        <CodeBlock>{init}</CodeBlock>
+      </Section>
+      <Section>
+        <H2>Power and log functions</H2>
+        <CodeBlock>{powerAndLog}</CodeBlock>
+      </Section>
+      <Section>
+        <H2>Dealing with max and min</H2>
+        <CodeBlock>{maxMin}</CodeBlock>
+      </Section>
+      <Section>
+        <H2>Constants</H2>
+        <CodeBlock>{constant}</CodeBlock>
+      </Section>
+    </PageSectionContainer>
   );
 };

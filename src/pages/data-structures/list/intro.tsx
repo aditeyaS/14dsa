@@ -1,4 +1,10 @@
-import { Alert, CodeBlock, H2 } from "../../../components";
+import {
+  Alert,
+  CodeBlock,
+  H2,
+  PageSectionContainer,
+  Section,
+} from "../../../components";
 
 const init = `arr = []
 arr = list()
@@ -49,31 +55,43 @@ l.sort(key=myFun)`;
 
 export const Intro = () => {
   return (
-    <div className="flex flex-col gap-4">
-      <H2>Initialization</H2>
-      <CodeBlock>{init}</CodeBlock>
-      <H2>Insert</H2>
-      <CodeBlock>{insert}</CodeBlock>
-      <H2>Access</H2>
-      <CodeBlock>{access}</CodeBlock>
-      <Alert type="Caution">
-        arr.index(item) gives error if item is not present
-      </Alert>
-      <H2>Delete</H2>
-      <CodeBlock>{del}</CodeBlock>
-      <Alert type="Caution">
-        arr.remove(item) gives error if item is not present
-      </Alert>
-      <Alert type="Tip">
-        Use another data structure if there are lot of delete
-      </Alert>
-      <H2>Others</H2>
-      <CodeBlock>{others}</CodeBlock>
-      <H2>Sorting objects</H2>
-      <CodeBlock>{listOperations}</CodeBlock>
-      <Alert type="Important">
-        sort() only works for array and sorted() works for any iterable
-      </Alert>
-    </div>
+    <PageSectionContainer>
+      <Section>
+        <H2>Initialization</H2>
+        <CodeBlock>{init}</CodeBlock>
+      </Section>
+      <Section>
+        <H2>Insert</H2>
+        <CodeBlock>{insert}</CodeBlock>
+      </Section>
+      <Section>
+        <H2>Access</H2>
+        <CodeBlock>{access}</CodeBlock>
+        <Alert type="Caution">
+          arr.index(item) gives error if item is not present
+        </Alert>
+      </Section>
+      <Section>
+        <H2>Delete</H2>
+        <CodeBlock>{del}</CodeBlock>
+        <Alert type="Caution">
+          arr.remove(item) gives error if item is not present
+        </Alert>
+        <Alert type="Tip">
+          Use another data structure if there are lot of delete
+        </Alert>
+      </Section>
+      <Section>
+        <H2>Others</H2>
+        <CodeBlock>{others}</CodeBlock>
+      </Section>
+      <Section>
+        <H2>Sorting objects</H2>
+        <CodeBlock>{listOperations}</CodeBlock>
+        <Alert type="Important">
+          sort() only works for array and sorted() works for any iterable
+        </Alert>
+      </Section>
+    </PageSectionContainer>
   );
 };

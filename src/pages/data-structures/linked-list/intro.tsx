@@ -1,4 +1,11 @@
-import { CodeBlock } from "../../../components";
+import {
+  CodeBlock,
+  H2,
+  LI,
+  PageSectionContainer,
+  Section,
+  UL,
+} from "../../../components";
 
 const node = `class Node:
   def __init__(self, val):
@@ -59,42 +66,42 @@ const de = `def delEnd(head):
 
 export const Intro = () => {
   return (
-    <div className="flex flex-col gap-4">
-      <ul className="text-xl list-disc list-inside">
-        <li>Nodes stored in non contiguous memory</li>
-        <li>
+    <PageSectionContainer>
+      <UL>
+        <LI>Nodes stored in non contiguous memory</LI>
+        <LI>
           Applications: Round robin, places where insert/delete at beginning
           should be O(1)
-        </li>
-        <li>
-          Node
-          <CodeBlock>{node}</CodeBlock>
-        </li>
-        <li>
-          Search
-          <CodeBlock>{search}</CodeBlock>
-        </li>
-        <li>
-          Insert at beginning
-          <CodeBlock>{iab}</CodeBlock>
-        </li>
-        <li>
-          Insert at end
-          <CodeBlock>{iae}</CodeBlock>
-        </li>
-        <li>
-          Insert at index
-          <CodeBlock>{iai}</CodeBlock>
-        </li>
-        <li>
-          Delete first
-          <CodeBlock>{df}</CodeBlock>
-        </li>
-        <li>
-          Delete end
-          <CodeBlock>{de}</CodeBlock>
-        </li>
-      </ul>
-    </div>
+        </LI>
+      </UL>
+      <Section>
+        <H2>Node</H2>
+        <CodeBlock>{node}</CodeBlock>
+      </Section>
+      <Section>
+        <H2>Search</H2>
+        <CodeBlock>{search}</CodeBlock>
+      </Section>
+      <Section>
+        <H2>Insert at beginning</H2>
+        <CodeBlock>{iab}</CodeBlock>
+      </Section>
+      <Section>
+        <H2>Insert at end</H2>
+        <CodeBlock>{iae}</CodeBlock>
+      </Section>
+      <Section>
+        <H2>Insert at index</H2>
+        <CodeBlock>{iai}</CodeBlock>
+      </Section>
+      <Section>
+        <H2>Delete first</H2>
+        <CodeBlock>{df}</CodeBlock>
+      </Section>
+      <Section>
+        <H2>Delete end</H2>
+        <CodeBlock>{de}</CodeBlock>
+      </Section>
+    </PageSectionContainer>
   );
 };

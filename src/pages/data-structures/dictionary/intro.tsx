@@ -1,4 +1,12 @@
-import { Alert, CodeBlock, H2 } from "../../../components";
+import {
+  Alert,
+  CodeBlock,
+  H2,
+  LI,
+  PageSectionContainer,
+  Section,
+  UL,
+} from "../../../components";
 
 const init = `d = {} 
 d = dict()`;
@@ -32,22 +40,32 @@ d['fruits'].append('apple')`;
 
 export const Intro = () => {
   return (
-    <div className="flex flex-col gap-4">
-      <ul className="text-xl list-disc list-inside">
-        <li>key value pairs</li>
-        <li>unordered</li>
-        <li>O(1) for search, insert, delete</li>
-      </ul>
-      <H2>Initialization</H2>
-      <CodeBlock>{init}</CodeBlock>
-      <H2>Insert</H2>
-      <CodeBlock>{insert}</CodeBlock>
-      <H2>Access</H2>
-      <CodeBlock>{access}</CodeBlock>
-      <H2>Delete</H2>
-      <CodeBlock>{del}</CodeBlock>
-      <H2>Others</H2>
-      <CodeBlock>{others}</CodeBlock>
+    <PageSectionContainer>
+      <UL>
+        <LI>key value pairs</LI>
+        <LI>unordered</LI>
+        <LI>O(1) for search, insert, delete</LI>
+      </UL>
+      <Section>
+        <H2>Initialization</H2>
+        <CodeBlock>{init}</CodeBlock>
+      </Section>
+      <Section>
+        <H2>Insert</H2>
+        <CodeBlock>{insert}</CodeBlock>
+      </Section>
+      <Section>
+        <H2>Access</H2>
+        <CodeBlock>{access}</CodeBlock>
+      </Section>
+      <Section>
+        <H2>Delete</H2>
+        <CodeBlock>{del}</CodeBlock>
+      </Section>
+      <Section>
+        <H2>Others</H2>
+        <CodeBlock>{others}</CodeBlock>
+      </Section>
       <Alert type="Caution">
         The dictionary key should be immutable. Use tuple instead of list.
       </Alert>
@@ -57,6 +75,6 @@ export const Intro = () => {
       <Alert type="Tip">
         <CodeBlock>{ddTip}</CodeBlock>
       </Alert>
-    </div>
+    </PageSectionContainer>
   );
 };

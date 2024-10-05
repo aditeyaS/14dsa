@@ -1,5 +1,12 @@
 import React from "react";
-import { CodeBlock, H2 } from "../../../../components";
+import {
+  CodeBlock,
+  H2,
+  LI,
+  PageSectionContainer,
+  Section,
+  UL,
+} from "../../../../components";
 
 const slowFast = `def getMiddle(head):
     if not head:
@@ -27,17 +34,17 @@ def nthNodeFromEnd(head, n):
 
 const Intro: React.FC = () => {
   return (
-    <div className="flex flex-col gap-4">
-      <div className="flex flex-col gap-1">
+    <PageSectionContainer>
+      <Section>
         <H2>Slow fast</H2>
-        <ul className="text-xl list-disc list-inside">
-          <li>
+        <UL>
+          <LI>
             We take two pointers and move them at different speeds. Examples:
-          </li>
-        </ul>
+          </LI>
+        </UL>
         <CodeBlock>{slowFast}</CodeBlock>
-      </div>
-    </div>
+      </Section>
+    </PageSectionContainer>
   );
 };
 

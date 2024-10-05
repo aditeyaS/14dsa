@@ -1,4 +1,12 @@
-import { CodeBlock, H1, SolutionBlock } from "../../../../components";
+import {
+  CodeBlock,
+  Complexity,
+  H1,
+  PageSectionContainer,
+  Section,
+  SolutionBlock,
+  TEXT,
+} from "../../../../components";
 
 const height = `def height(root): # h1
     if root == None:
@@ -9,20 +17,16 @@ const height = `def height(root): # h1
 
 export const Solutions = () => {
   return (
-    <div className="flex flex-col gap-4">
+    <PageSectionContainer>
       <H1>Common solutions</H1>
-      <ul className="flex flex-col gap-1">
-        <li>
-          <SolutionBlock title="height of tree">
-            <ul className="text-md list-disc list-inside">
-              <li>1st convention: number of nodes on longest path (h1)</li>
-              <li>2nd convention: number of edges on longest path (h2)</li>
-            </ul>
-            <span>Time: θ(n) | Space: θ(h)</span>
-            <CodeBlock>{height}</CodeBlock>
-          </SolutionBlock>
-        </li>
-      </ul>
-    </div>
+      <Section>
+        <SolutionBlock title="height of tree">
+          <TEXT>- 1st convention: number of nodes on longest path (h1)</TEXT>
+          <TEXT>- 2nd convention: number of edges on longest path (h2)</TEXT>
+          <Complexity time="θ(n)" space="θ(h)" />
+          <CodeBlock>{height}</CodeBlock>
+        </SolutionBlock>
+      </Section>
+    </PageSectionContainer>
   );
 };

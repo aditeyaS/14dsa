@@ -1,5 +1,11 @@
 import React from "react";
-import { CodeBlock, H2 } from "../../../../components";
+import {
+  CodeBlock,
+  Complexity,
+  H2,
+  PageSectionContainer,
+  Section,
+} from "../../../../components";
 
 const levelOrder = `from collections import deque
 def levelOrderTraversal(root):
@@ -17,13 +23,13 @@ def levelOrderTraversal(root):
 
 const Intro: React.FC = () => {
   return (
-    <div className="flex flex-col gap-4">
-      <div className="flex flex-col gap-1">
+    <PageSectionContainer>
+      <Section>
         <H2>Level order traversal</H2>
-        <span>Time: θ(n) | Space: O(width of BT)</span>
+        <Complexity time="θ(n)" space="O(width of BT)" />
         <CodeBlock>{levelOrder}</CodeBlock>
-      </div>
-    </div>
+      </Section>
+    </PageSectionContainer>
   );
 };
 

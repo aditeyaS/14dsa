@@ -1,5 +1,12 @@
 import React from "react";
-import { H2 } from "../../../components";
+import {
+  H2,
+  LI,
+  PageSectionContainer,
+  Section,
+  TEXT,
+  UL,
+} from "../../../components";
 import { Chart } from "react-google-charts";
 import { useTheme } from "../../../components/theme-provider";
 
@@ -44,13 +51,15 @@ export const Intro: React.FC = () => {
     },
   };
   return (
-    <div className="flex flex-col gap-4">
-      <H2>Order of growth</H2>
-      <span className="text-xl">
-        {
-          "c < log(log n) < log n < n^1/3 < n^1/2 < n < n^2 < n^3 < n^4 < 2^n < n^n"
-        }
-      </span>
+    <PageSectionContainer>
+      <Section>
+        <H2>Order of growth</H2>
+        <TEXT>
+          {
+            "c < log(log n) < log n < n^1/3 < n^1/2 < n < n^2 < n^3 < n^4 < 2^n < n^n"
+          }
+        </TEXT>
+      </Section>
       <Chart
         chartType="LineChart"
         data={chartData}
@@ -58,45 +67,55 @@ export const Intro: React.FC = () => {
         width="100%"
         options={options}
       />
-      <H2>Big O</H2>
-      <ul className="list-disc list-inside">
-        <li>
-          {
-            "We say f(n)=O(g(n)) iff there exists constants c and n0 such that f(n)<=cg(n) for all n>=n0"
-          }
-        </li>
-        <li>
-          {"{n/4, 2n + 3, ..., n/100000, log(n) + 100} ∈ O(n) (equal or less)"}
-        </li>
-        <li>{"Upper bound"}</li>
-      </ul>
-      <H2>Omega</H2>
-      <ul className="list-disc list-inside">
-        <li>
-          {
-            "f(n) = Ω(g(n)) iff there exists positive constants c and n0 such that 0<=cg(n)<=f(n) for all n>=n0"
-          }
-        </li>
-        <li>{"{n/4, n^2,..., n^n} ∈ Ω(n)"}</li>
-        <li>{"useful when we have lower bound"}</li>
-      </ul>
-      <H2>Theta</H2>
-      <ul className="list-disc list-inside">
-        <li>
-          {
-            "f(n)=θ(g(n)) iff there exist constants c1, c2 (where c1>0 and c2>0) and n0 (where n0>=0) such that c1g(n) <= f(n) <= c2g(n) for all n>=n0"
-          }
-        </li>
-        <li>{"Exact bound"}</li>
-      </ul>
-      <H2>Space Complexity</H2>
-      <ul className="list-disc list-inside">
-        <li>
-          {
-            "Auxiallary space: Order of growth of extra space (space other than i/o)"
-          }
-        </li>
-      </ul>
-    </div>
+      <Section>
+        <H2>Big O</H2>
+        <UL>
+          <LI>
+            {
+              "We say f(n)=O(g(n)) iff there exists constants c and n0 such that f(n)<=cg(n) for all n>=n0"
+            }
+          </LI>
+          <LI>
+            {
+              "{n/4, 2n + 3, ..., n/100000, log(n) + 100} ∈ O(n) (equal or less)"
+            }
+          </LI>
+          <LI>Upper bound</LI>
+        </UL>
+      </Section>
+      <Section>
+        <H2>Omega</H2>
+        <UL>
+          <LI>
+            {
+              "f(n) = Ω(g(n)) iff there exists positive constants c and n0 such that 0<=cg(n)<=f(n) for all n>=n0"
+            }
+          </LI>
+          <LI>{"{n/4, n^2,..., n^n} ∈ Ω(n)"}</LI>
+          <LI>useful when we have lower bound</LI>
+        </UL>
+      </Section>
+
+      <Section>
+        <H2>Theta</H2>
+        <UL>
+          <LI>
+            {
+              "f(n)=θ(g(n)) iff there exist constants c1, c2 (where c1>0 and c2>0) and n0 (where n0>=0) such that c1g(n) <= f(n) <= c2g(n) for all n>=n0"
+            }
+          </LI>
+          <LI>Exact bound</LI>
+        </UL>
+      </Section>
+      <Section>
+        <H2>Space Complexity</H2>
+        <UL>
+          <LI>
+            Auxiallary space: Order of growth of extra space (space other than
+            i/o)
+          </LI>
+        </UL>
+      </Section>
+    </PageSectionContainer>
   );
 };

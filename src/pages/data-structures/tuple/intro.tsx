@@ -1,4 +1,12 @@
-import { Alert, CodeBlock, H2 } from "../../../components";
+import {
+  Alert,
+  CodeBlock,
+  H2,
+  LI,
+  PageSectionContainer,
+  Section,
+  UL,
+} from "../../../components";
 
 const init = `t = ("apple", 2, True)
 t = tuple(("apple", 2, True))
@@ -16,21 +24,27 @@ print(type(t2)) # <class 'str'>`;
 
 export const Intro = () => {
   return (
-    <div className="flex flex-col gap-4">
-      <ul className="text-xl list-disc list-inside">
-        <li>ordered</li>
-        <li>unchangeable</li>
-        <li>can have duplicates</li>
-      </ul>
-      <H2>Init</H2>
-      <CodeBlock>{init}</CodeBlock>
-      <H2>Access</H2>
-      <CodeBlock>{access}</CodeBlock>
-      <H2>Others</H2>
-      <CodeBlock>{others}</CodeBlock>
+    <PageSectionContainer>
+      <UL>
+        <LI>ordered</LI>
+        <LI>unchangeable</LI>
+        <LI>can have duplicates</LI>
+      </UL>
+      <Section>
+        <H2>Init</H2>
+        <CodeBlock>{init}</CodeBlock>
+      </Section>
+      <Section>
+        <H2>Access</H2>
+        <CodeBlock>{access}</CodeBlock>
+      </Section>
+      <Section>
+        <H2>Others</H2>
+        <CodeBlock>{others}</CodeBlock>
+      </Section>
       <Alert type="Important">
         <CodeBlock>{important}</CodeBlock>
       </Alert>
-    </div>
+    </PageSectionContainer>
   );
 };

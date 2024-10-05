@@ -1,4 +1,9 @@
-import { CodeBlock, H1, SolutionBlock } from "../../../components";
+import {
+  CodeBlock,
+  H1,
+  PageSectionContainer,
+  SolutionBlock,
+} from "../../../components";
 
 const xPowerN = `def power(x, n):
     res = 1
@@ -11,7 +16,7 @@ const xPowerN = `def power(x, n):
 
 export const Solutions = () => {
   return (
-    <div className="flex flex-col gap-4">
+    <PageSectionContainer>
       <H1>Common solutions</H1>
       <ul className="flex flex-col gap-1">
         <li>
@@ -20,6 +25,6 @@ export const Solutions = () => {
           </SolutionBlock>
         </li>
       </ul>
-    </div>
+    </PageSectionContainer>
   );
 };

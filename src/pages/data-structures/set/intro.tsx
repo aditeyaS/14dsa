@@ -1,4 +1,11 @@
-import { CodeBlock, H2 } from "../../../components";
+import {
+  CodeBlock,
+  H2,
+  LI,
+  PageSectionContainer,
+  Section,
+  UL,
+} from "../../../components";
 
 const init = `s = {10, 20}
 s = set([10, 20])
@@ -39,20 +46,28 @@ s1.issubset(s2)`;
 
 export const Intro = () => {
   return (
-    <div className="flex flex-col gap-4">
-      <ul className="text-xl list-disc list-inside">
-        <li>distinct elements</li>
-        <li>unordered</li>
-        <li>O(1) for search, insert, delete</li>
-      </ul>
-      <H2>Init</H2>
-      <CodeBlock>{init}</CodeBlock>
-      <H2>Insert</H2>
-      <CodeBlock>{insert}</CodeBlock>
-      <H2>Delete</H2>
-      <CodeBlock>{del}</CodeBlock>
-      <H2>Others</H2>
-      <CodeBlock>{others}</CodeBlock>
-    </div>
+    <PageSectionContainer>
+      <UL>
+        <LI>distinct elements</LI>
+        <LI>unordered</LI>
+        <LI>O(1) for search, insert, delete</LI>
+      </UL>
+      <Section>
+        <H2>Init</H2>
+        <CodeBlock>{init}</CodeBlock>
+      </Section>
+      <Section>
+        <H2>Insert</H2>
+        <CodeBlock>{insert}</CodeBlock>
+      </Section>
+      <Section>
+        <H2>Delete</H2>
+        <CodeBlock>{del}</CodeBlock>
+      </Section>
+      <Section>
+        <H2>Others</H2>
+        <CodeBlock>{others}</CodeBlock>
+      </Section>
+    </PageSectionContainer>
   );
 };

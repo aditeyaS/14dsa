@@ -1,5 +1,5 @@
 import React from "react";
-import { ArticleListItem, H1 } from "../../../components";
+import { ArticleListItem, H1, PageSectionContainer } from "../../../components";
 import { Article } from "../../../types";
 
 const articles: Article[] = [
@@ -22,7 +22,7 @@ const articles: Article[] = [
 
 export const Articles: React.FC = () => {
   return (
-    <div className="mt-8 flex flex-col gap-4">
+    <PageSectionContainer>
       <H1>Related Articles</H1>
       <div className="flex flex-col gap-2">
         {articles.map((article, index) => (
@@ -34,6 +34,6 @@ export const Articles: React.FC = () => {
           />
         ))}
       </div>
-    </div>
+    </PageSectionContainer>
   );
 };

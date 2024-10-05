@@ -1,5 +1,15 @@
 import React from "react";
-import { CodeBlock, H2 } from "../../../../components";
+import {
+  CodeBlock,
+  Complexity,
+  H2,
+  LI,
+  PageSectionContainer,
+  Section,
+  TEXT,
+  TEXT2,
+  UL,
+} from "../../../../components";
 
 const margeSort = `# MERGING 2 SORTED SUB ARRAY
 def merge(l, low, mid, high):
@@ -73,55 +83,60 @@ const heapSort = ``;
 
 const Intro: React.FC = () => {
   return (
-    <div className="flex flex-col gap-4">
-      <div className="flex flex-col gap-1">
+    <PageSectionContainer>
+      <Section>
         <H2>Merge Sort</H2>
-        <ul className="text-xl list-disc list-inside">
-          <li>Divide and conquer algo</li>
-          <li>Stable sorting</li>
-          <li>Time: θ(n log n) | Space: O(n)</li>
-          <li>Well suited for LL | Quick sort better for list</li>
-        </ul>
+        <UL>
+          <LI>Divide and conquer algo</LI>
+          <LI>Stable sorting</LI>
+          <LI>Well suited for LL | Quick sort better for list</LI>
+          <LI>
+            <Complexity time="θ(n log n)" space="O(n)" />
+          </LI>
+        </UL>
         <CodeBlock>{margeSort}</CodeBlock>
-      </div>
-      <div className="flex flex-col gap-1">
+      </Section>
+
+      <Section>
         <H2>Quick Sort</H2>
-        <ul className="text-xl list-disc list-inside">
-          <li>Divide and conquer algo</li>
-          <li>Worst case: O(n^2)</li>
-          <li>
+        <UL>
+          <LI>Divide and conquer algo</LI>
+          <LI>Worst case: O(n^2)</LI>
+          <LI>
             considered faster - in place, cache friendly, avg O(nlogn), tail
             recursive
-          </li>
-          <li>
+          </LI>
+          <LI>
             Array partition: Choose 1 element and bring all smaller elements on
             left and larger on right.
-          </li>
-          <li>
+          </LI>
+          <LI>
             2 partition algorithm: Lomuto & Hoare's
-            <div className="flex flex-col">
-              <span className="underline text-lg">Lumoto Partition</span>
+            <Section>
+              <TEXT className="underline">Lumoto Partition</TEXT>
               <CodeBlock>{lumotoPartition}</CodeBlock>
-              <span className="underline text-lg">Hoare's Partition</span>
-              <span>
+              <TEXT className="underline">Hoare's Partition</TEXT>
+              <TEXT2>
                 # does not guarantee that pivot element is at correct position
-              </span>
+              </TEXT2>
               <CodeBlock>{hoaresPartition}</CodeBlock>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div className="flex flex-col gap-1">
+            </Section>
+          </LI>
+        </UL>
+      </Section>
+      <Section>
         <H2>Heap Sort</H2>
-        <ul className="text-xl list-disc list-inside">
-          <li>Optimization over selection sort</li>
-          <li>Not stable sorting</li>
-          <li>Time: θ(n log n) | Space: O(1)</li>
-          <li>Used in hybrid sorting algo like Intro Sort</li>
-        </ul>
+        <UL>
+          <LI>Optimization over selection sort</LI>
+          <LI>Not stable sorting</LI>
+          <LI>Used in hybrid sorting algo like Intro Sort</LI>
+          <LI>
+            <Complexity time="θ(n log n)" space="Space: O(1)" />
+          </LI>
+        </UL>
         <CodeBlock>{heapSort}</CodeBlock>
-      </div>
-    </div>
+      </Section>
+    </PageSectionContainer>
   );
 };
 

@@ -7,10 +7,10 @@ interface ComplexityProps {
 
 export const Complexity: React.FC<ComplexityProps> = ({ time, space }) => {
   return (
-    <div className="flex gap-1 items-center">
-      <span>{time}</span>
-      <span>|</span>
-      <span>{space}</span>
-    </div>
+    <span>
+      <span>Time: {time}</span>
+      <span className="mx-2">|</span>
+      <span>Space: {space}</span>
+    </span>
   );
 };

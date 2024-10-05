@@ -1,4 +1,12 @@
-import { Alert, CodeBlock, H2 } from "../../../components";
+import {
+  Alert,
+  CodeBlock,
+  H2,
+  LI,
+  PageSectionContainer,
+  Section,
+  UL,
+} from "../../../components";
 
 const init = `import heapq
 pq = [5,20,1,30,4]
@@ -15,21 +23,23 @@ heapq.heapreplace(pq,-1)`;
 
 export const Intro = () => {
   return (
-    <div className="flex flex-col gap-4">
-      <ul className="text-xl list-disc list-inside">
-        <li>
+    <PageSectionContainer>
+      <UL>
+        <LI>
           Min Heap (highest priority item assigned lowest value); root -
           smallest
-        </li>
-        <li>Max Heap (highest priority item assigned highest value)</li>
-        <li>left(i) = 2i + 1; right(i) = 2i + 2; parent(i) = (i-1)//2</li>
-      </ul>
-      <H2>Usage</H2>
-      <CodeBlock>{init}</CodeBlock>
+        </LI>
+        <LI>Max Heap (highest priority item assigned highest value)</LI>
+        <LI>left(i) = 2i + 1; right(i) = 2i + 2; parent(i) = (i-1)//2</LI>
+      </UL>
+      <Section>
+        <H2>Usage</H2>
+        <CodeBlock>{init}</CodeBlock>
+      </Section>
       <Alert type="Important">Python implements heapq as min heap.</Alert>
       <Alert type="Tip">
         To implement max heap multiply elements by -1 before storing
       </Alert>
-    </div>
+    </PageSectionContainer>
   );
 };

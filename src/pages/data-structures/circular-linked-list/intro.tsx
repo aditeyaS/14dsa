@@ -1,4 +1,11 @@
-import { CodeBlock } from "../../../components";
+import {
+  CodeBlock,
+  H2,
+  LI,
+  PageSectionContainer,
+  Section,
+  UL,
+} from "../../../components";
 
 const node = `class Node:
   def __init__(self, val):
@@ -45,34 +52,34 @@ const df = `def delFirst(head):
 
 export const Intro = () => {
   return (
-    <div className="flex flex-col gap-4">
-      <ul className="text-xl list-disc list-inside">
-        <li>the next of the last node points at head</li>
-        <li>
+    <PageSectionContainer>
+      <UL>
+        <LI>the next of the last node points at head</LI>
+        <LI>
           Advantage: whole list can be traversed from any node; implementation
           of round robin
-        </li>
-        <li>
-          Node
-          <CodeBlock>{node}</CodeBlock>
-        </li>
-        <li>
-          Traversal
-          <CodeBlock>{traversal}</CodeBlock>
-        </li>
-        <li>
-          Insert at beginning
-          <CodeBlock>{iab}</CodeBlock>
-        </li>
-        <li>
-          Insert at end
-          <CodeBlock>{iae}</CodeBlock>
-        </li>
-        <li>
-          Delete first
-          <CodeBlock>{df}</CodeBlock>
-        </li>
-      </ul>
-    </div>
+        </LI>
+      </UL>
+      <Section>
+        <H2>Node</H2>
+        <CodeBlock>{node}</CodeBlock>
+      </Section>
+      <Section>
+        <H2>Traversal</H2>
+        <CodeBlock>{traversal}</CodeBlock>
+      </Section>
+      <Section>
+        <H2>Insert at beginning</H2>
+        <CodeBlock>{iab}</CodeBlock>
+      </Section>
+      <Section>
+        <H2>Insert at end</H2>
+        <CodeBlock>{iae}</CodeBlock>
+      </Section>
+      <Section>
+        <H2>Delete first</H2>
+        <CodeBlock>{df}</CodeBlock>
+      </Section>
+    </PageSectionContainer>
   );
 };

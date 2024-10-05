@@ -1,5 +1,13 @@
 import React from "react";
-import { CodeBlock, H2 } from "../../../../components";
+import {
+  CodeBlock,
+  Complexity,
+  H2,
+  LI,
+  PageSectionContainer,
+  Section,
+  UL,
+} from "../../../../components";
 
 const bubbleSort = `for i in range(n):
   swapped = False
@@ -27,39 +35,46 @@ const insertionSort = `for i in range(1, n):
 
 const Intro: React.FC = () => {
   return (
-    <div className="flex flex-col gap-4">
-      <ul className="text-xl list-disc list-inside">
-        <li>
+    <PageSectionContainer>
+      <UL>
+        <LI>
           Stability in sorting: Order of occurrence is maintained when values
           are same
-        </li>
-        <li>sort() and sorted() are stable</li>
-      </ul>
-      <div className="flex flex-col gap-1">
+        </LI>
+        <LI>sort() and sorted() are stable</LI>
+      </UL>
+      <Section>
         <H2>Bubble Sort</H2>
-        <ul className="text-xl list-disc list-inside">
-          <li>Stable sorting</li>
-          <li>Time: O(n^2)</li>
-        </ul>
+        <UL>
+          <LI>Stable sorting</LI>
+          <LI>
+            <Complexity time="O(n^2)" space="O(1)" />
+          </LI>
+        </UL>
         <CodeBlock>{bubbleSort}</CodeBlock>
-      </div>
-      <div className="flex flex-col gap-1">
+      </Section>
+      <Section>
         <H2>Selection Sort</H2>
-        <ul className="text-xl list-disc list-inside">
-          <li>Not stable</li>
-          <li>Time: θ(n^2)</li>
-        </ul>
+        <UL>
+          <LI>Not stable</LI>
+          <LI>
+            <Complexity time="θ(n^2)" space="O(1)" />
+          </LI>
+        </UL>
         <CodeBlock>{selectionSort}</CodeBlock>
-      </div>
-      <div className="flex flex-col gap-1">
+      </Section>
+      <Section>
         <H2>Insertion Sort</H2>
-        <ul className="text-xl list-disc list-inside">
-          <li>Stable sorting</li>
-          <li>Best: O(n) | Worst: θ(n^2)</li>
-        </ul>
+        <UL>
+          <LI>Stable sorting</LI>
+          <LI>Time: Best - O(n) | Avg,Worst - O(n^2)</LI>
+          <LI>
+            <Complexity time="O(n^2)" space="O(1)" />
+          </LI>
+        </UL>
         <CodeBlock>{insertionSort}</CodeBlock>
-      </div>
-    </div>
+      </Section>
+    </PageSectionContainer>
   );
 };
 

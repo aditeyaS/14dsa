@@ -1,4 +1,12 @@
-import { Alert, CodeBlock, H2 } from "../../../components";
+import {
+  Alert,
+  CodeBlock,
+  H2,
+  LI,
+  PageSectionContainer,
+  Section,
+  UL,
+} from "../../../components";
 
 const listImplementation = `q = []
 q.append(10) # enqueue
@@ -68,33 +76,41 @@ const circularListImplementation = `class Queue:
 
 export const Intro = () => {
   return (
-    <div className="flex flex-col gap-4">
-      <ul className="text-xl list-disc list-inside">
-        <li>FIFO (first in first out) data structure</li>
-        <li>
+    <PageSectionContainer>
+      <UL>
+        <LI>FIFO (first in first out) data structure</LI>
+        <LI>
           Applications: single resource multiple consumers; sync slow fast
           devices; OS - semaphores, FCFS scheduling
-        </li>
-        <li>Variation: dequq, priority queue, doubly ended priority queue</li>
-      </ul>
-      <H2>List implementation</H2>
-      <CodeBlock>{listImplementation}</CodeBlock>
-      <H2>Deque implementation</H2>
-      <CodeBlock>{dequeImplementation}</CodeBlock>
-      <Alert type="Important">
-        <CodeBlock>from collections import deque</CodeBlock>
-      </Alert>
-      <H2>Linked List implementation</H2>
-      <CodeBlock>{llImplementation}</CodeBlock>
-      <Alert type="Tip">Use deque for queue</Alert>
+        </LI>
+        <LI>Variation: dequq, priority queue, doubly ended priority queue</LI>
+      </UL>
+      <Section>
+        <H2>List implementation</H2>
+        <CodeBlock>{listImplementation}</CodeBlock>
+      </Section>
+      <Section>
+        <H2>Deque implementation</H2>
+        <CodeBlock>{dequeImplementation}</CodeBlock>
+      </Section>
+      <Section>
+        <Alert type="Important">
+          <CodeBlock>from collections import deque</CodeBlock>
+        </Alert>
+        <Alert type="Tip">Use deque for queue</Alert>
+      </Section>
       <Alert type="Note">
         python also has Queue; but its used in multithreading
         <CodeBlock>from queue import Queue</CodeBlock>
       </Alert>
-      <div className="flex flex-col">
-        <span className="text-xl">Implement queue using circular list</span>
+      <Section>
+        <H2>Linked List implementation</H2>
+        <CodeBlock>{llImplementation}</CodeBlock>
+      </Section>
+      <Section>
+        <H2>Implement queue using circular list</H2>
         <CodeBlock>{circularListImplementation}</CodeBlock>
-      </div>
-    </div>
+      </Section>
+    </PageSectionContainer>
   );
 };

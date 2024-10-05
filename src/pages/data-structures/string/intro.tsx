@@ -1,4 +1,11 @@
-import { CodeBlock, H2 } from "../../../components";
+import {
+  CodeBlock,
+  H2,
+  LI,
+  PageSectionContainer,
+  Section,
+  UL,
+} from "../../../components";
 
 const init = `s = "Hello World"
 
@@ -62,22 +69,34 @@ s.split(", ")`;
 
 export const Intro = () => {
   return (
-    <div className="flex flex-col gap-4">
-      <ul className="text-xl list-disc list-inside">
-        <li>immutable</li>
-      </ul>
-      <H2>Init</H2>
-      <CodeBlock>{init}</CodeBlock>
-      <H2>Access</H2>
-      <CodeBlock>{access}</CodeBlock>
-      <H2>Delete</H2>
-      <CodeBlock>{deleteCode}</CodeBlock>
-      <H2>String formatting</H2>
-      <CodeBlock>{strFormatting}</CodeBlock>
-      <H2>Others</H2>
-      <CodeBlock>{others}</CodeBlock>
-      <H2>String methods</H2>
-      <CodeBlock>{stringMethods}</CodeBlock>
-    </div>
+    <PageSectionContainer>
+      <UL>
+        <LI>immutable</LI>
+      </UL>
+      <Section>
+        <H2>Init</H2>
+        <CodeBlock>{init}</CodeBlock>
+      </Section>
+      <Section>
+        <H2>Access</H2>
+        <CodeBlock>{access}</CodeBlock>
+      </Section>
+      <Section>
+        <H2>Delete</H2>
+        <CodeBlock>{deleteCode}</CodeBlock>
+      </Section>
+      <Section>
+        <H2>String formatting</H2>
+        <CodeBlock>{strFormatting}</CodeBlock>
+      </Section>
+      <Section>
+        <H2>Others</H2>
+        <CodeBlock>{others}</CodeBlock>
+      </Section>
+      <Section>
+        <H2>String methods</H2>
+        <CodeBlock>{stringMethods}</CodeBlock>
+      </Section>
+    </PageSectionContainer>
   );
 };

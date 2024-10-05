@@ -1,5 +1,14 @@
 import React from "react";
-import { Alert, CodeBlock, H2 } from "../../../../components";
+import {
+  Alert,
+  CodeBlock,
+  Complexity,
+  H2,
+  LI,
+  PageSectionContainer,
+  Section,
+  UL,
+} from "../../../../components";
 
 const inOrder = `def inOrder(root):
     if not root:
@@ -21,31 +30,31 @@ const postOrder = `def postOrder(root):
 
 const Intro: React.FC = () => {
   return (
-    <div className="flex flex-col gap-4">
-      <ul className="text-xl list-disc list-inside">
-        <li>{`in-order: left -> root (parent P) -> right`}</li>
-        <li>{`pre-order: root -> left -> right`}</li>
-        <li>{`post-order: left -> right -> root`}</li>
-      </ul>
-      <div className="flex flex-col gap-1">
+    <PageSectionContainer>
+      <UL>
+        <LI>{`in-order: left -> root (parent P) -> right`}</LI>
+        <LI>{`pre-order: root -> left -> right`}</LI>
+        <LI>{`post-order: left -> right -> root`}</LI>
+      </UL>
+      <Section>
         <H2>In-order (LPR)</H2>
-        <span>Time: θ(n) | Space: θ(h)</span>
+        <Complexity time="θ(n)" space="θ(h)" />
         <CodeBlock>{inOrder}</CodeBlock>
-      </div>
-      <div className="flex flex-col gap-1">
+      </Section>
+      <Section>
         <H2>Pre-order (PLR)</H2>
-        <span>Time: θ(n) | Space: θ(h)</span>
+        <Complexity time="θ(n)" space="θ(h)" />
         <CodeBlock>{preOrder}</CodeBlock>
-      </div>
-      <div className="flex flex-col gap-1">
+      </Section>
+      <Section>
         <H2>Post-order (LRP)</H2>
-        <span>Time: θ(n) | Space: θ(h)</span>
+        <Complexity time="θ(n)" space="θ(h)" />
         <CodeBlock>{postOrder}</CodeBlock>
-      </div>
+      </Section>
       <Alert type="Tip">
         Prefer in-order or pre-order because they are tail recursive
       </Alert>
-    </div>
+    </PageSectionContainer>
   );
 };
 

@@ -194,7 +194,7 @@ const algorithmList: Algorithm[] = [
 const Dashboard: React.FC = () => {
   return (
     <div className="px-24">
-      <H1 className="text-base-content">Basic</H1>
+      <H1 className="text-base-content mb-4">Basic</H1>
       <div className="grid grid-cols-3 gap-4 justify-items-stretch">
         {basics.map((topic) => (
           <Link to={`/basics/${topic.url}`} key={topic.url}>
@@ -205,7 +205,7 @@ const Dashboard: React.FC = () => {
           </Link>
         ))}
       </div>
-      <H1 className="text-base-content">Data Structures</H1>
+      <H1 className="text-base-content my-4">Data Structures</H1>
       <div className="grid grid-cols-3 gap-4 justify-items-stretch">
         {dataStructures.map((topic) => (
           <Link to={`/data-structures/${topic.url}`} key={topic.url}>
@@ -216,7 +216,7 @@ const Dashboard: React.FC = () => {
           </Link>
         ))}
       </div>
-      <H1 className="text-base-content">Algorithms</H1>
+      <H1 className="text-base-content my-4">Algorithms</H1>
       <div className="flex flex-col gap-2">
         {algorithmList.map((algorithm) => (
           <>

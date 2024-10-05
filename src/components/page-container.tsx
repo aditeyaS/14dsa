@@ -20,7 +20,7 @@ export const PageContainer: React.FC<PageContainerProps> = ({
         )}
         <H1>{title}</H1>
       </div>
-      <div className="mt-10 px-24 flex flex-col gap-8">{children}</div>
+      <div className="mt-10 px-24 flex flex-col gap-16">{children}</div>
     </div>
   );
 };
