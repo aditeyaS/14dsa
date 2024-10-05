@@ -1,13 +1,15 @@
 import React from "react";
 import { PageContainer } from "../../../../components";
 import Intro from "./intro";
+import { Solutions } from "./solutions";
 
-const Sorting1: React.FC = () => {
+const DFS: React.FC = () => {
   return (
-    <PageContainer title="Sorting 1: Bubble, Selection, Insertion">
+    <PageContainer title="DFS">
       <Intro />
+      <Solutions />
     </PageContainer>
   );
 };
 
-export default Sorting1;
+export default DFS;

@@ -172,6 +172,19 @@ const algorithmList: Algorithm[] = [
       },
     ],
   },
+  {
+    dataStructure: "tree",
+    algos: [
+      {
+        url: "dfs",
+        name: "Depth First (in-order, pre-order, post-order)",
+      },
+      {
+        url: "bfs",
+        name: "Breath First",
+      },
+    ],
+  },
 ];
 
 const Dashboard: React.FC = () => {

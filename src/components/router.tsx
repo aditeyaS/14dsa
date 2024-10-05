@@ -38,6 +38,8 @@ const Sorting2 = lazy(() => import("../pages/algorithms/list/sorting-2"));
 const C2Pointers = lazy(
   () => import("../pages/algorithms/linked-list/2-pointers")
 );
+const TreeDFS = lazy(() => import("../pages/algorithms/tree/dfs"));
+const TreeBFS = lazy(() => import("../pages/algorithms/tree/bfs"));
 
 export const router = createBrowserRouter([
   {
@@ -164,6 +166,19 @@ export const router = createBrowserRouter([
               {
                 path: "2-pointers",
                 element: <C2Pointers />,
+              },
+            ],
+          },
+          {
+            path: "tree",
+            children: [
+              {
+                path: "dfs",
+                element: <TreeDFS />,
+              },
+              {
+                path: "bfs",
+                element: <TreeBFS />,
               },
             ],
           },
