@@ -1,7 +1,7 @@
 import { lazy } from "react";
 import { createBrowserRouter } from "react-router-dom";
 import { AppContainer } from "./app-container";
-const Home = lazy(() => import("../pages"));
+const Dashboard = lazy(() => import("../pages/dashboard"));
 const Landing = lazy(() => import("../pages/landing"));
 const NotFound = lazy(() => import("../pages/not-found"));
 // basic
@@ -45,12 +45,12 @@ export const router = createBrowserRouter([
     errorElement: <NotFound />,
     children: [
       {
-        path: "/landing",
+        path: "/",
         element: <Landing />,
       },
       {
-        path: "/",
-        element: <Home />,
+        path: "/dashboard",
+        element: <Dashboard />,
       },
       {
         path: "/basics",

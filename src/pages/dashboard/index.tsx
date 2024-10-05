@@ -21,8 +21,8 @@ import {
   TreeIcon,
   TrieIcon,
   TupleIcon,
-} from "../icons";
-import { H1, H2 } from "../components";
+} from "../../icons";
+import { H1, H2 } from "../../components";
 
 type Topic = {
   url: string;
@@ -174,13 +174,13 @@ const algorithmList: Algorithm[] = [
   },
 ];
 
-const Home: React.FC = () => {
+const Dashboard: React.FC = () => {
   return (
     <div className="px-24">
       <H1 className="text-base-content">Basic</H1>
       <div className="grid grid-cols-3 gap-4 justify-items-stretch">
         {basics.map((topic) => (
-          <Link to={`basics/${topic.url}`} key={topic.url}>
+          <Link to={`/basics/${topic.url}`} key={topic.url}>
             <div className="bg-base-1 p-2 drop-shadow rounded hover:bg-base-2 flex flex-col items-center">
               {topic.icon}
               <span className="text-xl text-primary">{topic.name}</span>
@@ -191,7 +191,7 @@ const Home: React.FC = () => {
       <H1 className="text-base-content">Data Structures</H1>
       <div className="grid grid-cols-3 gap-4 justify-items-stretch">
         {dataStructures.map((topic) => (
-          <Link to={`data-structures/${topic.url}`} key={topic.url}>
+          <Link to={`/data-structures/${topic.url}`} key={topic.url}>
             <div className="bg-base-1 p-2 drop-shadow rounded hover:bg-base-2 flex flex-col items-center">
               {topic.icon}
               <span className="text-xl text-primary">{topic.name}</span>
@@ -209,7 +209,7 @@ const Home: React.FC = () => {
             <div className="flex flex-col gap-1">
               {algorithm.algos.map((algo) => (
                 <Link
-                  to={`algorithms/${algorithm.dataStructure}/${algo.url}`}
+                  to={`/algorithms/${algorithm.dataStructure}/${algo.url}`}
                   key={algo.url}
                 >
                   <div className="bg-base-1 p-2 drop-shadow rounded hover:bg-base-2 flex gap-1 items-center">
@@ -225,4 +225,4 @@ const Home: React.FC = () => {
   );
 };
 
-export default Home;
+export default Dashboard;

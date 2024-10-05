@@ -27,6 +27,11 @@ d[-1]`;
 export const Intro = () => {
   return (
     <div className="flex flex-col gap-4">
+      <ul className="text-xl list-disc list-inside">
+        <li>doubly ended queue</li>
+        <li>insert/delete at both ends - O(1)</li>
+        <li>Application: Stack & Queue; history of actions</li>
+      </ul>
       <H2>Initialization</H2>
       <CodeBlock>{init}</CodeBlock>
       <H2>Left operations</H2>
