@@ -111,8 +111,8 @@ const dataStructures: Topic[] = [
     icon: <TreeIcon />,
   },
   {
-    url: "binary-tree",
-    name: "Binary Tree",
+    url: "binary-search-tree",
+    name: "Binary Search Tree",
     icon: <BinaryTreeIcon />,
   },
   {
@@ -182,6 +182,10 @@ const algorithmList: Algorithm[] = [
       {
         url: "bfs",
         name: "Breath First",
+      },
+      {
+        url: "bst-operations",
+        name: "BST operations",
       },
     ],
   },

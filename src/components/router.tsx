@@ -28,7 +28,9 @@ const Stack = lazy(() => import("../pages/data-structures/stack"));
 const Queue = lazy(() => import("../pages/data-structures/queue"));
 const Heap = lazy(() => import("../pages/data-structures/heap"));
 const Tree = lazy(() => import("../pages/data-structures/tree"));
-const BinaryTree = lazy(() => import("../pages/data-structures/binary-tree"));
+const BinarySearchTree = lazy(
+  () => import("../pages/data-structures/binary-search-tree")
+);
 // algorithms
 const BinarySearch = lazy(
   () => import("../pages/algorithms/list/binary-search")
@@ -40,6 +42,9 @@ const C2Pointers = lazy(
 );
 const TreeDFS = lazy(() => import("../pages/algorithms/tree/dfs"));
 const TreeBFS = lazy(() => import("../pages/algorithms/tree/bfs"));
+const BSTOperations = lazy(
+  () => import("../pages/algorithms/tree/bst-operations")
+);
 
 export const router = createBrowserRouter([
   {
@@ -135,8 +140,8 @@ export const router = createBrowserRouter([
             element: <Tree />,
           },
           {
-            path: "binary-tree",
-            element: <BinaryTree />,
+            path: "binary-search-tree",
+            element: <BinarySearchTree />,
           },
         ],
       },
@@ -179,6 +184,10 @@ export const router = createBrowserRouter([
               {
                 path: "bfs",
                 element: <TreeBFS />,
+              },
+              {
+                path: "bst-operations",
+                element: <BSTOperations />,
               },
             ],
           },

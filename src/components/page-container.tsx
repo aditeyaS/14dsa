@@ -1,5 +1,5 @@
 import React from "react";
-import { H1 } from "./h1";
+import { H1 } from "./text";
 
 interface PageContainerProps {
   title: string;
@@ -20,7 +20,7 @@ export const PageContainer: React.FC<PageContainerProps> = ({
         )}
         <H1>{title}</H1>
       </div>
-      <div className="mt-10 px-24">{children}</div>
+      <div className="mt-10 px-24 flex flex-col gap-8">{children}</div>
     </div>
   );
 };
