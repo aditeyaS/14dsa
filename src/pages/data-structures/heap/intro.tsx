@@ -16,30 +16,27 @@ export const Intro = () => {
   const [heapq, setHeapq] = useState<string>("");
 
   useEffect(() => {
-    const fetchMinHeap = async () => {
-      try {
-        const data = await apiClient.getCode(
-          "data-structures/heap/min_heap.py"
-        );
-        setMinHeap(data);
-      } catch (error) {
-        console.error("Failed to fetch data", error);
-      }
-    };
+    fetchHeapq();
     fetchMinHeap();
   }, []);
 
-  useEffect(() => {
-    const fetchHeapq = async () => {
-      try {
-        const data = await apiClient.getCode("data-structures/heap/heapq.py");
-        setHeapq(data);
-      } catch (error) {
-        console.error("Failed to fetch data", error);
-      }
-    };
-    fetchHeapq();
-  }, []);
+  const fetchMinHeap = async () => {
+    try {
+      const data = await apiClient.getCode("data-structures/heap/min_heap.py");
+      setMinHeap(data);
+    } catch (error) {
+      console.error("Failed to fetch data", error);
+    }
+  };
+
+  const fetchHeapq = async () => {
+    try {
+      const data = await apiClient.getCode("data-structures/heap/heapq.py");
+      setHeapq(data);
+    } catch (error) {
+      console.error("Failed to fetch data", error);
+    }
+  };
 
   return (
     <PageSectionContainer>

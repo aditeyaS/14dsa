@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   CodeBlock,
   Complexity,
@@ -8,32 +8,53 @@ import {
   Section,
   UL,
 } from "../../../../components";
-
-const bubbleSort = `for i in range(n):
-  swapped = False
-  for j in range(n - i - 1):
-    if arr[j] > arr[j + 1]:
-      arr[j], arr[j + 1] = arr[j + 1], arr[j]
-      swapped = True
-  if not swapped:
-    break`;
-
-const selectionSort = `for i in range(n):
-  minIdx = i
-  for j in range(i + 1, n):
-    if arr[i] < arr[minIdx]:
-      minIdx = i
-  arr[minIdx], arr[i] = arr[i], arr[minIdx]`;
-
-const insertionSort = `for i in range(1, n):
-  x = arr[i]
-  j = i - 1
-  while j >= 0 and x < arr[j]:
-    arr[j + 1] = arr[j]
-    j -= 1
-  arr[j + 1] = x`;
+import ApiClient from "../../../../lib/api-client";
 
 const Intro: React.FC = () => {
+  const apiClient = new ApiClient();
+  const [bubbleSort, setBubbleSort] = useState<string>("");
+  const [selectionSort, setSelectionSort] = useState<string>("");
+  const [insertionSort, setInsertionSort] = useState<string>("");
+
+  useEffect(() => {
+    fetchBubbleSort();
+    fetchSelectionSort();
+    fetchInsertionSort();
+  }, []);
+
+  const fetchBubbleSort = async () => {
+    try {
+      const data = await apiClient.getCode(
+        "algorithms/list/sorting-1/bubble_sort.py"
+      );
+      setBubbleSort(data);
+    } catch (error) {
+      console.error("Failed to fetch data", error);
+    }
+  };
+
+  const fetchSelectionSort = async () => {
+    try {
+      const data = await apiClient.getCode(
+        "algorithms/list/sorting-1/selection_sort.py"
+      );
+      setSelectionSort(data);
+    } catch (error) {
+      console.error("Failed to fetch data", error);
+    }
+  };
+
+  const fetchInsertionSort = async () => {
+    try {
+      const data = await apiClient.getCode(
+        "algorithms/list/sorting-1/insertion_sort.py"
+      );
+      setInsertionSort(data);
+    } catch (error) {
+      console.error("Failed to fetch data", error);
+    }
+  };
+
   return (
     <PageSectionContainer>
       <UL>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   CodeBlock,
   Complexity,
@@ -7,20 +7,27 @@ import {
   Section,
   UL,
 } from "../../../../components";
-
-const binarySearch = `l = 0
-r = len(arr) - 1
-while l <= r:
-    mid = (l + r) // 2
-    if arr[mid] == target:
-        return mid
-    elif arr[mid] > target:
-        r = mid - 1
-    else:
-        l = mid + 1
-return -1`;
+import ApiClient from "../../../../lib/api-client";
 
 const Intro: React.FC = () => {
+  const apiClient = new ApiClient();
+  const [binarySearch, setBinarySearch] = useState<string>("");
+
+  useEffect(() => {
+    fetchBinarySearch();
+  }, []);
+
+  const fetchBinarySearch = async () => {
+    try {
+      const data = await apiClient.getCode(
+        "algorithms/list/binary-search/binary_search.py"
+      );
+      setBinarySearch(data);
+    } catch (error) {
+      console.error("Failed to fetch data", error);
+    }
+  };
+
   return (
     <PageSectionContainer>
       <Section>
