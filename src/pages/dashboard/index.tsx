@@ -101,11 +101,6 @@ const dataStructures: Topic[] = [
     icon: <MatrixIcon />,
   },
   {
-    url: "heap",
-    name: "Heap",
-    icon: <HeapIcon />,
-  },
-  {
     url: "tree",
     name: "Tree",
     icon: <TreeIcon />,
@@ -119,6 +114,11 @@ const dataStructures: Topic[] = [
     url: "trie",
     name: "Trie",
     icon: <TrieIcon />,
+  },
+  {
+    url: "heap",
+    name: "Heap",
+    icon: <HeapIcon />,
   },
 ];
 
@@ -182,10 +182,6 @@ const algorithmList: Algorithm[] = [
       {
         url: "bfs",
         name: "Breath First",
-      },
-      {
-        url: "bst-operations",
-        name: "BST operations",
       },
     ],
   },

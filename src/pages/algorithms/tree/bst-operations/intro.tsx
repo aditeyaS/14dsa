@@ -52,6 +52,31 @@ const insertI = `def insert(root, x):
     p.right = Node(x)
   return root`;
 
+const deleteR = `def delete(root, x):
+  if root == None:
+    return
+  if root.val > x:
+    root.left = delete(root.left, x)
+  elif root.val < x:
+    root.right = delete(root.right, x)
+  else:
+    if root.left == None:
+      return root.right
+    elif root.right == None:
+      return root.left
+    else:
+      succ = getSuccessor(root.right, x)
+      root.val = succ
+      root.right = delete(root.right, succ)
+  return root
+  
+def getSuccessor(root, x):
+  while root.left:
+    root = root.left
+  return root.val`;
+
+const deleteI = ``;
+
 const Intro: React.FC = () => {
   return (
     <PageSectionContainer>
@@ -72,6 +97,15 @@ const Intro: React.FC = () => {
         <TEXT>Iterative</TEXT>
         <Complexity time="O(h)" space="O(1)" />
         <CodeBlock>{insertI}</CodeBlock>
+      </Section>
+      <Section>
+        <H2>Delete</H2>
+        <TEXT>Recursive</TEXT>
+        <Complexity time="O(h)" space="O(h)" />
+        <CodeBlock>{deleteR}</CodeBlock>
+        <TEXT>Iterative</TEXT>
+        <Complexity time="O(h)" space="O(1)" />
+        <CodeBlock>{deleteI}</CodeBlock>
       </Section>
     </PageSectionContainer>
   );

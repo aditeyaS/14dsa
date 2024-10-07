@@ -43,9 +43,6 @@ const C2Pointers = lazy(
 );
 const TreeDFS = lazy(() => import("../pages/algorithms/tree/dfs"));
 const TreeBFS = lazy(() => import("../pages/algorithms/tree/bfs"));
-const BSTOperations = lazy(
-  () => import("../pages/algorithms/tree/bst-operations")
-);
 
 export const router = createBrowserRouter([
   {
@@ -189,10 +186,6 @@ export const router = createBrowserRouter([
               {
                 path: "bfs",
                 element: <TreeBFS />,
-              },
-              {
-                path: "bst-operations",
-                element: <BSTOperations />,
               },
             ],
           },
