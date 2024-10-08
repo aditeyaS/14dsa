@@ -31,3 +31,4 @@ export { ArrowUp } from "./arrow-up";
 export { CircularLinkedListIcon } from "./circular-linked-list";
 export { DoublyLinkedListIcon } from "./doubly-linked-list";
 export { TrieIcon } from "./trie";
+export { GraphIcon } from "./graph";

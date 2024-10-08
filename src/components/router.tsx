@@ -38,11 +38,18 @@ const BinarySearch = lazy(
 );
 const Sorting1 = lazy(() => import("../pages/algorithms/list/sorting-1"));
 const Sorting2 = lazy(() => import("../pages/algorithms/list/sorting-2"));
+const Sliding2Prefix = lazy(
+  () => import("../pages/algorithms/list/sliding-2-prefix")
+);
 const C2Pointers = lazy(
   () => import("../pages/algorithms/linked-list/2-pointers")
 );
 const TreeDFS = lazy(() => import("../pages/algorithms/tree/dfs"));
 const TreeBFS = lazy(() => import("../pages/algorithms/tree/bfs"));
+const BKA = lazy(() => import("../pages/algorithms/bit-magic/bka"));
+const BMAdditional = lazy(
+  () => import("../pages/algorithms/bit-magic/additional")
+);
 
 export const router = createBrowserRouter([
   {
@@ -151,6 +158,19 @@ export const router = createBrowserRouter([
         path: "/algorithms",
         children: [
           {
+            path: "bit-magic",
+            children: [
+              {
+                path: "bka",
+                element: <BKA />,
+              },
+              {
+                path: "additional",
+                element: <BMAdditional />,
+              },
+            ],
+          },
+          {
             path: "list",
             children: [
               {
@@ -164,6 +184,10 @@ export const router = createBrowserRouter([
               {
                 path: "sorting-2",
                 element: <Sorting2 />,
+              },
+              {
+                path: "sliding-2-prefix",
+                element: <Sliding2Prefix />,
               },
             ],
           },

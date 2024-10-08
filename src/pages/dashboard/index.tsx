@@ -8,6 +8,7 @@ import {
   DequeIcon,
   DictionaryIcon,
   DoublyLinkedListIcon,
+  GraphIcon,
   HeapIcon,
   LinkedListIcon,
   ListIcon,
@@ -120,6 +121,11 @@ const dataStructures: Topic[] = [
     name: "Heap",
     icon: <HeapIcon />,
   },
+  {
+    url: "graph",
+    name: "Graph",
+    icon: <GraphIcon />,
+  },
 ];
 
 const basics: Topic[] = [
@@ -147,6 +153,19 @@ const basics: Topic[] = [
 
 const algorithmList: Algorithm[] = [
   {
+    dataStructure: "bit-magic",
+    algos: [
+      {
+        url: "bka",
+        name: "Brian Kernigam's Algorithm",
+      },
+      {
+        url: "additional",
+        name: "Additional",
+      },
+    ],
+  },
+  {
     dataStructure: "list",
     algos: [
       {
@@ -156,6 +175,10 @@ const algorithmList: Algorithm[] = [
       {
         url: "sorting-1",
         name: "Sorting 1: Bubble, Selection, and Insertion",
+      },
+      {
+        url: "sliding-2-prefix",
+        name: "Sliding window, 2 pointer, Prefix Sum",
       },
       {
         url: "sorting-2",
