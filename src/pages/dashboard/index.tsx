@@ -184,7 +184,15 @@ const algorithmList: Algorithm[] = [
         url: "sorting-2",
         name: "Sorting 2: Merge, Quick, Heap",
       },
+      {
+        url: "additional",
+        name: "Additional",
+      },
     ],
+  },
+  {
+    dataStructure: "recursion",
+    algos: [{ url: "additional", name: "Additional" }],
   },
   {
     dataStructure: "linked-list",
