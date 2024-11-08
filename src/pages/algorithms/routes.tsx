@@ -1,6 +1,6 @@
 import { lazy } from "react";
 import { RouteObject } from "react-router-dom";
-const BinarySearch = lazy(() => import("./list/binary-search"));
+const ListSearch = lazy(() => import("./list/search"));
 const Sorting1 = lazy(() => import("./list/sorting-1"));
 const Sorting2 = lazy(() => import("./list/sorting-2"));
 const Sliding2Prefix = lazy(() => import("./list/sliding-2-prefix"));
@@ -32,8 +32,8 @@ export const AlgorithmRoutes: RouteObject = {
       path: "list",
       children: [
         {
-          path: "binary-search",
-          element: <BinarySearch />,
+          path: "search",
+          element: <ListSearch />,
         },
         {
           path: "sorting-1",

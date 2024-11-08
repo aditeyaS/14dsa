@@ -12,3 +12,4 @@ export { Section } from "./section";
 export { Complexity } from "./complexity";
 export { H1, H2, TEXT, TEXT2 } from "./text";
 export { TABLE, TR, TH, TD } from "./table";
+export { SolutionBlock2 } from "./solution-block-2";

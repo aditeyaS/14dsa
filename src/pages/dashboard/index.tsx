@@ -169,8 +169,8 @@ const algorithmList: Algorithm[] = [
     dataStructure: "list",
     algos: [
       {
-        url: "binary-search",
-        name: "Binary Search",
+        url: "search",
+        name: "Search",
       },
       {
         url: "sorting-1",
