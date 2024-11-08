@@ -10,13 +10,25 @@ import {
 } from "../../../components";
 import ApiClient from "../../../lib/api-client";
 
+const heapq = `import heapq
+
+pq = [5, 20, 1, 30, 4]
+
+heapq.heapify(pq)  # 1,4,5,30,20
+heapq.heappush(pq, 3)  # 1,4,3,30,20,5
+m = heapq.heappop(pq)  # 3,4,5,30,20 (removes min element)
+
+heapq.nlargest(2, pq)  # [30,20]
+heapq.nsmallest(2, pq)  # [1,4]
+
+heapq.pushpop(pq, 2)
+heapq.heapreplace(pq, -1)`;
+
 export const Intro = () => {
   const apiClient = new ApiClient();
   const [minHeap, setMinHeap] = useState<string>("");
-  const [heapq, setHeapq] = useState<string>("");
 
   useEffect(() => {
-    fetchHeapq();
     fetchMinHeap();
   }, []);
 
@@ -24,15 +36,6 @@ export const Intro = () => {
     try {
       const data = await apiClient.getCode("data-structures/heap/min_heap.py");
       setMinHeap(data);
-    } catch (error) {
-      console.error("Failed to fetch data", error);
-    }
-  };
-
-  const fetchHeapq = async () => {
-    try {
-      const data = await apiClient.getCode("data-structures/heap/heapq.py");
-      setHeapq(data);
     } catch (error) {
       console.error("Failed to fetch data", error);
     }
