@@ -2,7 +2,7 @@ class ApiClient {
   async getCode(codePath: string): Promise<string> {
     try {
       const response = await fetch(
-        `https://raw.githubusercontent.com/aditeyaS/python-dsa/refs/heads/main/src/pages/${codePath}`,
+        `https://raw.githubusercontent.com/aditeyaS/python-dsa/refs/heads/main/code/${codePath}`,
         {
           method: "GET",
           headers: {

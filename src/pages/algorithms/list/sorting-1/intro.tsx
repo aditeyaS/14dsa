@@ -1,60 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import {
-  CodeBlock,
   Complexity,
   H2,
   LI,
   PageSectionContainer,
   Section,
+  SolutionBlock2,
   UL,
 } from "../../../../components";
-import ApiClient from "../../../../lib/api-client";
 
 const Intro: React.FC = () => {
-  const apiClient = new ApiClient();
-  const [bubbleSort, setBubbleSort] = useState<string>("");
-  const [selectionSort, setSelectionSort] = useState<string>("");
-  const [insertionSort, setInsertionSort] = useState<string>("");
-
-  useEffect(() => {
-    fetchBubbleSort();
-    fetchSelectionSort();
-    fetchInsertionSort();
-  }, []);
-
-  const fetchBubbleSort = async () => {
-    try {
-      const data = await apiClient.getCode(
-        "algorithms/list/sorting-1/bubble_sort.py"
-      );
-      setBubbleSort(data);
-    } catch (error) {
-      console.error("Failed to fetch data", error);
-    }
-  };
-
-  const fetchSelectionSort = async () => {
-    try {
-      const data = await apiClient.getCode(
-        "algorithms/list/sorting-1/selection_sort.py"
-      );
-      setSelectionSort(data);
-    } catch (error) {
-      console.error("Failed to fetch data", error);
-    }
-  };
-
-  const fetchInsertionSort = async () => {
-    try {
-      const data = await apiClient.getCode(
-        "algorithms/list/sorting-1/insertion_sort.py"
-      );
-      setInsertionSort(data);
-    } catch (error) {
-      console.error("Failed to fetch data", error);
-    }
-  };
-
   return (
     <PageSectionContainer>
       <UL>
@@ -72,7 +27,11 @@ const Intro: React.FC = () => {
             <Complexity time="O(n^2)" space="O(1)" />
           </LI>
         </UL>
-        <CodeBlock>{bubbleSort}</CodeBlock>
+        <SolutionBlock2
+          title="Implementation"
+          folder="list"
+          file="bubble_sort"
+        />
       </Section>
       <Section>
         <H2>Selection Sort</H2>
@@ -82,7 +41,11 @@ const Intro: React.FC = () => {
             <Complexity time="θ(n^2)" space="O(1)" />
           </LI>
         </UL>
-        <CodeBlock>{selectionSort}</CodeBlock>
+        <SolutionBlock2
+          title="Implementation"
+          folder="list"
+          file="selection_sort"
+        />
       </Section>
       <Section>
         <H2>Insertion Sort</H2>
@@ -93,7 +56,11 @@ const Intro: React.FC = () => {
             <Complexity time="O(n^2)" space="O(1)" />
           </LI>
         </UL>
-        <CodeBlock>{insertionSort}</CodeBlock>
+        <SolutionBlock2
+          title="Implementation"
+          folder="list"
+          file="insertion_sort"
+        />
       </Section>
     </PageSectionContainer>
   );

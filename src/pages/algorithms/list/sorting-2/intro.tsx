@@ -1,75 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import {
-  CodeBlock,
   Complexity,
   H2,
   LI,
   PageSectionContainer,
   Section,
+  SolutionBlock2,
   TEXT,
   TEXT2,
   UL,
 } from "../../../../components";
-import ApiClient from "../../../../lib/api-client";
 
 const Intro: React.FC = () => {
-  const apiClient = new ApiClient();
-  const [mergeSort, setMergeSort] = useState<string>("");
-  const [lumoto, setLumoto] = useState<string>("");
-  const [hoares, setHoares] = useState<string>("");
-  const [heapSort, setHeapSort] = useState<string>("");
-
-  useEffect(() => {
-    fetchMergeSort();
-    fetchLumoto();
-    fetchHoares();
-    fetchHeapSort();
-  }, []);
-
-  const fetchMergeSort = async () => {
-    try {
-      const data = await apiClient.getCode(
-        "algorithms/list/sorting-2/merge_sort.py"
-      );
-      setMergeSort(data);
-    } catch (error) {
-      console.error("Failed to fetch data", error);
-    }
-  };
-
-  const fetchLumoto = async () => {
-    try {
-      const data = await apiClient.getCode(
-        "algorithms/list/sorting-2/lumoto.py"
-      );
-      setLumoto(data);
-    } catch (error) {
-      console.error("Failed to fetch data", error);
-    }
-  };
-
-  const fetchHoares = async () => {
-    try {
-      const data = await apiClient.getCode(
-        "algorithms/list/sorting-2/hoares.py"
-      );
-      setHoares(data);
-    } catch (error) {
-      console.error("Failed to fetch data", error);
-    }
-  };
-
-  const fetchHeapSort = async () => {
-    try {
-      const data = await apiClient.getCode(
-        "algorithms/list/sorting-2/heap_sort.py"
-      );
-      setHeapSort(data);
-    } catch (error) {
-      console.error("Failed to fetch data", error);
-    }
-  };
-
   return (
     <PageSectionContainer>
       <Section>
@@ -82,7 +24,11 @@ const Intro: React.FC = () => {
             <Complexity time="θ(n log n)" space="O(n)" />
           </LI>
         </UL>
-        <CodeBlock>{mergeSort}</CodeBlock>
+        <SolutionBlock2
+          title="Implementation"
+          folder="list"
+          file="merge_sort"
+        />
       </Section>
 
       <Section>
@@ -102,12 +48,20 @@ const Intro: React.FC = () => {
             2 partition algorithm: Lomuto & Hoare's
             <Section>
               <TEXT className="underline">Lumoto Partition</TEXT>
-              <CodeBlock>{lumoto}</CodeBlock>
+              <SolutionBlock2
+                title="Implementation"
+                folder="list"
+                file="lumoto"
+              />
               <TEXT className="underline">Hoare's Partition</TEXT>
               <TEXT2>
                 # does not guarantee that pivot element is at correct position
               </TEXT2>
-              <CodeBlock>{hoares}</CodeBlock>
+              <SolutionBlock2
+                title="Implementation"
+                folder="list"
+                file="hoares"
+              />
             </Section>
           </LI>
         </UL>
@@ -122,7 +76,7 @@ const Intro: React.FC = () => {
             <Complexity time="O(n log n)" space="Space: O(1)" />
           </LI>
         </UL>
-        <CodeBlock>{heapSort}</CodeBlock>
+        <SolutionBlock2 title="Implementation" folder="list" file="heap_sort" />
       </Section>
     </PageSectionContainer>
   );

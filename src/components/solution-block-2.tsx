@@ -51,7 +51,7 @@ export const SolutionBlock2: React.FC<SolutionBlock2Props> = ({
             <a
               className="absolute right-2 top-2 bg-primary z-50 p-1 rounded"
               target="_blank"
-              href={`https://github.com/aditeyaS/python-dsa/blob/main/src/pages/${folder}/${file}${
+              href={`https://github.com/aditeyaS/python-dsa/blob/main/code/${folder}/${file}${
                 isExampleAvailable ? "_ex" : ""
               }.py`}
             >
