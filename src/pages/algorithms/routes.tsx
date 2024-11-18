@@ -12,77 +12,107 @@ const TreeBFS = lazy(() => import("./tree/bfs"));
 const BKA = lazy(() => import("./bit-magic/bka"));
 const BMAdditional = lazy(() => import("./bit-magic/additional"));
 
+interface PathRouteChild {
+  path: string;
+  name: string;
+  element: JSX.Element;
+}
+
+interface PageRoutes {
+  path: string;
+  title: string;
+  children: PathRouteChild[];
+}
+
+export const algorithmRoutes: PageRoutes[] = [
+  {
+    path: "bit-magic",
+    title: "Bit Magic",
+    children: [
+      {
+        path: "bka",
+        name: "Brian Kernigam's Algorithm",
+        element: <BKA />,
+      },
+      {
+        path: "additional",
+        name: "Additional",
+        element: <BMAdditional />,
+      },
+    ],
+  },
+  {
+    path: "list",
+    title: "List",
+    children: [
+      {
+        path: "search",
+        name: "Search",
+        element: <ListSearch />,
+      },
+      {
+        path: "sorting-1",
+        name: "Sorting 1: Bubble, Selection, and Insertion",
+        element: <Sorting1 />,
+      },
+      {
+        path: "sorting-2",
+        name: "Sorting 2: Merge, Quick, Heap",
+        element: <Sorting2 />,
+      },
+      {
+        path: "sliding-2-prefix",
+        name: "Sliding window, 2 pointer, Prefix Sum",
+        element: <Sliding2Prefix />,
+      },
+      {
+        path: "additional",
+        name: "Additional",
+        element: <ListAdditioanl />,
+      },
+    ],
+  },
+  {
+    path: "recursion",
+    title: "Recursion",
+    children: [
+      {
+        path: "additional",
+        name: "Additional",
+        element: <RecursionAdditional />,
+      },
+    ],
+  },
+  {
+    path: "linked-list",
+    title: "Linked List",
+    children: [
+      {
+        path: "2-pointers",
+        name: "2 Pointers: Slow fast, cycle detection",
+        element: <C2Pointers />,
+      },
+    ],
+  },
+  {
+    path: "tree",
+    title: "Tree",
+    children: [
+      {
+        path: "dfs",
+        name: "Depth First (in-order, pre-order, post-order)",
+        element: <TreeDFS />,
+      },
+      {
+        path: "bfs",
+        name: "Breadth First",
+        element: <TreeBFS />,
+      },
+    ],
+  },
+];
+
 export const AlgorithmRoutes: RouteObject = {
   path: "algorithms",
-  children: [
-    {
-      path: "bit-magic",
-      children: [
-        {
-          path: "bka",
-          element: <BKA />,
-        },
-        {
-          path: "additional",
-          element: <BMAdditional />,
-        },
-      ],
-    },
-    {
-      path: "list",
-      children: [
-        {
-          path: "search",
-          element: <ListSearch />,
-        },
-        {
-          path: "sorting-1",
-          element: <Sorting1 />,
-        },
-        {
-          path: "sorting-2",
-          element: <Sorting2 />,
-        },
-        {
-          path: "sliding-2-prefix",
-          element: <Sliding2Prefix />,
-        },
-        {
-          path: "additional",
-          element: <ListAdditioanl />,
-        },
-      ],
-    },
-    {
-      path: "recursion",
-      children: [
-        {
-          path: "additional",
-          element: <RecursionAdditional />,
-        },
-      ],
-    },
-    {
-      path: "linked-list",
-      children: [
-        {
-          path: "2-pointers",
-          element: <C2Pointers />,
-        },
-      ],
-    },
-    {
-      path: "tree",
-      children: [
-        {
-          path: "dfs",
-          element: <TreeDFS />,
-        },
-        {
-          path: "bfs",
-          element: <TreeBFS />,
-        },
-      ],
-    },
-  ],
+  children: [...algorithmRoutes],
 };

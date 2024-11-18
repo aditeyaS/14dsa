@@ -19,8 +19,8 @@
 
   html[data-theme='dark'] {
     --base: 0 0% 0%;
-    --base-1: 0 0% 7%;
-    --base-2: 0 0% 14%;
+    --base-1: 0 0% 1%;
+    --base-2: 0 0% 5%;
     --base-content: 0 0% 100%;
     --primary: 226 56% 61%;
     --primary-content: 0 0% 100%;

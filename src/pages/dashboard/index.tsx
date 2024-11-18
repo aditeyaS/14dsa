@@ -24,20 +24,12 @@ import {
   TupleIcon,
 } from "../../icons";
 import { H1, H2 } from "../../components";
+import { algorithmRoutes } from "../algorithms/routes";
 
 type Topic = {
   url: string;
   name: string;
   icon: React.ReactNode;
-};
-
-type AlgorithmListType = {
-  url: string;
-  name: string;
-};
-type Algorithm = {
-  dataStructure: string;
-  algos: AlgorithmListType[];
 };
 
 const dataStructures: Topic[] = [
@@ -151,73 +143,6 @@ const basics: Topic[] = [
   },
 ];
 
-const algorithmList: Algorithm[] = [
-  {
-    dataStructure: "bit-magic",
-    algos: [
-      {
-        url: "bka",
-        name: "Brian Kernigam's Algorithm",
-      },
-      {
-        url: "additional",
-        name: "Additional",
-      },
-    ],
-  },
-  {
-    dataStructure: "list",
-    algos: [
-      {
-        url: "search",
-        name: "Search",
-      },
-      {
-        url: "sorting-1",
-        name: "Sorting 1: Bubble, Selection, and Insertion",
-      },
-      {
-        url: "sliding-2-prefix",
-        name: "Sliding window, 2 pointer, Prefix Sum",
-      },
-      {
-        url: "sorting-2",
-        name: "Sorting 2: Merge, Quick, Heap",
-      },
-      {
-        url: "additional",
-        name: "Additional",
-      },
-    ],
-  },
-  {
-    dataStructure: "recursion",
-    algos: [{ url: "additional", name: "Additional" }],
-  },
-  {
-    dataStructure: "linked-list",
-    algos: [
-      {
-        url: "2-pointers",
-        name: "2 Pointers: Slow fast, cycle detection",
-      },
-    ],
-  },
-  {
-    dataStructure: "tree",
-    algos: [
-      {
-        url: "dfs",
-        name: "Depth First (in-order, pre-order, post-order)",
-      },
-      {
-        url: "bfs",
-        name: "Breath First",
-      },
-    ],
-  },
-];
-
 const Dashboard: React.FC = () => {
   return (
     <div className="px-24">
@@ -245,16 +170,16 @@ const Dashboard: React.FC = () => {
       </div>
       <H1 className="text-base-content my-4">Algorithms</H1>
       <div className="flex flex-col gap-2">
-        {algorithmList.map((algorithm) => (
-          <>
+        {algorithmRoutes.map((algorithm) => (
+          <div key={algorithm.title}>
             <H2 className="text-base-content/50 capitalize">
-              {algorithm.dataStructure.replace("-", " ")}
+              {algorithm.title}
             </H2>
             <div className="flex flex-col gap-1">
-              {algorithm.algos.map((algo) => (
+              {algorithm.children.map((algo) => (
                 <Link
-                  to={`/algorithms/${algorithm.dataStructure}/${algo.url}`}
-                  key={algo.url}
+                  to={`/algorithms/${algorithm.path}/${algo.path}`}
+                  key={algo.path}
                 >
                   <div className="bg-base-1 p-2 drop-shadow rounded hover:bg-base-2 flex gap-1 items-center">
                     <span className="text-xl text-primary">{algo.name}</span>
@@ -262,7 +187,7 @@ const Dashboard: React.FC = () => {
                 </Link>
               ))}
             </div>
-          </>
+          </div>
         ))}
       </div>
     </div>

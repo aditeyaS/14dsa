@@ -1,50 +1,12 @@
 import React from "react";
 import {
-  CodeBlock,
   H2,
   LI,
   PageSectionContainer,
   Section,
-  SolutionBlock,
+  SolutionBlock2,
   UL,
 } from "../../../../components";
-
-const maxKSum = `def maxKSum(arr, k):
-  curr = 0
-  for i in range(k):
-    curr += arr[i]
-  res = curr
-  for i in range(k, len(arr)):
-    curr = curr + arr[i] - arr[i-k]
-    res = max(res, curr)
-  return res`;
-
-const subarrayWithGivenSum = `def subarrayWithGivenSum(arr, x):
-  s, curr = 0, 0 # start index, current sum
-  for e in range(len(arr)):
-    curr += arr[e]
-    while curr > x:
-      curr -= arr[s]
-      s += 1
-    if curr == x:
-      return True
-  return False`;
-
-const twoPointers = ``;
-
-const prefixSum = `def subArraySums(arr, indexes):
-  n = len(arr)
-  pSum = [0] * n
-  pSump[0] = arr[0]
-  for i in range(1, n):
-    pSum[i] = pSum[i - 1] + arr[i]
-  res = []
-  for l, r in indexes:
-    if l == 0:
-      res.append(pSum[r])
-    else:
-      res.append(pSum[r] - pSum[l-1])
-  return res`;
 
 const Intro: React.FC = () => {
   return (
@@ -63,12 +25,16 @@ const Intro: React.FC = () => {
             d = deque(); with one variable for sum etc.`}
           </LI>
         </UL>
-        <SolutionBlock title="Max sum of k consecutive elements">
-          <CodeBlock>{maxKSum}</CodeBlock>
-        </SolutionBlock>
-        <SolutionBlock title="Subarray with given sum">
-          <CodeBlock>{subarrayWithGivenSum}</CodeBlock>
-        </SolutionBlock>
+        <SolutionBlock2
+          title="Max sum of k consecutive elements"
+          folder="list"
+          file="max_k_sum"
+        />
+        <SolutionBlock2
+          title="Subarray with given sum"
+          folder="list"
+          file="sub_array_with_given_sum"
+        />
       </Section>
       <Section>
         <H2>2 pointer</H2>
@@ -78,16 +44,22 @@ const Intro: React.FC = () => {
             situation
           </LI>
         </UL>
-        <CodeBlock>{twoPointers}</CodeBlock>
+        <SolutionBlock2
+          title="Find if there is a pair with sum x in sorted array"
+          folder="list"
+          file="pair_sum_x"
+        />
       </Section>
       <Section>
         <H2>Prefix/Postfix sum</H2>
         <UL>
           <LI>Used for searching in sorted array</LI>
         </UL>
-        <SolutionBlock title="find sum of subarray between indexes">
-          <CodeBlock>{prefixSum}</CodeBlock>
-        </SolutionBlock>
+        <SolutionBlock2
+          title="find sum of subarray between indexes"
+          folder="list"
+          file="sum_between_indexes"
+        />
       </Section>
     </PageSectionContainer>
   );
