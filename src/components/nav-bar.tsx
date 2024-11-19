@@ -14,7 +14,7 @@ export const NavBar: React.FC = () => {
   return (
     <div className="w-full flex justify-between items-center  p-2 px-4 bg-base-1">
       <Link
-        to="/"
+        to="/dashboard"
         className="flex hover:bg-base-2 p-1 rounded items-center gap-2"
       >
         <LogoIcon className="w-8 h-8" />

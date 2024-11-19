@@ -1,9 +1,9 @@
 import { lazy } from "react";
 import { createBrowserRouter } from "react-router-dom";
 import { AppContainer } from "../components/app-container";
-import { BasicsRoutes } from "./basics/routes";
-import { DataStructuresRoutes } from "./data-structures/routes";
-import { AlgorithmRoutes } from "./algorithms/routes";
+import { basicsRoutes } from "./basics/routes";
+import { dataStructuresRoutes } from "./data-structures/routes";
+import { algorithmRoutes } from "./algorithms/routes";
 const Dashboard = lazy(() => import("./dashboard"));
 const Landing = lazy(() => import("./landing"));
 const NotFound = lazy(() => import("./not-found"));
@@ -22,9 +22,9 @@ export const router = createBrowserRouter([
         path: "dashboard",
         element: <Dashboard />,
       },
-      BasicsRoutes,
-      DataStructuresRoutes,
-      AlgorithmRoutes,
+      { path: "basics", children: basicsRoutes },
+      { path: "data-structures", children: dataStructuresRoutes },
+      { path: "algorithms", children: algorithmRoutes },
     ],
   },
 ]);

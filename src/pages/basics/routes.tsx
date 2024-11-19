@@ -5,24 +5,21 @@ const Recursion = lazy(() => import("./recursion"));
 const Math = lazy(() => import("./math"));
 const BitMagic = lazy(() => import("./bit-magic"));
 
-export const BasicsRoutes: RouteObject = {
-  path: "basics",
-  children: [
-    {
-      path: "analysis",
-      element: <Analysis />,
-    },
-    {
-      path: "recursion",
-      element: <Recursion />,
-    },
-    {
-      path: "math",
-      element: <Math />,
-    },
-    {
-      path: "bit-magic",
-      element: <BitMagic />,
-    },
-  ],
-};
+export const basicsRoutes: RouteObject[] = [
+  {
+    path: "analysis",
+    element: <Analysis />,
+  },
+  {
+    path: "recursion",
+    element: <Recursion />,
+  },
+  {
+    path: "math",
+    element: <Math />,
+  },
+  {
+    path: "bit-magic",
+    element: <BitMagic />,
+  },
+];
