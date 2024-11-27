@@ -4,7 +4,7 @@ const ListSearch = lazy(() => import("./search"));
 const Sorting1 = lazy(() => import("./sorting-1"));
 const Sorting2 = lazy(() => import("./sorting-2"));
 const Sliding2Prefix = lazy(() => import("./sliding-2-prefix"));
-const ListAdditioanl = lazy(() => import("./additional"));
+const ListAdditional = lazy(() => import("./additional"));
 
 export const listRoutes: AlgorithmRouteObject[] = [
   {
@@ -30,6 +30,6 @@ export const listRoutes: AlgorithmRouteObject[] = [
   {
     path: "additional",
     name: "Additional",
-    element: <ListAdditioanl />,
+    element: <ListAdditional />,
   },
 ];
