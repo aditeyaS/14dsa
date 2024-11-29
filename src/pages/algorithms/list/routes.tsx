@@ -1,35 +1,72 @@
 import { lazy } from "react";
-import { AlgorithmRouteObject } from "../routes";
-const ListSearch = lazy(() => import("./search"));
-const Sorting1 = lazy(() => import("./sorting-1"));
-const Sorting2 = lazy(() => import("./sorting-2"));
-const Sliding2Prefix = lazy(() => import("./sliding-2-prefix"));
-const ListAdditional = lazy(() => import("./additional"));
+import { AppRouteObject } from "@/types/app-route-object";
 
-export const listRoutes: AlgorithmRouteObject[] = [
+const BinarySearch = lazy(() => import("./binary-search"));
+const BubbleSort = lazy(() => import("./bubble-sort"));
+const SelectionSort = lazy(() => import("./selection-sort"));
+const InsertionSort = lazy(() => import("./insertion-sort"));
+const MergeSort = lazy(() => import("./merge-sort"));
+const QuickSort = lazy(() => import("./quick-sort"));
+const HeapSort = lazy(() => import("./heap-sort"));
+const SlidingWindow = lazy(() => import("./sliding-window"));
+const TwoPointer = lazy(() => import("./2-pointer"));
+const PrePostSum = lazy(() => import("./pre-post-sum"));
+const Additional = lazy(() => import("./additional"));
+
+export const listRoutes: AppRouteObject[] = [
   {
-    path: "search",
-    name: "Search",
-    element: <ListSearch />,
+    path: "binary-search",
+    name: "Binary Search",
+    element: <BinarySearch />,
   },
   {
-    path: "sorting-1",
-    name: "Sorting 1: Bubble, Selection, and Insertion",
-    element: <Sorting1 />,
+    path: "bubble-sort",
+    name: "Bubble Sort",
+    element: <BubbleSort />,
   },
   {
-    path: "sorting-2",
-    name: "Sorting 2: Merge, Quick, Heap",
-    element: <Sorting2 />,
+    path: "selection-sort",
+    name: "Selection Sort",
+    element: <SelectionSort />,
   },
   {
-    path: "sliding-2-prefix",
-    name: "Sliding window, 2 pointer, Prefix Sum",
-    element: <Sliding2Prefix />,
+    path: "insertion-sort",
+    name: "Insertion Sort",
+    element: <InsertionSort />,
+  },
+  {
+    path: "merge-sort",
+    name: "Merge Sort",
+    element: <MergeSort />,
+  },
+  {
+    path: "quick-sort",
+    name: "Quick Sort",
+    element: <QuickSort />,
+  },
+  {
+    path: "heap-sort",
+    name: "Heap Sort",
+    element: <HeapSort />,
+  },
+  {
+    path: "sliding-window",
+    name: "Sliding Window",
+    element: <SlidingWindow />,
+  },
+  {
+    path: "2-pointer",
+    name: "Two Pointer",
+    element: <TwoPointer />,
+  },
+  {
+    path: "pps",
+    name: "Prefix/Postfix Sum",
+    element: <PrePostSum />,
   },
   {
     path: "additional",
     name: "Additional",
-    element: <ListAdditional />,
+    element: <Additional />,
   },
 ];

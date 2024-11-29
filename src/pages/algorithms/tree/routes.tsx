@@ -1,17 +1,18 @@
 import { lazy } from "react";
-import { AlgorithmRouteObject } from "../routes";
-const TreeDFS = lazy(() => import("./dfs"));
-const TreeBFS = lazy(() => import("./bfs"));
+import { AppRouteObject } from "@/types/app-route-object";
 
-export const treeRoutes: AlgorithmRouteObject[] = [
+const DFS = lazy(() => import("./dfs"));
+const BFS = lazy(() => import("./bfs"));
+
+export const treeRoutes: AppRouteObject[] = [
   {
     path: "dfs",
-    name: "Depth First (in-order, pre-order, post-order)",
-    element: <TreeDFS />,
+    name: "DFS",
+    element: <DFS />,
   },
   {
     path: "bfs",
-    name: "Breadth First",
-    element: <TreeBFS />,
+    name: "BFS",
+    element: <BFS />,
   },
 ];

@@ -1,29 +1,42 @@
-import React from "react";
-import { CodeBlock as CB, oneDark, oneLight } from "@react-email/code-block";
+import {
+  CodeBlock as CB,
+  oneDark,
+  oneLight,
+  PrismLangauge,
+} from "@react-email/code-block";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 import { useTheme } from "./theme-provider";
-import { useFontSize } from "./font-size-provider";
 
 interface CodeBlockProps {
-  children: string;
+  languages: PrismLangauge[];
+  snippets: string[];
 }
 
-export const CodeBlock: React.FC<CodeBlockProps> = ({ children }) => {
+export default function CodeBlock({ languages, snippets }: CodeBlockProps) {
   const { theme } = useTheme();
-  const { fontSize } = useFontSize();
 
-  const fontSizeMapping = {
-    S: "0.875rem",
-    M: "1rem",
-    L: "1.25rem",
-  };
-
+  if (languages.length !== snippets.length) {
+    throw new Error("Number of languages should be equal to the snippets");
+  }
   return (
-    <CB
-      language="python"
-      lineNumbers={false}
-      theme={theme === "dark" ? oneDark : oneLight}
-      code={children}
-      style={{ fontSize: fontSizeMapping[fontSize] }}
-    />
+    <Tabs defaultValue={languages[0]}>
+      <TabsList>
+        {languages.map((l) => (
+          <TabsTrigger key={l} value={l}>
+            {l}
+          </TabsTrigger>
+        ))}
+      </TabsList>
+      {snippets.map((code, i) => (
+        <TabsContent key={languages[i]} value={languages[i]}>
+          <CB
+            language={languages[i]}
+            lineNumbers={false}
+            theme={theme === "light" ? oneLight : oneDark}
+            code={code}
+          />
+        </TabsContent>
+      ))}
+    </Tabs>
   );
-};
+}

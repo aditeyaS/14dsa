@@ -1,28 +1,16 @@
-import React from "react";
-import {
-  CodeBlock,
-  PageContainer,
-  SolutionBlock,
-} from "../../../../components";
+import CodeBlock from "@/components/code-block";
+import PageContainer from "@/components/layout/page-container";
+import SectionContainer from "@/components/layout/section-container";
+import { Heading } from "@/components/text";
+import { pypowerSet } from "./code";
 
-const powerSet = `def printPowerSet(s: str):
-    n = len(s)
-    pSize = (1 << n) # 2**n
-    for i in range(pSize):
-        for j in range(n):
-            if (i & (1 << j)) != 0:
-                print(s[j], end="")
-        print()`;
-
-const BMAdditional: React.FC = () => {
+export default function Additional() {
   return (
-    <PageContainer title="Bit Magic Additional">
-      <SolutionBlock title="Power Set">
-        <CodeBlock>{powerSet}</CodeBlock>
-      </SolutionBlock>
+    <PageContainer pageTitle="Additional" contributors={["aditeyaS"]}>
+      <SectionContainer>
+        <Heading>Power set</Heading>
+        <CodeBlock languages={["python"]} snippets={[pypowerSet]} />
+      </SectionContainer>
     </PageContainer>
   );
-};
-
-export default BMAdditional;
-// https://leetcode.com/problems/subsets/description/
+}

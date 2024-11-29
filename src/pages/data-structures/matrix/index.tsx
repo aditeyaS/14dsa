@@ -1,14 +1,26 @@
-import React from "react";
-import { PageContainer } from "../../../components";
-import { MatrixIcon } from "../../../icons";
-import { Intro } from "./intro";
+import CodeBlock from "@/components/code-block";
+import PageContainer from "@/components/layout/page-container";
+import SectionContainer from "@/components/layout/section-container";
+import { Heading } from "@/components/text";
+import { LI, UL } from "@/components/ul-li";
+import { pyinit, pyspiral } from "./code";
 
-const Matrix: React.FC = () => {
+export default function Matrix() {
   return (
-    <PageContainer title="Matrix" icon={<MatrixIcon />}>
-      <Intro />
+    <PageContainer pageTitle="Matrix" contributors={["aditeyaS"]}>
+      <SectionContainer>
+        <UL>
+          <LI>2D array</LI>
+        </UL>
+      </SectionContainer>
+      <SectionContainer>
+        <Heading>Initialization</Heading>
+        <CodeBlock languages={["python"]} snippets={[pyinit]} />
+      </SectionContainer>
+      <SectionContainer>
+        <Heading>Spiral</Heading>
+        <CodeBlock languages={["python"]} snippets={[pyspiral]} />
+      </SectionContainer>
     </PageContainer>
   );
-};
-
-export default Matrix;
+}

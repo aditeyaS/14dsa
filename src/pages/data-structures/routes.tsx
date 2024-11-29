@@ -1,85 +1,102 @@
 import { lazy } from "react";
-import { RouteObject } from "react-router-dom";
-const Tuple = lazy(() => import("./tuple"));
+import { AppRouteObject } from "@/types/app-route-object";
+
+const SetDS = lazy(() => import("./set"));
 const Dictionary = lazy(() => import("./dictionary"));
-const Set = lazy(() => import("./set"));
+const Tuple = lazy(() => import("./tuple"));
 const List = lazy(() => import("./list"));
 const String = lazy(() => import("./string"));
 const LinkedList = lazy(() => import("./linked-list"));
 const CircularLinkedList = lazy(() => import("./circular-linked-list"));
 const DoublyLinkedList = lazy(() => import("./doubly-linked-list"));
-const Matrix = lazy(() => import("./matrix"));
 const Deque = lazy(() => import("./deque"));
 const Stack = lazy(() => import("./stack"));
 const Queue = lazy(() => import("./queue"));
-const Heap = lazy(() => import("./heap"));
+const Matrix = lazy(() => import("./matrix"));
 const Tree = lazy(() => import("./tree"));
-const BinarySearchTree = lazy(() => import("./binary-search-tree"));
+const BST = lazy(() => import("./bst"));
 const Trie = lazy(() => import("./trie"));
+const Heap = lazy(() => import("./heap"));
 
-export const dataStructuresRoutes: RouteObject[] = [
+export const dataStructuresRoutes: AppRouteObject[] = [
   {
     path: "tuple",
+    name: "Tuple",
     element: <Tuple />,
   },
   {
+    path: "set",
+    name: "Set",
+    element: <SetDS />,
+  },
+  {
     path: "dictionary",
+    name: "Dictionary",
     element: <Dictionary />,
   },
   {
-    path: "set",
-    element: <Set />,
-  },
-  {
     path: "list",
+    name: "List",
     element: <List />,
   },
   {
     path: "string",
+    name: "String",
     element: <String />,
   },
   {
     path: "linked-list",
+    name: "Linked List",
     element: <LinkedList />,
   },
   {
     path: "circular-linked-list",
+    name: "Circular Linked List",
     element: <CircularLinkedList />,
   },
   {
     path: "doubly-linked-list",
+    name: "Doubly Linked List",
     element: <DoublyLinkedList />,
   },
   {
-    path: "matrix",
-    element: <Matrix />,
-  },
-  {
     path: "deque",
+    name: "Deque",
     element: <Deque />,
   },
   {
     path: "stack",
+    name: "Stack",
     element: <Stack />,
   },
   {
     path: "queue",
+    name: "Queue",
     element: <Queue />,
   },
   {
-    path: "heap",
-    element: <Heap />,
+    path: "matrix",
+    name: "Matrix",
+    element: <Matrix />,
   },
   {
     path: "tree",
+    name: "Tree",
     element: <Tree />,
   },
   {
-    path: "binary-search-tree",
-    element: <BinarySearchTree />,
+    path: "bst",
+    name: "Binary Search Tree",
+    element: <BST />,
   },
   {
     path: "trie",
+    name: "Trie",
     element: <Trie />,
+  },
+  {
+    path: "heap",
+    name: "Heap",
+    element: <Heap />,
   },
 ];

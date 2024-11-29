@@ -1,11 +1,12 @@
 import { lazy } from "react";
-import { AlgorithmRouteObject } from "../routes";
-const C2Pointers = lazy(() => import("./2-pointers"));
+import { AppRouteObject } from "@/types/app-route-object";
 
-export const linkedListRoutes: AlgorithmRouteObject[] = [
+const SlowFast = lazy(() => import("./slow-fast"));
+
+export const linkedListRoutes: AppRouteObject[] = [
   {
-    path: "2-pointers",
-    name: "2 Pointers: Slow fast, cycle detection",
-    element: <C2Pointers />,
+    path: "slow-fast",
+    name: "Slow Fast",
+    element: <SlowFast />,
   },
 ];

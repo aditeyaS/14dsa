@@ -1,3 +1,3 @@
 <img src="public/logo.svg" width="35%" />
 
-### PythonDSA
+### 14dsa - I Love DSA

@@ -1,17 +1,18 @@
 import { lazy } from "react";
-import { AlgorithmRouteObject } from "../routes";
-const BKA = lazy(() => import("./bka"));
-const BMAdditional = lazy(() => import("./additional"));
+import { AppRouteObject } from "@/types/app-route-object";
 
-export const bitMagicRoutes: AlgorithmRouteObject[] = [
+const BKA = lazy(() => import("./bka"));
+const Additional = lazy(() => import("./additional"));
+
+export const bitMagicRoutes: AppRouteObject[] = [
   {
     path: "bka",
-    name: "Brian Kernigam's Algorithm",
+    name: "Brian Kernigam's",
     element: <BKA />,
   },
   {
     path: "additional",
     name: "Additional",
-    element: <BMAdditional />,
+    element: <Additional />,
   },
 ];

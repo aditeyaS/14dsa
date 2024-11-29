@@ -1,5 +1,5 @@
+import { ArrowUp } from "lucide-react";
 import React, { useEffect, useState } from "react";
-import { ArrowUp } from "../icons";
 
 export const ScrollToTop: React.FC = () => {
   const [visible, setVisible] = useState<boolean>(false);

@@ -1,78 +1,65 @@
-import * as React from "react";
-import { cn } from "../lib/utils";
+import { cn } from "@/lib/utils";
+import { cva, VariantProps } from "class-variance-authority";
 import {
-  CautionIcon,
-  ImportantIcon,
-  NoteIcon,
-  TipIcon,
-  WarningIcon,
-} from "../icons";
+  CircleAlert,
+  Lightbulb,
+  MessageSquareWarning,
+  OctagonAlert,
+} from "lucide-react";
+import React from "react";
 
-interface AlertProps extends React.HTMLAttributes<HTMLDivElement> {
-  type: "Note" | "Tip" | "Important" | "Warning" | "Caution";
+const alertVariants = cva("p-2 border border-2 rounded flex flex-col gap-2", {
+  variants: {
+    type: {
+      Note: "border-blue-500",
+      Tip: "border-green-500",
+      Important: "border-violet-500",
+      Warning: "bg-green-400",
+      Caution: "border-red-500",
+    },
+  },
+});
+
+interface AlertProps extends VariantProps<typeof alertVariants> {
+  children: React.ReactNode;
 }
 
-export const Alert: React.FC<AlertProps> = ({ type, children, className }) => {
-  const getBorderColor = (
-    type: "Note" | "Tip" | "Important" | "Warning" | "Caution"
-  ) => {
-    let color = "";
-    if (type === "Note") {
-      color = "border-blue";
-    } else if (type == "Tip") {
-      color = "border-green";
-    } else if (type == "Important") {
-      color = "border-purple";
-    } else if (type == "Warning") {
-      color = "border-yellow";
-    } else {
-      color = "border-red";
-    }
-    return color;
-  };
-
+export function Alert({ children, type }: AlertProps) {
   return (
-    <div
-      className={cn(
-        "p-2 border border-2 rounded flex flex-col gap-2",
-        className,
-        getBorderColor(type)
-      )}
-    >
+    <div className={cn(alertVariants({ type }))}>
       <div>
         {type === "Note" && (
-          <div className="flex gap-2 text-blue">
-            <NoteIcon />
+          <div className="flex gap-2 text-blue-500">
+            <CircleAlert />
             {type}
           </div>
         )}
         {type === "Tip" && (
-          <div className="flex gap-2 text-green">
-            <TipIcon />
+          <div className="flex gap-2 text-green-500">
+            <Lightbulb />
             {type}
           </div>
         )}
         {type === "Important" && (
-          <div className="flex gap-2 text-purple">
-            <ImportantIcon />
+          <div className="flex gap-2 text-violet-500">
+            <MessageSquareWarning />
             {type}
           </div>
         )}
         {type === "Warning" && (
           <div className="flex gap-2 text-yellow">
-            <WarningIcon />
+            <CircleAlert />
             {type}
           </div>
         )}
         {type === "Caution" && (
-          <div className="flex gap-2 text-red">
-            <CautionIcon />
+          <div className="flex gap-2 text-red-500">
+            <OctagonAlert />
             {type}
           </div>
         )}
       </div>
       {children}
-      {/* <pre className="p-2 whitespace-pre">{children}</pre> */}
     </div>
   );
-};
+}

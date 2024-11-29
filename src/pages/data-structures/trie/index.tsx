@@ -1,14 +1,15 @@
-import React from "react";
-import { PageContainer } from "../../../components";
-import { TrieIcon } from "../../../icons";
-import { Intro } from "./intro";
+import PageContainer from "@/components/layout/page-container";
+import SectionContainer from "@/components/layout/section-container";
+import { LI, UL } from "@/components/ul-li";
 
-const Trie: React.FC = () => {
+export default function Trie() {
   return (
-    <PageContainer title="Trie" icon={<TrieIcon />}>
-      <Intro />
+    <PageContainer pageTitle="Trie" contributors={["aditeyaS"]}>
+      <SectionContainer>
+        <UL>
+          <LI>prefix tree</LI>
+        </UL>
+      </SectionContainer>
     </PageContainer>
   );
-};
-
-export default Trie;
+}
