@@ -30,12 +30,13 @@ import { bitMagicRoutes } from "@/pages/algorithms/bit-magic/routes";
 import { listRoutes } from "@/pages/algorithms/list/routes";
 import { treeRoutes } from "@/pages/algorithms/tree/routes";
 import { linkedListRoutes } from "@/pages/algorithms/linked-list/routes";
+import { matrixRoutes } from "@/pages/algorithms/matrix/routes";
 
 export function AppSidebar() {
   return (
     <Sidebar>
       <SidebarHeader className="flex flex-row justify-center items-center text-2xl text-primary">
-        <img src={logo} className="w-10" />
+        <img src={logo} className="w-10" alt="Logo" />
         14dsa
       </SidebarHeader>
       <SidebarSeparator />
@@ -104,7 +105,7 @@ export function AppSidebar() {
           </SidebarMenu>
         </SidebarGroup>
         <SidebarGroup>
-          <SidebarGroupLabel>Algorithms</SidebarGroupLabel>
+          <SidebarGroupLabel>Algorithms & Patterns</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               <Collapsible className="group/collapsible">
@@ -165,6 +166,30 @@ export function AppSidebar() {
                       <SidebarMenuSub key={route.path}>
                         <SidebarMenuSubItem>
                           <NavLink to={`/algorithms/list/${route.path}`}>
+                            {({ isActive }) => (
+                              <SidebarMenuButton isActive={isActive}>
+                                {route.name}
+                              </SidebarMenuButton>
+                            )}
+                          </NavLink>
+                        </SidebarMenuSubItem>
+                      </SidebarMenuSub>
+                    ))}
+                  </CollapsibleContent>
+                </SidebarMenuItem>
+              </Collapsible>
+            </SidebarMenu>
+            <SidebarMenu>
+              <Collapsible className="group/collapsible">
+                <SidebarMenuItem>
+                  <CollapsibleTrigger asChild>
+                    <SidebarMenuButton>Matrix</SidebarMenuButton>
+                  </CollapsibleTrigger>
+                  <CollapsibleContent>
+                    {matrixRoutes.map((route) => (
+                      <SidebarMenuSub key={route.path}>
+                        <SidebarMenuSubItem>
+                          <NavLink to={`/algorithms/matrix/${route.path}`}>
                             {({ isActive }) => (
                               <SidebarMenuButton isActive={isActive}>
                                 {route.name}

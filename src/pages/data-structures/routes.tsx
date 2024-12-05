@@ -40,6 +40,11 @@ export const dataStructuresRoutes: AppRouteObject[] = [
     element: <List />,
   },
   {
+    path: "matrix",
+    name: "Matrix",
+    element: <Matrix />,
+  },
+  {
     path: "string",
     name: "String",
     element: <String />,
@@ -73,11 +78,6 @@ export const dataStructuresRoutes: AppRouteObject[] = [
     path: "queue",
     name: "Queue",
     element: <Queue />,
-  },
-  {
-    path: "matrix",
-    name: "Matrix",
-    element: <Matrix />,
   },
   {
     path: "tree",

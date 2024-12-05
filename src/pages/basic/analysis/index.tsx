@@ -36,7 +36,7 @@ export default function Analysis() {
         </UL>
       </SectionContainer>
       <SectionContainer>
-        <Heading>Omega</Heading>
+        <Heading>Omega Ω</Heading>
         <UL>
           <LI>
             {`f(n) = Ω(g(n)) iff there exists positive constants c and n0 such that 0<=cg(n)<=f(n) for all n>=n0`}
@@ -46,6 +46,7 @@ export default function Analysis() {
         </UL>
       </SectionContainer>
       <SectionContainer>
+        <Heading>Theta θ</Heading>
         <UL>
           <LI>{`f(n)=θ(g(n)) iff there exist constants c1, c2 (where c1>0 and c2>0) and n0 (where n0>=0) such that c1g(n) <= f(n) <= c2g(n) for all n>=n0`}</LI>
           <LI>Exact bound</LI>
@@ -64,7 +65,6 @@ export default function Analysis() {
         <Heading>Common Data Structure Operations</Heading>
         <DataStructureOpTable />
       </SectionContainer>
-      <div>refer https://www.bigocheatsheet.com/</div>
     </PageContainer>
   );
 }

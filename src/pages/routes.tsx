@@ -9,6 +9,7 @@ import { bitMagicRoutes } from "./algorithms/bit-magic/routes";
 import { listRoutes } from "./algorithms/list/routes";
 import { treeRoutes } from "./algorithms/tree/routes";
 import { linkedListRoutes } from "./algorithms/linked-list/routes";
+import { matrixRoutes } from "./algorithms/matrix/routes";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,7 @@ const router = createBrowserRouter([
           { path: "bit-magic", children: bitMagicRoutes },
           { path: "math", children: mathRoutes },
           { path: "list", children: listRoutes },
+          { path: "matrix", children: matrixRoutes },
           { path: "linked-list", children: linkedListRoutes },
           { path: "tree", children: treeRoutes },
         ],

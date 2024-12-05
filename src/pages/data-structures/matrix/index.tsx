@@ -3,7 +3,7 @@ import PageContainer from "@/components/layout/page-container";
 import SectionContainer from "@/components/layout/section-container";
 import { Heading } from "@/components/text";
 import { LI, UL } from "@/components/ul-li";
-import { pyinit, pyspiral } from "./code";
+import { pyinit } from "./code";
 
 export default function Matrix() {
   return (
@@ -16,10 +16,6 @@ export default function Matrix() {
       <SectionContainer>
         <Heading>Initialization</Heading>
         <CodeBlock languages={["python"]} snippets={[pyinit]} />
-      </SectionContainer>
-      <SectionContainer>
-        <Heading>Spiral</Heading>
-        <CodeBlock languages={["python"]} snippets={[pyspiral]} />
       </SectionContainer>
     </PageContainer>
   );

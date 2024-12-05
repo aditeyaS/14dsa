@@ -6,7 +6,7 @@ export default function AppLayout() {
   return (
     <>
       <AppSidebar />
-      <SidebarTrigger />
+      <SidebarTrigger title="Toggle Sidebar" />
       <Outlet />
     </>
   );
