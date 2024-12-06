@@ -1,11 +1,32 @@
 import {
   CodeBlock as CB,
-  oneDark,
   oneLight,
+  oneDark,
   PrismLangauge,
+  Theme,
 } from "@react-email/code-block";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 import { useTheme } from "./theme-provider";
+
+const codeLight: Theme = {
+  ...oneLight,
+  base: {
+    ...oneLight.base,
+    background: "hsl(var(--muted))",
+    color: "hsl(var(--muted-foreground))",
+    borderRadius: "var(--radius)",
+  },
+};
+
+const codeDark: Theme = {
+  ...oneDark,
+  base: {
+    ...oneDark.base,
+    background: "hsl(var(--muted))",
+    color: "hsl(var(--muted-foreground))",
+    borderRadius: "var(--radius)",
+  },
+};
 
 interface CodeBlockProps {
   languages: PrismLangauge[];
@@ -32,7 +53,7 @@ export default function CodeBlock({ languages, snippets }: CodeBlockProps) {
           <CB
             language={languages[i]}
             lineNumbers={false}
-            theme={theme === "light" ? oneLight : oneDark}
+            theme={theme === "light" ? codeLight : codeDark}
             code={code}
           />
         </TabsContent>
