@@ -10,10 +10,15 @@ import {
   pylistImplementation,
   pyllImplementation,
 } from "./code";
+import QueueImage from "./image";
 
 export default function Queue() {
   return (
     <PageContainer pageTitle="Queue" contributors={["aditeyaS"]}>
+      <SectionContainer>
+        <QueueImage />
+      </SectionContainer>
+
       <SectionContainer>
         <UL>
           <LI>FIFO (first in first out) data structure</LI>

@@ -5,6 +5,7 @@ import { Heading, Paragraph } from "@/components/text";
 import { LI, UL } from "@/components/ul-li";
 import { Alert } from "@/components/alert";
 import { pyAccess, pyDdTip, pyDel, pyInit, pyInsert, pyOthers } from "./code";
+import { SingleComplexity } from "@/components/complexity";
 
 export default function Dictionary() {
   return (
@@ -13,7 +14,9 @@ export default function Dictionary() {
         <UL>
           <LI>key value pairs</LI>
           <LI>unordered</LI>
-          <LI>O(1) for search, insert, delete</LI>
+          <LI>
+            search, insert, delete - <SingleComplexity complexity="O(1)" />
+          </LI>
         </UL>
       </SectionContainer>
 

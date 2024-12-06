@@ -1,8 +1,3 @@
-export const pynode = `class Node:
-  def __init__(self, val):
-    self.val = val
-    self.next = None`;
-
 export const pytraversal = `def traversal(head):
     if not head:
         return

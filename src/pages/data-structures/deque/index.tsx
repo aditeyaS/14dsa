@@ -5,14 +5,22 @@ import { Heading, Paragraph } from "@/components/text";
 import { LI, UL } from "@/components/ul-li";
 import { Alert } from "@/components/alert";
 import { pyinit, pyleftOp, pyothers, pyrightOp } from "./code";
+import DequeImage from "./image";
+import { SingleComplexity } from "@/components/complexity";
 
 export default function Deque() {
   return (
     <PageContainer pageTitle="Deque" contributors={["aditeyaS"]}>
       <SectionContainer>
+        <DequeImage />
+      </SectionContainer>
+
+      <SectionContainer>
         <UL>
           <LI>doubly ended queue</LI>
-          <LI>insert/delete at both ends - O(1)</LI>
+          <LI>
+            insert/delete at both ends <SingleComplexity complexity="O(1)" />
+          </LI>
           <LI>Application: Stack & Queue; history of actions</LI>
         </UL>
       </SectionContainer>

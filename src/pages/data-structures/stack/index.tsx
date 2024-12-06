@@ -9,10 +9,15 @@ import {
   pylistImplementation,
   pyllImplementation,
 } from "./code";
+import StackImage from "./image";
 
 export default function Stack() {
   return (
     <PageContainer pageTitle="Stack" contributors={["aditeyaS"]}>
+      <SectionContainer>
+        <StackImage />
+      </SectionContainer>
+
       <SectionContainer>
         <UL>
           <LI>LIFO (last in first out) data structure</LI>

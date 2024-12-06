@@ -19,7 +19,7 @@ const router = createBrowserRouter([
     children: [
       { path: "", element: <Home /> },
       { path: "basic", children: basicsRoutes },
-      { path: "data-structures", children: dataStructuresRoutes },
+      { path: "ds", children: dataStructuresRoutes },
       {
         path: "algorithms",
         children: [

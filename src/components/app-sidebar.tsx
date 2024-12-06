@@ -89,7 +89,7 @@ export function AppSidebar() {
                   {dataStructuresRoutes.map((route) => (
                     <SidebarMenuSub key={route.path}>
                       <SidebarMenuSubItem>
-                        <NavLink to={`/data-structures/${route.path}`}>
+                        <NavLink to={`/ds/${route.path}`}>
                           {({ isActive }) => (
                             <SidebarMenuSubButton isActive={isActive}>
                               {route.name}

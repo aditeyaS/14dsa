@@ -3,7 +3,7 @@ import PageContainer from "@/components/layout/page-container";
 import SectionContainer from "@/components/layout/section-container";
 import { Heading } from "@/components/text";
 import { LI, UL } from "@/components/ul-li";
-import { pyde, pydf, pyiab, pyiae, pyiai, pynode, pysearch } from "./code";
+import { pynodecircular, pynodedoubly, pynodesingle } from "./code";
 
 export default function LinkedList() {
   return (
@@ -19,38 +19,32 @@ export default function LinkedList() {
       </SectionContainer>
 
       <SectionContainer>
-        <Heading>Node</Heading>
-        <CodeBlock languages={["python"]} snippets={[pynode]} />
+        <Heading>Single Linked List</Heading>
+        <CodeBlock languages={["python"]} snippets={[pynodesingle]} />
       </SectionContainer>
 
       <SectionContainer>
-        <Heading>Search</Heading>
-        <CodeBlock languages={["python"]} snippets={[pysearch]} />
+        <Heading>Circular Linked List</Heading>
+        <UL>
+          <LI>the next of the last node points at head</LI>
+          <LI>
+            Advantage: whole list can be traversed from any node; implementation
+            of round robin
+          </LI>
+        </UL>
+        <CodeBlock languages={["python"]} snippets={[pynodecircular]} />
       </SectionContainer>
 
       <SectionContainer>
-        <Heading>Insert at beginning</Heading>
-        <CodeBlock languages={["python"]} snippets={[pyiab]} />
-      </SectionContainer>
-
-      <SectionContainer>
-        <Heading>Insert at end</Heading>
-        <CodeBlock languages={["python"]} snippets={[pyiae]} />
-      </SectionContainer>
-
-      <SectionContainer>
-        <Heading>Insert at index</Heading>
-        <CodeBlock languages={["python"]} snippets={[pyiai]} />
-      </SectionContainer>
-
-      <SectionContainer>
-        <Heading>Delete first</Heading>
-        <CodeBlock languages={["python"]} snippets={[pydf]} />
-      </SectionContainer>
-
-      <SectionContainer>
-        <Heading>Delete end</Heading>
-        <CodeBlock languages={["python"]} snippets={[pyde]} />
+        <Heading>Doubly Linked List</Heading>
+        <UL>
+          <LI>
+            Advantage: traverse in both dir, insert/delete before node,
+            insert/delete form both ends in O(1) by maintaining tail
+          </LI>
+          <LI>Disadvantages: extra space, complex code</LI>
+        </UL>
+        <CodeBlock languages={["python"]} snippets={[pynodedoubly]} />
       </SectionContainer>
     </PageContainer>
   );

@@ -1,22 +1,20 @@
 import { lazy } from "react";
 import { AppRouteObject } from "@/types/app-route-object";
 
+const Tuple = lazy(() => import("./tuple"));
 const SetDS = lazy(() => import("./set"));
 const Dictionary = lazy(() => import("./dictionary"));
-const Tuple = lazy(() => import("./tuple"));
 const List = lazy(() => import("./list"));
+const Matrix = lazy(() => import("./matrix"));
 const String = lazy(() => import("./string"));
 const LinkedList = lazy(() => import("./linked-list"));
-const CircularLinkedList = lazy(() => import("./circular-linked-list"));
-const DoublyLinkedList = lazy(() => import("./doubly-linked-list"));
 const Deque = lazy(() => import("./deque"));
 const Stack = lazy(() => import("./stack"));
 const Queue = lazy(() => import("./queue"));
-const Matrix = lazy(() => import("./matrix"));
 const Tree = lazy(() => import("./tree"));
 const BST = lazy(() => import("./bst"));
-const Trie = lazy(() => import("./trie"));
 const Heap = lazy(() => import("./heap"));
+const Trie = lazy(() => import("./trie"));
 
 export const dataStructuresRoutes: AppRouteObject[] = [
   {
@@ -55,16 +53,6 @@ export const dataStructuresRoutes: AppRouteObject[] = [
     element: <LinkedList />,
   },
   {
-    path: "circular-linked-list",
-    name: "Circular Linked List",
-    element: <CircularLinkedList />,
-  },
-  {
-    path: "doubly-linked-list",
-    name: "Doubly Linked List",
-    element: <DoublyLinkedList />,
-  },
-  {
     path: "deque",
     name: "Deque",
     element: <Deque />,
@@ -90,13 +78,13 @@ export const dataStructuresRoutes: AppRouteObject[] = [
     element: <BST />,
   },
   {
-    path: "trie",
-    name: "Trie",
-    element: <Trie />,
-  },
-  {
     path: "heap",
     name: "Heap",
     element: <Heap />,
+  },
+  {
+    path: "trie",
+    name: "Trie",
+    element: <Trie />,
   },
 ];

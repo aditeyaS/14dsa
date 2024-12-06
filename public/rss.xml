@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+  <channel>
+    <title>14dsa</title>
+    <link>https://14dsa.vercel.app/</link>
+    <description>Data structures and algorithms.</description>
+
+    <item>
+      <title>Analysis</title>
+      <link>https://14dsa.vercel.app/basic/analysis</link>
+      <description>Analysis of algorithms</description>
+    </item>
+
+  </channel>
+</rss>

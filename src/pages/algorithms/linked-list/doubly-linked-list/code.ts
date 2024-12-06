@@ -1,9 +1,3 @@
-export const pynode = `class Node:
-    def __init__(self, val):
-        self.val = val
-        self.prev = None
-        self.next = None`;
-
 export const pyiab = `def insertAtBeginning(head, x):
     t = Node(x)
     if head:

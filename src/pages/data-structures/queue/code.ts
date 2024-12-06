@@ -1,6 +1,6 @@
 export const pylistImplementation = `q = []
 q.append(10) # enqueue
-q.pop(0) # dequeue O(n)
+q.pop(0) # dequeue -> O(n) Inefficient ❌
 len(q) # length`;
 
 export const pydequeImplementation = `from collections import deque
