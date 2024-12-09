@@ -1,7 +1,8 @@
 import React from "react";
+import { NonIndexRouteObject } from "react-router-dom";
 
-export interface AppRouteObject {
-  path: string;
+export default interface AppRouteObject extends NonIndexRouteObject {
   name: string;
-  element: React.ReactNode;
+  icon?: React.ReactNode;
+  children?: AppRouteObject[];
 }
