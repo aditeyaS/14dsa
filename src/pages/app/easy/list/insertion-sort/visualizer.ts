@@ -1,4 +1,4 @@
-import { SortFunction } from "@/components/sort-visualizer";
+import SortFunction from "@/types/sort-function";
 
 const visualizerFunction: SortFunction = async (array, update, shouldStop) => {
   for (let i = 1; i < array.length; i++) {

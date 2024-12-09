@@ -1,4 +1,4 @@
-import { lazy } from "react";
+import { createElement, lazy } from "react";
 import { ArrowUpNarrowWide, Merge, Rabbit } from "lucide-react";
 import AppRouteObject from "@/types/app-route-object";
 
@@ -10,20 +10,20 @@ const listRoutes: AppRouteObject[] = [
   {
     path: "merge-sort",
     name: "Merge Sort",
-    icon: <Merge />,
-    element: <MS />,
+    icon: createElement(Merge),
+    element: createElement(MS),
   },
   {
     path: "quick-sort",
     name: "Quick Sort",
-    icon: <Rabbit />,
-    element: <QS />,
+    icon: createElement(Rabbit),
+    element: createElement(QS),
   },
   {
     path: "heap-sort",
     name: "Heap Sort",
-    icon: <ArrowUpNarrowWide />,
-    element: <HS />,
+    icon: createElement(ArrowUpNarrowWide),
+    element: createElement(HS),
   },
 ];
 

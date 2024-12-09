@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import AppLayout from "@/components/layout/app-layout";
 import Home from "./home";
 import NotFound from "./not-found";
-import appRoutes from "./app/routes";
+import appRoutes from "./app";
 
 const router = createBrowserRouter([
   {

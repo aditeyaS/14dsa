@@ -7,12 +7,12 @@ import {
   SidebarSeparator,
 } from "@/components/ui/sidebar";
 import logo from "@/assets/logo.svg";
-import { ModeToggle } from "@/components/mode-toggle";
-import RouteSidebarGroup from "./route-sidebar-group";
-import basicRoutes from "@/pages/app/basic/routes";
-import easyRoutes from "@/pages/app/easy/routes";
 import { Separator } from "../ui/separator";
+import { ModeToggle } from "@/components/mode-toggle";
+import basicRoutes from "@/pages/app/basic";
+import easyRoutes from "@/pages/app/easy";
 import mediumRoutes from "@/pages/app/medium/routes";
+import RouteSidebarGroup from "./route-sidebar-group";
 
 export default function AppSidebar() {
   return (

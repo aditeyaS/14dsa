@@ -1,25 +1,22 @@
-export const pyheapsort = `def buildHeap(l):
-    N = len(l)
+export const pyheapsort = `def buildHeap(arr):
+    N = len(arr)
     for i in range((N - 2) // 2, -1, -1):
-        maxHeapify(l, N, i)
+        maxHeapify(arr, N, i)
 
-
-def maxHeapify(l, n, i):
+def maxHeapify(arr, n, i):
     largest = i
-    left = 2 * i + 1
-    right = 2 * i + 2
-    if left < n and l[left] > l[largest]:
+    left, right = 2 * i + 1, 2 * i + 2
+    if left < n and arr[left] > arr[largest]:
         largest = left
-    if right < n and l[right] > l[largest]:
+    if right < n and arr[right] > arr[largest]:
         largest = right
     if largest != i:
-        l[i], l[largest] = l[largest], l[i]
-        maxHeapify(l, n, largest)
+        arr[i], arr[largest] = arr[largest], arr[i]
+        maxHeapify(arr, n, largest)
 
-
-def heapSort(l):
-    N = len(l)
-    buildHeap(l)
+def heapSort(arr):
+    buildHeap(arr)
+    N = len(arr)
     for i in range(N - 1, 0, -1):
-        l[i], l[0] = l[0], l[i]
-        maxHeapify(l, i, 0)`;
+        arr[i], arr[0] = arr[0], arr[i]
+        maxHeapify(arr, i, 0)`;

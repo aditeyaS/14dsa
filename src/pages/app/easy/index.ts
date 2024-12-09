@@ -1,4 +1,4 @@
-import { lazy } from "react";
+import { createElement, lazy } from "react";
 import {
   Cable,
   Calculator,
@@ -10,11 +10,11 @@ import {
 } from "lucide-react";
 import AppRouteObject from "@/types/app-route-object";
 
-import listRoutes from "./list/routes";
-import matrixRoutes from "./matrix/routes";
-import linkedListRoutes from "./linked-list/routes";
-import treeRoutes from "./tree/routes";
-import mathRoutes from "./math/routes";
+import listRoutes from "./list";
+import matrixRoutes from "./matrix";
+import linkedListRoutes from "./linked-list";
+import treeRoutes from "./tree";
+import mathRoutes from "./math";
 
 const H = lazy(() => import("./heap"));
 const T = lazy(() => import("./trie"));
@@ -22,45 +22,45 @@ const T = lazy(() => import("./trie"));
 const easyRoutes: AppRouteObject[] = [
   {
     path: "math",
-    icon: <Calculator />,
+    icon: createElement(Calculator),
     name: "Math",
     children: mathRoutes,
   },
   {
     path: "list",
-    icon: <List />,
+    icon: createElement(List),
     name: "List",
     children: listRoutes,
   },
   {
     path: "matrix",
-    icon: <Grid3X3 />,
+    icon: createElement(Grid3X3),
     name: "Matrix",
     children: matrixRoutes,
   },
   {
     path: "linked-list",
-    icon: <Cable />,
+    icon: createElement(Cable),
     name: "Linked List",
     children: linkedListRoutes,
   },
   {
     path: "tree",
-    icon: <TreePalm />,
+    icon: createElement(TreePalm),
     name: "Tree",
     children: treeRoutes,
   },
   {
     path: "heap",
-    icon: <ListFilter />,
+    icon: createElement(ListFilter),
     name: "Heap",
-    element: <H />,
+    element: createElement(H),
   },
   {
     path: "trie",
-    icon: <FolderTree />,
+    icon: createElement(FolderTree),
     name: "Trie",
-    element: <T />,
+    element: createElement(T),
   },
 ];
 

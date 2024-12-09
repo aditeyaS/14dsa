@@ -1,7 +1,13 @@
 import PageContainer from "@/components/layout/page-container";
 import SectionContainer from "@/components/layout/section-container";
-import { CodeBlock, Heading, LanguageSections } from "@/components/blocks";
+import {
+  CodeBlock,
+  Heading,
+  LanguageSections,
+  QuestionList,
+} from "@/components/blocks";
 import { pysumbwi } from "./code";
+import questions from "./questions";
 
 export default function PrePostSum() {
   return (
@@ -16,6 +22,10 @@ export default function PrePostSum() {
             </>,
           ]}
         />
+      </SectionContainer>
+      <SectionContainer>
+        <Heading className="underline">Related Questions</Heading>
+        <QuestionList questions={questions} />
       </SectionContainer>
     </PageContainer>
   );

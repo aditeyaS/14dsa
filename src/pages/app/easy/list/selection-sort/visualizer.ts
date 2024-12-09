@@ -1,5 +1,5 @@
 // ChatGPT
-import { SortFunction } from "@/components/sort-visualizer";
+import SortFunction from "@/types/sort-function";
 
 const visualizerFunction: SortFunction = async (array, update, shouldStop) => {
   const n = array.length;

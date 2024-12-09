@@ -1,3 +1,4 @@
+import { createElement, lazy } from "react";
 import AppRouteObject from "@/types/app-route-object";
 import {
   ChevronsLeftRightEllipsis,
@@ -6,7 +7,6 @@ import {
   RefreshCcwDot,
   Turtle,
 } from "lucide-react";
-import { lazy } from "react";
 
 const SLL = lazy(() => import("./singly-linked-list"));
 const SLP = lazy(() => import("./slow-fast-pointer"));
@@ -17,33 +17,33 @@ const CLL = lazy(() => import("./circular-linked-list"));
 const linkedListRoutes: AppRouteObject[] = [
   {
     path: "singly-linked-list",
-    icon: <Link />,
+    icon: createElement(Link),
     name: "Singly Linked List",
-    element: <SLL />,
+    element: createElement(SLL),
   },
   {
     path: "slow-fast-pointer",
-    icon: <Turtle />,
+    icon: createElement(Turtle),
     name: "Slow Fast Pointer",
-    element: <SLP />,
+    element: createElement(SLP),
   },
   {
     path: "cycle-detection",
-    icon: <RefreshCcwDot />,
+    icon: createElement(RefreshCcwDot),
     name: "Cycle Detection",
-    element: <CD />,
+    element: createElement(CD),
   },
   {
     path: "doubly-linked-list",
-    icon: <ChevronsLeftRightEllipsis />,
+    icon: createElement(ChevronsLeftRightEllipsis),
     name: "Doubly Linked List",
-    element: <DLL />,
+    element: createElement(DLL),
   },
   {
     path: "circular-linked-list",
-    icon: <ListRestart />,
+    icon: createElement(ListRestart),
     name: "Circular Linked List",
-    element: <CLL />,
+    element: createElement(CLL),
   },
 ];
 

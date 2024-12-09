@@ -1,3 +1,4 @@
+import { lazy, createElement } from "react";
 import AppRouteObject from "@/types/app-route-object";
 import {
   AArrowDown,
@@ -10,7 +11,6 @@ import {
   SquareSigma,
   TextSearch,
 } from "lucide-react";
-import { lazy } from "react";
 
 const S = lazy(() => import("./sorting"));
 const BS = lazy(() => import("./binary-search"));
@@ -26,56 +26,56 @@ const listRoutes: AppRouteObject[] = [
   {
     path: "sorting",
     name: "Sorting",
-    icon: <ArrowDownUp />,
-    element: <S />,
+    icon: createElement(ArrowDownUp),
+    element: createElement(S),
   },
   {
     path: "binary-search",
     name: "Binary Search",
-    icon: <TextSearch />,
-    element: <BS />,
+    icon: createElement(TextSearch),
+    element: createElement(BS),
   },
   {
     path: "two-pointer",
     name: "Two Pointer",
-    icon: <Maximize2 />,
-    element: <TP />,
+    icon: createElement(Maximize2),
+    element: createElement(TP),
   },
   {
     path: "sliding-window",
     name: "Sliding Window",
-    icon: <Blinds />,
-    element: <SW />,
+    icon: createElement(Blinds),
+    element: createElement(SW),
   },
   {
     path: "prefix-postfix-sum",
     name: "Prefix/Postfix Sum",
-    icon: <SquareSigma />,
-    element: <PPS />,
+    icon: createElement(SquareSigma),
+    element: createElement(PPS),
   },
   {
     path: "bubble-sort",
     name: "Bubble Sort",
-    icon: <ArrowDown01 />,
-    element: <BSORT />,
+    icon: createElement(ArrowDown01),
+    element: createElement(BSORT),
   },
   {
     path: "selection-sort",
     name: "Selection Sort",
-    icon: <AArrowDown />,
-    element: <SS />,
+    icon: createElement(AArrowDown),
+    element: createElement(SS),
   },
   {
     path: "insertion-sort",
     name: "Insertion Sort",
-    icon: <BetweenVerticalEnd />,
-    element: <IS />,
+    icon: createElement(BetweenVerticalEnd),
+    element: createElement(IS),
   },
   {
     path: "additional",
     name: "Additional",
-    icon: <CircleFadingPlus />,
-    element: <A />,
+    icon: createElement(CircleFadingPlus),
+    element: createElement(A),
   },
 ];
 

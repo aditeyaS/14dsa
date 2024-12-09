@@ -6,6 +6,7 @@ import {
   SpaceTimeComplexity,
   LanguageSections,
   CodeBlock,
+  OL,
 } from "@/components/blocks";
 import { pyheapsort } from "./code";
 
@@ -24,6 +25,16 @@ export default function HeapSort() {
               space="O(1)"
               spaceLevel={1}
             />
+          </LI>
+          <LI>
+            2 steps:
+            <OL className="ml-10">
+              <LI>Build a MaxHeap</LI>
+              <LI>
+                Repeatedly swap root with the last node, reduce heap size by 1
+                and heapify
+              </LI>
+            </OL>
           </LI>
         </UL>
         <LanguageSections

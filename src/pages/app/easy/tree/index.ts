@@ -1,3 +1,4 @@
+import { createElement, lazy } from "react";
 import AppRouteObject from "@/types/app-route-object";
 import {
   FileWarning,
@@ -5,7 +6,6 @@ import {
   GalleryVerticalEnd,
   Network,
 } from "lucide-react";
-import { lazy } from "react";
 
 const I = lazy(() => import("./introduction"));
 const BST = lazy(() => import("./binary-search-tree"));
@@ -15,27 +15,27 @@ const BFS = lazy(() => import("./breadth-first-search"));
 const treeRoutes: AppRouteObject[] = [
   {
     path: "introduction",
-    icon: <FileWarning />,
     name: "Introduction",
-    element: <I />,
+    icon: createElement(FileWarning),
+    element: createElement(I),
   },
   {
     path: "binary-search-tree",
-    icon: <Network />,
     name: "Binary Search Tree",
-    element: <BST />,
+    icon: createElement(Network),
+    element: createElement(BST),
   },
   {
     path: "depth-first-search",
-    icon: <GalleryVerticalEnd />,
     name: "Depth First Search",
-    element: <DFS />,
+    icon: createElement(GalleryVerticalEnd),
+    element: createElement(DFS),
   },
   {
     path: "breadth-first-search",
-    icon: <GalleryHorizontalEnd />,
     name: "Breadth First Search",
-    element: <BFS />,
+    icon: createElement(GalleryHorizontalEnd),
+    element: createElement(BFS),
   },
 ];
 

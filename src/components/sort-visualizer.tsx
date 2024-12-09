@@ -2,16 +2,11 @@
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Slider } from "@/components/ui/slider";
+import SortFunction from "@/types/sort-function";
 import { Pause, Play, Shuffle } from "lucide-react";
 import React, { useState, useEffect, useRef } from "react";
 
 const DEFAULT_SPEED = 200;
-
-export type SortFunction = (
-  array: number[],
-  update: (arr: number[], indices: [number, number] | null) => Promise<void>,
-  shouldStop: () => boolean
-) => Promise<void>;
 
 interface SortVisualizerProps {
   sortFunction: SortFunction;
@@ -28,7 +23,7 @@ const SortVisualizer: React.FC<SortVisualizerProps> = ({ sortFunction }) => {
 
   useEffect(() => {
     generateNewArray();
-  }, []);
+  });
 
   const generateNewArray = () => {
     if (isSorting) return;

@@ -8,6 +8,15 @@ export const UL: React.FC<React.HTMLAttributes<HTMLUListElement>> = ({
   return <ul className={cn("list-disc list-inside", className)} {...props} />;
 };
 
+export const OL: React.FC<React.HTMLAttributes<HTMLOListElement>> = ({
+  className,
+  ...props
+}) => {
+  return (
+    <ol className={cn("list-decimal list-inside", className)} {...props} />
+  );
+};
+
 export const LI: React.FC<React.HTMLAttributes<HTMLLIElement>> = ({
   className,
   ...props

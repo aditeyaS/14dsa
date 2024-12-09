@@ -15,7 +15,6 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { DialogTitle } from "@radix-ui/react-dialog";
 
 const SIDEBAR_COOKIE_NAME = "sidebar:state";
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7;
@@ -24,7 +23,7 @@ const SIDEBAR_WIDTH_MOBILE = "18rem";
 const SIDEBAR_WIDTH_ICON = "3rem";
 const SIDEBAR_KEYBOARD_SHORTCUT = "b";
 
-type SidebarContext = {
+type SidebarContextType = {
   state: "expanded" | "collapsed";
   open: boolean;
   setOpen: (open: boolean) => void;
@@ -34,10 +33,10 @@ type SidebarContext = {
   toggleSidebar: () => void;
 };
 
-const SidebarContext = React.createContext<SidebarContext | null>(null);
+const SidebarContextType = React.createContext<SidebarContextType | null>(null);
 
 function useSidebar() {
-  const context = React.useContext(SidebarContext);
+  const context = React.useContext(SidebarContextType);
   if (!context) {
     throw new Error("useSidebar must be used within a SidebarProvider.");
   }
@@ -114,7 +113,7 @@ const SidebarProvider = React.forwardRef<
     // This makes it easier to style the sidebar with Tailwind classes.
     const state = open ? "expanded" : "collapsed";
 
-    const contextValue = React.useMemo<SidebarContext>(
+    const contextValue = React.useMemo<SidebarContextType>(
       () => ({
         state,
         open,
@@ -128,7 +127,7 @@ const SidebarProvider = React.forwardRef<
     );
 
     return (
-      <SidebarContext.Provider value={contextValue}>
+      <SidebarContextType.Provider value={contextValue}>
         <TooltipProvider delayDuration={0}>
           <div
             style={
@@ -148,7 +147,7 @@ const SidebarProvider = React.forwardRef<
             {children}
           </div>
         </TooltipProvider>
-      </SidebarContext.Provider>
+      </SidebarContextType.Provider>
     );
   }
 );
