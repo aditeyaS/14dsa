@@ -23,7 +23,7 @@ const SortVisualizer: React.FC<SortVisualizerProps> = ({ sortFunction }) => {
 
   useEffect(() => {
     generateNewArray();
-  });
+  }, []);
 
   const generateNewArray = () => {
     if (isSorting) return;

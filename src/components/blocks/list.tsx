@@ -5,7 +5,9 @@ export const UL: React.FC<React.HTMLAttributes<HTMLUListElement>> = ({
   className,
   ...props
 }) => {
-  return <ul className={cn("list-disc list-inside", className)} {...props} />;
+  return (
+    <ul className={cn("list-disc list-inside text-xl", className)} {...props} />
+  );
 };
 
 export const OL: React.FC<React.HTMLAttributes<HTMLOListElement>> = ({
@@ -13,7 +15,10 @@ export const OL: React.FC<React.HTMLAttributes<HTMLOListElement>> = ({
   ...props
 }) => {
   return (
-    <ol className={cn("list-decimal list-inside", className)} {...props} />
+    <ol
+      className={cn("list-decimal list-inside text-xl", className)}
+      {...props}
+    />
   );
 };
 

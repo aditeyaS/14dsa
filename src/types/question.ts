@@ -1,4 +1,4 @@
-type Topics = "prefix sum" | "list";
+type Topics = "prefix sum" | "list" | "kadane's algorithm";
 
 interface Question {
   title: string;

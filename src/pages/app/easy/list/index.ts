@@ -4,6 +4,7 @@ import {
   AArrowDown,
   ArrowDown01,
   ArrowDownUp,
+  CopyPlus,
   BetweenVerticalEnd,
   Blinds,
   CircleFadingPlus,
@@ -16,6 +17,7 @@ const S = lazy(() => import("./sorting"));
 const BS = lazy(() => import("./binary-search"));
 const TP = lazy(() => import("./two-pointer"));
 const SW = lazy(() => import("./sliding-window"));
+const KA = lazy(() => import("./kadane-algorithm"));
 const PPS = lazy(() => import("./prefix-postfix-sum"));
 const BSORT = lazy(() => import("./bubble-sort"));
 const SS = lazy(() => import("./selection-sort"));
@@ -46,6 +48,12 @@ const listRoutes: AppRouteObject[] = [
     name: "Sliding Window",
     icon: createElement(Blinds),
     element: createElement(SW),
+  },
+  {
+    path: "kadane-algorithm",
+    name: "Kadane's Algorithm",
+    icon: createElement(CopyPlus),
+    element: createElement(KA),
   },
   {
     path: "prefix-postfix-sum",
