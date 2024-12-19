@@ -1,4 +1,4 @@
-import { createElement, lazy } from "react";
+import { lazy } from "react";
 import AppRouteObject from "@/types/app-route-object";
 import {
   ChevronsLeftRightEllipsis,
@@ -17,33 +17,33 @@ const CLL = lazy(() => import("./circular-linked-list"));
 const linkedListRoutes: AppRouteObject[] = [
   {
     path: "singly-linked-list",
-    icon: createElement(Link),
+    icon: <Link />,
     name: "Singly Linked List",
-    element: createElement(SLL),
+    element: <SLL />,
   },
   {
     path: "slow-fast-pointer",
-    icon: createElement(Turtle),
+    icon: <Turtle />,
     name: "Slow Fast Pointer",
-    element: createElement(SLP),
+    element: <SLP />,
   },
   {
     path: "cycle-detection",
-    icon: createElement(RefreshCcwDot),
+    icon: <RefreshCcwDot />,
     name: "Cycle Detection",
-    element: createElement(CD),
+    element: <CD />,
   },
   {
     path: "doubly-linked-list",
-    icon: createElement(ChevronsLeftRightEllipsis),
+    icon: <ChevronsLeftRightEllipsis />,
     name: "Doubly Linked List",
-    element: createElement(DLL),
+    element: <DLL />,
   },
   {
     path: "circular-linked-list",
-    icon: createElement(ListRestart),
+    icon: <ListRestart />,
     name: "Circular Linked List",
-    element: createElement(CLL),
+    element: <CLL />,
   },
 ];
 

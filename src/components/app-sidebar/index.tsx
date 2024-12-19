@@ -11,7 +11,7 @@ import { Separator } from "../ui/separator";
 import { ModeToggle } from "@/components/mode-toggle";
 import basicRoutes from "@/pages/app/basic";
 import easyRoutes from "@/pages/app/easy";
-import mediumRoutes from "@/pages/app/medium/routes";
+import mediumRoutes from "@/pages/app/medium";
 import RouteSidebarGroup from "./route-sidebar-group";
 
 export default function AppSidebar() {

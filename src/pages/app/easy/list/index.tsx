@@ -1,4 +1,4 @@
-import { lazy, createElement } from "react";
+import { lazy } from "react";
 import AppRouteObject from "@/types/app-route-object";
 import {
   AArrowDown,
@@ -28,62 +28,62 @@ const listRoutes: AppRouteObject[] = [
   {
     path: "sorting",
     name: "Sorting",
-    icon: createElement(ArrowDownUp),
-    element: createElement(S),
+    icon: <ArrowDownUp />,
+    element: <S />,
   },
   {
     path: "binary-search",
     name: "Binary Search",
-    icon: createElement(TextSearch),
-    element: createElement(BS),
+    icon: <TextSearch />,
+    element: <BS />,
   },
   {
     path: "two-pointer",
     name: "Two Pointer",
-    icon: createElement(Maximize2),
-    element: createElement(TP),
+    icon: <Maximize2 />,
+    element: <TP />,
   },
   {
     path: "sliding-window",
     name: "Sliding Window",
-    icon: createElement(Blinds),
-    element: createElement(SW),
+    icon: <Blinds />,
+    element: <SW />,
   },
   {
     path: "kadane-algorithm",
     name: "Kadane's Algorithm",
-    icon: createElement(CopyPlus),
-    element: createElement(KA),
+    icon: <CopyPlus />,
+    element: <KA />,
   },
   {
     path: "prefix-postfix-sum",
     name: "Prefix/Postfix Sum",
-    icon: createElement(SquareSigma),
-    element: createElement(PPS),
+    icon: <SquareSigma />,
+    element: <PPS />,
   },
   {
     path: "bubble-sort",
     name: "Bubble Sort",
-    icon: createElement(ArrowDown01),
-    element: createElement(BSORT),
+    icon: <ArrowDown01 />,
+    element: <BSORT />,
   },
   {
     path: "selection-sort",
     name: "Selection Sort",
-    icon: createElement(AArrowDown),
-    element: createElement(SS),
+    icon: <AArrowDown />,
+    element: <SS />,
   },
   {
     path: "insertion-sort",
     name: "Insertion Sort",
-    icon: createElement(BetweenVerticalEnd),
-    element: createElement(IS),
+    icon: <BetweenVerticalEnd />,
+    element: <IS />,
   },
   {
     path: "additional",
     name: "Additional",
-    icon: createElement(CircleFadingPlus),
-    element: createElement(A),
+    icon: <CircleFadingPlus />,
+    element: <A />,
   },
 ];
 

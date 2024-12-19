@@ -1,7 +1,7 @@
 import { RouteObject } from "react-router-dom";
 import basicRoutes from "./basic";
 import easyRoutes from "./easy";
-import mediumRoutes from "./medium/routes";
+import mediumRoutes from "./medium";
 
 const appRoutes: RouteObject[] = [
   {

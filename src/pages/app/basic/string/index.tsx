@@ -10,6 +10,7 @@ import {
   pyStringMethods,
 } from "./code";
 import {
+  Alert,
   CodeBlock,
   Heading,
   LanguageSections,
@@ -96,6 +97,13 @@ export default function String() {
             </>,
           ]}
         />
+      </SectionContainer>
+
+      <SectionContainer>
+        <Alert type={"Tip"}>
+          If there are a lot of modifications required then choose an array and
+          return it as a string
+        </Alert>
       </SectionContainer>
     </PageContainer>
   );

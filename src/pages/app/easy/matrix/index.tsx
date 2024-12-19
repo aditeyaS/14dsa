@@ -1,6 +1,6 @@
 import AppRouteObject from "@/types/app-route-object";
 import { FlipHorizontal2, RailSymbol } from "lucide-react";
-import { createElement, lazy } from "react";
+import { lazy } from "react";
 
 const TL = lazy(() => import("./traversal"));
 const TE = lazy(() => import("./transpose"));
@@ -8,15 +8,15 @@ const TE = lazy(() => import("./transpose"));
 const matrixRoutes: AppRouteObject[] = [
   {
     path: "traversal",
-    icon: createElement(RailSymbol),
+    icon: <RailSymbol />,
     name: "Traversal",
-    element: createElement(TL),
+    element: <TL />,
   },
   {
     path: "transpose",
-    icon: createElement(FlipHorizontal2),
+    icon: <FlipHorizontal2 />,
     name: "Transpose",
-    element: createElement(TE),
+    element: <TE />,
   },
 ];
 

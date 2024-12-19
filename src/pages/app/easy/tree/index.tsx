@@ -1,4 +1,4 @@
-import { createElement, lazy } from "react";
+import { lazy } from "react";
 import AppRouteObject from "@/types/app-route-object";
 import {
   FileWarning,
@@ -16,26 +16,26 @@ const treeRoutes: AppRouteObject[] = [
   {
     path: "introduction",
     name: "Introduction",
-    icon: createElement(FileWarning),
-    element: createElement(I),
+    icon: <FileWarning />,
+    element: <I />,
   },
   {
     path: "binary-search-tree",
     name: "Binary Search Tree",
-    icon: createElement(Network),
-    element: createElement(BST),
+    icon: <Network />,
+    element: <BST />,
   },
   {
     path: "depth-first-search",
     name: "Depth First Search",
-    icon: createElement(GalleryVerticalEnd),
-    element: createElement(DFS),
+    icon: <GalleryVerticalEnd />,
+    element: <DFS />,
   },
   {
     path: "breadth-first-search",
     name: "Breadth First Search",
-    icon: createElement(GalleryHorizontalEnd),
-    element: createElement(BFS),
+    icon: <GalleryHorizontalEnd />,
+    element: <BFS />,
   },
 ];
 

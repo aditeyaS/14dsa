@@ -1,4 +1,4 @@
-import { createElement, lazy } from "react";
+import { lazy } from "react";
 import {
   Cable,
   Calculator,
@@ -22,45 +22,45 @@ const T = lazy(() => import("./trie"));
 const easyRoutes: AppRouteObject[] = [
   {
     path: "math",
-    icon: createElement(Calculator),
+    icon: <Calculator />,
     name: "Math",
     children: mathRoutes,
   },
   {
     path: "list",
-    icon: createElement(List),
+    icon: <List />,
     name: "List",
     children: listRoutes,
   },
   {
     path: "matrix",
-    icon: createElement(Grid3X3),
+    icon: <Grid3X3 />,
     name: "Matrix",
     children: matrixRoutes,
   },
   {
     path: "linked-list",
-    icon: createElement(Cable),
+    icon: <Cable />,
     name: "Linked List",
     children: linkedListRoutes,
   },
   {
     path: "tree",
-    icon: createElement(TreePalm),
+    icon: <TreePalm />,
     name: "Tree",
     children: treeRoutes,
   },
   {
     path: "heap",
-    icon: createElement(ListFilter),
+    icon: <ListFilter />,
     name: "Heap",
-    element: createElement(H),
+    element: <H />,
   },
   {
     path: "trie",
-    icon: createElement(FolderTree),
+    icon: <FolderTree />,
     name: "Trie",
-    element: createElement(T),
+    element: <T />,
   },
 ];
 
