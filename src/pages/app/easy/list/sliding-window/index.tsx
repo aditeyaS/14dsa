@@ -5,9 +5,11 @@ import {
   Heading,
   LanguageSections,
   LI,
+  QuestionList,
   UL,
 } from "@/components/blocks";
 import { pymaxksum, pysubarraygivensum } from "./code";
+import questions from "./question";
 
 export default function SlidingWindow() {
   return (
@@ -44,6 +46,11 @@ export default function SlidingWindow() {
             </>,
           ]}
         />
+      </SectionContainer>
+
+      <SectionContainer>
+        <Heading className="underline">Related Questions</Heading>
+        <QuestionList questions={questions} />
       </SectionContainer>
     </PageContainer>
   );
