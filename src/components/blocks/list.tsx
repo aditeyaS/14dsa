@@ -26,5 +26,5 @@ export const LI: React.FC<React.HTMLAttributes<HTMLLIElement>> = ({
   className,
   ...props
 }) => {
-  return <li className={cn("text-xl", className)} {...props} />;
+  return <li className={cn(className)} {...props} />;
 };

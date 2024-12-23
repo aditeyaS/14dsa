@@ -20,12 +20,6 @@ const treeRoutes: AppRouteObject[] = [
     element: <I />,
   },
   {
-    path: "binary-search-tree",
-    name: "Binary Search Tree",
-    icon: <Network />,
-    element: <BST />,
-  },
-  {
     path: "depth-first-search",
     name: "Depth First Search",
     icon: <GalleryVerticalEnd />,
@@ -36,6 +30,12 @@ const treeRoutes: AppRouteObject[] = [
     name: "Breadth First Search",
     icon: <GalleryHorizontalEnd />,
     element: <BFS />,
+  },
+  {
+    path: "binary-search-tree",
+    name: "Binary Search Tree",
+    icon: <Network />,
+    element: <BST />,
   },
 ];
 
