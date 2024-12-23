@@ -21,29 +21,11 @@ export default function Heap() {
           <LI>it is a complete binary tree</LI>
           <LI>used to implement Priority Queue</LI>
           <LI>2 types: Min heap; Max heap</LI>
-          <LI>Min Heap (highest priority item assigned lowest value)</LI>
-          <LI>Max Heap (highest priority item assigned highest value)</LI>
+          <UL className="ml-8">
+            <LI>Min Heap (highest priority item assigned lowest value)</LI>
+            <LI>Max Heap (highest priority item assigned highest value)</LI>
+          </UL>
         </UL>
-      </SectionContainer>
-
-      <SectionContainer>
-        <Heading>Min Heap</Heading>
-        <UL>
-          <LI>complete binary tree</LI>
-          <LI>every node has value smaller than it's descendants</LI>
-          <LI>
-            Array implementation: left(i) = 2i + 1; right(i) = 2i + 2; parent(i)
-            = (i-1)//2
-          </LI>
-        </UL>
-        <LanguageSections
-          languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language={"python"} code={pyminheap} />
-            </>,
-          ]}
-        />
       </SectionContainer>
 
       <SectionContainer>
@@ -61,6 +43,30 @@ export default function Heap() {
                   To implement max heap multiply elements by -1 before storing
                 </Paragraph>
               </Alert>
+            </>,
+          ]}
+        />
+      </SectionContainer>
+
+      <SectionContainer>
+        <Heading>Min Heap</Heading>
+        <UL>
+          <LI>complete binary tree</LI>
+          <LI>every node has value smaller than it's descendants</LI>
+          <LI>
+            Array implementation:
+            <UL className="ml-8">
+              <LI>parent = (i-1) // 2</LI>
+              <LI>left = 2i + 1</LI>
+              <LI>right = 2i + 2</LI>
+            </UL>
+          </LI>
+        </UL>
+        <LanguageSections
+          languages={["python"]}
+          sections={[
+            <>
+              <CodeBlock language={"python"} code={pyminheap} />
             </>,
           ]}
         />

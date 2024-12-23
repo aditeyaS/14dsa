@@ -10,7 +10,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import InsertImage from "./insert-image";
+import insert from "./insert.svg";
 
 export default function AVLTree() {
   return (
@@ -65,7 +65,7 @@ export default function AVLTree() {
           </LI>
         </UL>
         <Paragraph>Eg: Insert: [20, 15, 5, 40, 50, 18]</Paragraph>
-        <InsertImage />
+        <img src={insert} />
       </SectionContainer>
 
       <SectionContainer>

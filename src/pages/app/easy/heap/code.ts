@@ -2,9 +2,10 @@ export const pyminheap = `class MinHeap:
     def __init__(self):
         self.mh = []
 
-    def __init__(self, l):
-        self.mh = l
-        i = (len(l) - 2) // 2
+    def __init__(self, arr = []):
+        self.mh = arr
+        # bottom left internal node
+        i = self.parent(len(arr) - 1)
         while i >= 0:
             self.minHeapify(i)
             i -= 1
@@ -27,6 +28,7 @@ export const pyminheap = `class MinHeap:
             i = p
 
     def minHeapify(self, i):
+        # fixes the heap whose root is violating the heap properties
         l = self.left(i)
         r = self.right(i)
         smallest = i
