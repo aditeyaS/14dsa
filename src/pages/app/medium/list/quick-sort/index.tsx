@@ -62,11 +62,7 @@ export default function QuickSort() {
         </UL>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language={"python"} code={pylumoto} />
-            </>,
-          ]}
+          sections={[<CodeBlock language={"python"} code={pylumoto} />]}
         />
       </SectionContainer>
 
@@ -82,11 +78,7 @@ export default function QuickSort() {
         </UL>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language={"python"} code={pyhoares} />
-            </>,
-          ]}
+          sections={[<CodeBlock language={"python"} code={pyhoares} />]}
         />
       </SectionContainer>
 
@@ -94,11 +86,7 @@ export default function QuickSort() {
         <Heading>Quick Sort</Heading>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language={"python"} code={pyquicksort} />
-            </>,
-          ]}
+          sections={[<CodeBlock language={"python"} code={pyquicksort} />]}
         />
       </SectionContainer>
     </PageContainer>

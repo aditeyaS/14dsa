@@ -14,11 +14,7 @@ export default function TransposeMatrix() {
         <Heading>Square Matrix</Heading>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language={"python"} code={pytranspose} />
-            </>,
-          ]}
+          sections={[<CodeBlock language={"python"} code={pytranspose} />]}
         />
       </SectionContainer>
     </PageContainer>

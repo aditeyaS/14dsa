@@ -29,11 +29,7 @@ export default function SlidingWindow() {
         <Heading>Max sum of k consecutive elements</Heading>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language={"python"} code={pymaxksum} />
-            </>,
-          ]}
+          sections={[<CodeBlock language={"python"} code={pymaxksum} />]}
         />
       </SectionContainer>
       <SectionContainer>
@@ -41,9 +37,7 @@ export default function SlidingWindow() {
         <LanguageSections
           languages={["python"]}
           sections={[
-            <>
-              <CodeBlock language={"python"} code={pysubarraygivensum} />
-            </>,
+            <CodeBlock language={"python"} code={pysubarraygivensum} />,
           ]}
         />
       </SectionContainer>

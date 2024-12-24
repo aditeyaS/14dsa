@@ -36,11 +36,7 @@ export default function DFS() {
         />
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language={"python"} code={pyinOrder} />
-            </>,
-          ]}
+          sections={[<CodeBlock language={"python"} code={pyinOrder} />]}
         />
       </SectionContainer>
 
@@ -54,11 +50,7 @@ export default function DFS() {
         />
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language={"python"} code={pypreOrder} />
-            </>,
-          ]}
+          sections={[<CodeBlock language={"python"} code={pypreOrder} />]}
         />
       </SectionContainer>
 
@@ -72,11 +64,7 @@ export default function DFS() {
         />
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language={"python"} code={pypostOrder} />
-            </>,
-          ]}
+          sections={[<CodeBlock language={"python"} code={pypostOrder} />]}
         />
       </SectionContainer>
 
@@ -94,11 +82,7 @@ export default function DFS() {
         />
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language={"python"} code={pyheight} />
-            </>,
-          ]}
+          sections={[<CodeBlock language={"python"} code={pyheight} />]}
         />
       </SectionContainer>
     </PageContainer>

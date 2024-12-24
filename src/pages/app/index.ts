@@ -2,6 +2,7 @@ import { RouteObject } from "react-router-dom";
 import basicRoutes from "./basic";
 import easyRoutes from "./easy";
 import mediumRoutes from "./medium";
+import hardRoutes from "./hard";
 
 const appRoutes: RouteObject[] = [
   {
@@ -15,6 +16,10 @@ const appRoutes: RouteObject[] = [
   {
     path: "medium",
     children: mediumRoutes,
+  },
+  {
+    path: "hard",
+    children: hardRoutes,
   },
 ];
 

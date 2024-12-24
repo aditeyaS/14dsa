@@ -30,40 +30,24 @@ export default function Trie() {
         <Paragraph>Node</Paragraph>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language={"python"} code={pynode} />
-            </>,
-          ]}
+          sections={[<CodeBlock language={"python"} code={pynode} />]}
         />
         <Paragraph>Insert</Paragraph>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language={"python"} code={pyinsert} />
-            </>,
-          ]}
+          sections={[<CodeBlock language={"python"} code={pyinsert} />]}
         />
 
         <Paragraph>Search</Paragraph>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language={"python"} code={pysearch} />
-            </>,
-          ]}
+          sections={[<CodeBlock language={"python"} code={pysearch} />]}
         />
 
         <Paragraph>Delete</Paragraph>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language={"python"} code={pydelete} />
-            </>,
-          ]}
+          sections={[<CodeBlock language={"python"} code={pydelete} />]}
         />
       </SectionContainer>
     </PageContainer>

@@ -40,9 +40,7 @@ export default function Stack() {
         <LanguageSections
           languages={["python"]}
           sections={[
-            <>
-              <CodeBlock language="python" code={pylistImplementation} />
-            </>,
+            <CodeBlock language="python" code={pylistImplementation} />,
           ]}
         />
       </SectionContainer>
@@ -78,11 +76,7 @@ export default function Stack() {
         <Heading>Linked List implementation</Heading>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language="python" code={pyllImplementation} />
-            </>,
-          ]}
+          sections={[<CodeBlock language="python" code={pyllImplementation} />]}
         />
       </SectionContainer>
     </PageContainer>

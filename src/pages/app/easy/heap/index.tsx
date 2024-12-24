@@ -64,11 +64,7 @@ export default function Heap() {
         </UL>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language={"python"} code={pyminheap} />
-            </>,
-          ]}
+          sections={[<CodeBlock language={"python"} code={pyminheap} />]}
         />
       </SectionContainer>
     </PageContainer>

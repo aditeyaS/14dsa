@@ -21,11 +21,7 @@ export default function KadaneAlgorithm() {
         </OL>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language={"python"} code={pymaxSubArraySum} />
-            </>,
-          ]}
+          sections={[<CodeBlock language={"python"} code={pymaxSubArraySum} />]}
         />
       </SectionContainer>
     </PageContainer>

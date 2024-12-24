@@ -26,11 +26,7 @@ export default function LinkedList() {
         <Heading>Single Linked List</Heading>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language="python" code={pynodesingle} />
-            </>,
-          ]}
+          sections={[<CodeBlock language="python" code={pynodesingle} />]}
         />
       </SectionContainer>
 
@@ -45,11 +41,7 @@ export default function LinkedList() {
         </UL>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language="python" code={pynodecircular} />
-            </>,
-          ]}
+          sections={[<CodeBlock language="python" code={pynodecircular} />]}
         />
       </SectionContainer>
 
@@ -64,11 +56,7 @@ export default function LinkedList() {
         </UL>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language="python" code={pynodedoubly} />
-            </>,
-          ]}
+          sections={[<CodeBlock language="python" code={pynodedoubly} />]}
         />
       </SectionContainer>
     </PageContainer>

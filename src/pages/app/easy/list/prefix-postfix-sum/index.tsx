@@ -16,11 +16,7 @@ export default function PrePostSum() {
         <Heading>find sum of subarray between indexes</Heading>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language={"python"} code={pysumbwi} />
-            </>,
-          ]}
+          sections={[<CodeBlock language={"python"} code={pysumbwi} />]}
         />
       </SectionContainer>
       <SectionContainer>

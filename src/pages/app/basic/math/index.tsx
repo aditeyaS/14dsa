@@ -27,7 +27,6 @@ export default function Math() {
           sections={[
             <>
               <CodeBlock language="python" code={pyoperations} />
-
               <Alert type={"Caution"}>
                 <CodeBlock language="python" code={pyroundtozero} />
               </Alert>
@@ -40,11 +39,7 @@ export default function Math() {
         <Heading>Number-theoretic and representation functions</Heading>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language="python" code={pyNTR} />
-            </>,
-          ]}
+          sections={[<CodeBlock language="python" code={pyNTR} />]}
         />
       </SectionContainer>
 
@@ -52,11 +47,7 @@ export default function Math() {
         <Heading>Power and log functions</Heading>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language="python" code={pyPowerAndLog} />
-            </>,
-          ]}
+          sections={[<CodeBlock language="python" code={pyPowerAndLog} />]}
         />
       </SectionContainer>
 
@@ -67,11 +58,7 @@ export default function Math() {
         </Paragraph>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language="python" code={pyMaxMin} />
-            </>,
-          ]}
+          sections={[<CodeBlock language="python" code={pyMaxMin} />]}
         />
       </SectionContainer>
 
@@ -79,11 +66,7 @@ export default function Math() {
         <Heading>Constants</Heading>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language="python" code={pyConstant} />
-            </>,
-          ]}
+          sections={[<CodeBlock language="python" code={pyConstant} />]}
         />
       </SectionContainer>
 
@@ -92,11 +75,7 @@ export default function Math() {
         <Paragraph>x power n</Paragraph>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language="python" code={pyXPowerN} />
-            </>,
-          ]}
+          sections={[<CodeBlock language="python" code={pyXPowerN} />]}
         />
       </SectionContainer>
     </PageContainer>

@@ -34,24 +34,28 @@ const BM = lazy(() => import("./bit-magic"));
 
 const basicRoutes: AppRouteObject[] = [
   {
+    id: "b/analysis",
     path: "analysis",
     icon: <ChartSpline />,
     name: "Analysis",
     element: <A />,
   },
   {
+    id: "b/recursion",
     path: "recursion",
     icon: <Repeat />,
     name: "Recursion",
     element: <R />,
   },
   {
+    id: "b/math",
     path: "math",
     icon: <Calculator />,
     name: "Math",
     element: <M />,
   },
   {
+    id: "b/tuple",
     path: "tuple",
     icon: <Parentheses />,
     name: "Tuple",
@@ -63,12 +67,14 @@ const basicRoutes: AppRouteObject[] = [
     name: "Hashing",
     children: [
       {
+        id: "b/set",
         path: "set",
         icon: <Parentheses />,
         name: "Set",
         element: <SET />,
       },
       {
+        id: "b/dictionary",
         path: "dictionary",
         icon: <Braces />,
         name: "Dictionary",
@@ -77,48 +83,56 @@ const basicRoutes: AppRouteObject[] = [
     ],
   },
   {
+    id: "b/list",
     path: "list",
     icon: <List />,
     name: "List",
     element: <L />,
   },
   {
+    id: "b/matrix",
     path: "matrix",
     icon: <Grid3X3 />,
     name: "Matrix",
     element: <MAT />,
   },
   {
+    id: "b/string",
     path: "string",
     icon: <WholeWord />,
     name: "String",
     element: <S />,
   },
   {
+    id: "b/linked-list",
     path: "linked-list",
     icon: <Cable />,
     name: "Linked List",
     element: <LL />,
   },
   {
+    id: "b/deque",
     path: "deque",
     icon: <Move />,
     name: "Deque",
     element: <D />,
   },
   {
+    id: "b/stack",
     path: "stack",
     icon: <Layers />,
     name: "Stack",
     element: <STK />,
   },
   {
+    id: "b/queue",
     path: "queue",
     icon: <ListEnd />,
     name: "Queue",
     element: <Q />,
   },
   {
+    id: "b/bit-magic",
     path: "bit-magic",
     icon: <Binary />,
     name: "Bit Magic",

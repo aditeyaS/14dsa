@@ -10,11 +10,7 @@ export default function DoublyLinkedList() {
         <Heading>Insert at beginning</Heading>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language={"python"} code={pyiab} />
-            </>,
-          ]}
+          sections={[<CodeBlock language={"python"} code={pyiab} />]}
         />
       </SectionContainer>
 
@@ -22,11 +18,7 @@ export default function DoublyLinkedList() {
         <Heading>Insert at end</Heading>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language={"python"} code={pyiae} />
-            </>,
-          ]}
+          sections={[<CodeBlock language={"python"} code={pyiae} />]}
         />
       </SectionContainer>
 
@@ -34,11 +26,7 @@ export default function DoublyLinkedList() {
         <Heading>Delete first</Heading>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language={"python"} code={pydf} />
-            </>,
-          ]}
+          sections={[<CodeBlock language={"python"} code={pydf} />]}
         />
       </SectionContainer>
 
@@ -46,11 +34,7 @@ export default function DoublyLinkedList() {
         <Heading>Delete last</Heading>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language={"python"} code={pydl} />
-            </>,
-          ]}
+          sections={[<CodeBlock language={"python"} code={pydl} />]}
         />
       </SectionContainer>
     </PageContainer>

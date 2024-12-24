@@ -10,11 +10,7 @@ export default function CircularLinkedList() {
         <Heading>Traversal</Heading>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language={"python"} code={pytraversal} />
-            </>,
-          ]}
+          sections={[<CodeBlock language={"python"} code={pytraversal} />]}
         />
       </SectionContainer>
 
@@ -22,11 +18,7 @@ export default function CircularLinkedList() {
         <Heading>Insert at beginning</Heading>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language={"python"} code={pyiab} />
-            </>,
-          ]}
+          sections={[<CodeBlock language={"python"} code={pyiab} />]}
         />
       </SectionContainer>
 
@@ -34,11 +26,7 @@ export default function CircularLinkedList() {
         <Heading>Insert at end</Heading>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language={"python"} code={pyiae} />
-            </>,
-          ]}
+          sections={[<CodeBlock language={"python"} code={pyiae} />]}
         />
       </SectionContainer>
 
@@ -46,11 +34,7 @@ export default function CircularLinkedList() {
         <Heading>Delete first</Heading>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language={"python"} code={pydf} />
-            </>,
-          ]}
+          sections={[<CodeBlock language={"python"} code={pydf} />]}
         />
       </SectionContainer>
     </PageContainer>

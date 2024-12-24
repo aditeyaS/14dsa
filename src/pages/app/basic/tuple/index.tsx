@@ -41,11 +41,7 @@ export default function Tuple() {
         <Heading>Access</Heading>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language="python" code={pyAccess} />
-            </>,
-          ]}
+          sections={[<CodeBlock language="python" code={pyAccess} />]}
         />
       </SectionContainer>
 
@@ -53,11 +49,7 @@ export default function Tuple() {
         <Heading>Others</Heading>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language="python" code={pyOthers} />
-            </>,
-          ]}
+          sections={[<CodeBlock language="python" code={pyOthers} />]}
         />
       </SectionContainer>
     </PageContainer>

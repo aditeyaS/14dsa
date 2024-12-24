@@ -77,11 +77,7 @@ export default function BitMagic() {
         </UL>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language="python" code={pyBitwiseNot} />
-            </>,
-          ]}
+          sections={[<CodeBlock language="python" code={pyBitwiseNot} />]}
         />
       </SectionContainer>
       <SectionContainer>
@@ -92,11 +88,7 @@ export default function BitMagic() {
         </UL>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language="python" code={pyShift} />
-            </>,
-          ]}
+          sections={[<CodeBlock language="python" code={pyShift} />]}
         />
       </SectionContainer>
     </PageContainer>

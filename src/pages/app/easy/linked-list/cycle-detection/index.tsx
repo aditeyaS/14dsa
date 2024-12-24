@@ -23,22 +23,14 @@ export default function CycleDetection() {
         </UL>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language={"python"} code={pycycledetection} />
-            </>,
-          ]}
+          sections={[<CodeBlock language={"python"} code={pycycledetection} />]}
         />
       </SectionContainer>
       <SectionContainer>
         <Heading>Remove cycle</Heading>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language={"python"} code={pyremoveloop} />
-            </>,
-          ]}
+          sections={[<CodeBlock language={"python"} code={pyremoveloop} />]}
         />
       </SectionContainer>
     </PageContainer>

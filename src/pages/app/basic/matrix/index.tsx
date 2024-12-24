@@ -21,11 +21,7 @@ export default function Matrix() {
         <Heading>Initialization</Heading>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language={"python"} code={pyinit} />
-            </>,
-          ]}
+          sections={[<CodeBlock language={"python"} code={pyinit} />]}
         />
       </SectionContainer>
     </PageContainer>

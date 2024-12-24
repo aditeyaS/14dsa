@@ -1,11 +1,11 @@
 import { SidebarTrigger } from "@/components/ui/sidebar";
-import AppSidebar from "@/components/app-sidebar";
 import { Outlet } from "react-router-dom";
+import Sidebar from "./_side-bar";
 
-export default function AppLayout() {
+export default function Layout() {
   return (
     <>
-      <AppSidebar />
+      <Sidebar />
       <SidebarTrigger title="Toggle Sidebar" />
       <Outlet />
     </>

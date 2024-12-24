@@ -29,11 +29,7 @@ export default function Dictionary() {
         <Heading>Initialize</Heading>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language="python" code={pyInit} />
-            </>,
-          ]}
+          sections={[<CodeBlock language="python" code={pyInit} />]}
         />
       </SectionContainer>
 
@@ -59,11 +55,7 @@ export default function Dictionary() {
         <Heading>Access</Heading>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language="python" code={pyAccess} />
-            </>,
-          ]}
+          sections={[<CodeBlock language="python" code={pyAccess} />]}
         />
       </SectionContainer>
 
@@ -71,11 +63,7 @@ export default function Dictionary() {
         <Heading>Delete</Heading>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language="python" code={pyDel} />
-            </>,
-          ]}
+          sections={[<CodeBlock language="python" code={pyDel} />]}
         />
       </SectionContainer>
 

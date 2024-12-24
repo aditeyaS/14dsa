@@ -46,11 +46,7 @@ export default function BST() {
         />
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language={"python"} code={pysearchR} />
-            </>,
-          ]}
+          sections={[<CodeBlock language={"python"} code={pysearchR} />]}
         />
         <Paragraph>Iterative</Paragraph>
         <SpaceTimeComplexity
@@ -61,11 +57,7 @@ export default function BST() {
         />
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language={"python"} code={pysearchI} />
-            </>,
-          ]}
+          sections={[<CodeBlock language={"python"} code={pysearchI} />]}
         />
       </SectionContainer>
       <SectionContainer>
@@ -79,11 +71,7 @@ export default function BST() {
         />
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language={"python"} code={pyinsertR} />
-            </>,
-          ]}
+          sections={[<CodeBlock language={"python"} code={pyinsertR} />]}
         />
 
         <Paragraph>Iterative</Paragraph>
@@ -95,11 +83,7 @@ export default function BST() {
         />
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language={"python"} code={pyinsertI} />
-            </>,
-          ]}
+          sections={[<CodeBlock language={"python"} code={pyinsertI} />]}
         />
       </SectionContainer>
 
@@ -114,11 +98,7 @@ export default function BST() {
         />
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language={"python"} code={pydeleteR} />
-            </>,
-          ]}
+          sections={[<CodeBlock language={"python"} code={pydeleteR} />]}
         />
       </SectionContainer>
     </PageContainer>

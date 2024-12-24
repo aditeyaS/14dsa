@@ -35,11 +35,7 @@ export default function Deque() {
         <Heading>Initialization</Heading>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language="python" code={pyinit} />
-            </>,
-          ]}
+          sections={[<CodeBlock language="python" code={pyinit} />]}
         />
       </SectionContainer>
 
@@ -47,11 +43,7 @@ export default function Deque() {
         <Heading>Left operations</Heading>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language="python" code={pyleftOp} />
-            </>,
-          ]}
+          sections={[<CodeBlock language="python" code={pyleftOp} />]}
         />
       </SectionContainer>
 
@@ -59,11 +51,7 @@ export default function Deque() {
         <Heading>Left operations</Heading>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language="python" code={pyrightOp} />
-            </>,
-          ]}
+          sections={[<CodeBlock language="python" code={pyrightOp} />]}
         />
       </SectionContainer>
 

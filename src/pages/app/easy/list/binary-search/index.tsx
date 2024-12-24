@@ -27,11 +27,7 @@ export default function BinarySearch() {
         </UL>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language={"python"} code={pybinarySearch} />
-            </>,
-          ]}
+          sections={[<CodeBlock language={"python"} code={pybinarySearch} />]}
         />
       </SectionContainer>
 
@@ -39,11 +35,7 @@ export default function BinarySearch() {
         <Heading>Search in sorted rotated array</Heading>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language={"python"} code={pybsrotated} />
-            </>,
-          ]}
+          sections={[<CodeBlock language={"python"} code={pybsrotated} />]}
         />
       </SectionContainer>
 
@@ -51,11 +43,7 @@ export default function BinarySearch() {
         <Heading>Median of 2 sorted array</Heading>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language={"python"} code={pymediansorted} />
-            </>,
-          ]}
+          sections={[<CodeBlock language={"python"} code={pymediansorted} />]}
         />
       </SectionContainer>
     </PageContainer>

@@ -13,11 +13,7 @@ export default function TraversalMatrix() {
         <SnakeImage />
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language={"python"} code={pysnake} />
-            </>,
-          ]}
+          sections={[<CodeBlock language={"python"} code={pysnake} />]}
         />
       </SectionContainer>
       <SectionContainer>
@@ -25,11 +21,7 @@ export default function TraversalMatrix() {
         <SpiralImage />
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language={"python"} code={pyspiral} />
-            </>,
-          ]}
+          sections={[<CodeBlock language={"python"} code={pyspiral} />]}
         />
       </SectionContainer>
     </PageContainer>

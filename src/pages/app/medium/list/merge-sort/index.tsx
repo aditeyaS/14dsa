@@ -29,11 +29,7 @@ export default function MergeSort() {
         />
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language={"python"} code={pymergesort} />
-            </>,
-          ]}
+          sections={[<CodeBlock language={"python"} code={pymergesort} />]}
         />
       </SectionContainer>
       <SectionContainer>

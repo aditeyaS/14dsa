@@ -17,9 +17,7 @@ export default function Additional() {
         <LanguageSections
           languages={["python"]}
           sections={[
-            <>
-              <CodeBlock language={"python"} code={pymajorityElement} />
-            </>,
+            <CodeBlock language={"python"} code={pymajorityElement} />,
           ]}
         />
       </SectionContainer>

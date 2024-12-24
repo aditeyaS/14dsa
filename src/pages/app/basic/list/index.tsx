@@ -16,11 +16,7 @@ export default function List() {
         <Heading>Initialize</Heading>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language="python" code={pyInit} />
-            </>,
-          ]}
+          sections={[<CodeBlock language="python" code={pyInit} />]}
         />
       </SectionContainer>
 
@@ -28,11 +24,7 @@ export default function List() {
         <Heading>Insert</Heading>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language="python" code={pyInsert} />
-            </>,
-          ]}
+          sections={[<CodeBlock language="python" code={pyInsert} />]}
         />
       </SectionContainer>
 
@@ -79,11 +71,7 @@ export default function List() {
         <Heading>Others</Heading>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language="python" code={pyOthers} />
-            </>,
-          ]}
+          sections={[<CodeBlock language="python" code={pyOthers} />]}
         />
       </SectionContainer>
     </PageContainer>

@@ -47,11 +47,7 @@ export default function Sorting() {
         <Heading>Objects</Heading>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language={"python"} code={pysortobjects} />
-            </>,
-          ]}
+          sections={[<CodeBlock language={"python"} code={pysortobjects} />]}
         />
       </SectionContainer>
     </PageContainer>

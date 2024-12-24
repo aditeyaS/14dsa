@@ -21,11 +21,7 @@ export default function BFS() {
         />
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language={"python"} code={pylevelOrder} />
-            </>,
-          ]}
+          sections={[<CodeBlock language={"python"} code={pylevelOrder} />]}
         />
       </SectionContainer>
     </PageContainer>

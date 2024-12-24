@@ -10,11 +10,7 @@ export default function SinglyLinkedList() {
         <Heading>Search</Heading>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language={"python"} code={pysearch} />
-            </>,
-          ]}
+          sections={[<CodeBlock language={"python"} code={pysearch} />]}
         />
       </SectionContainer>
 
@@ -22,11 +18,7 @@ export default function SinglyLinkedList() {
         <Heading>Insert at beginning</Heading>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language={"python"} code={pyiab} />
-            </>,
-          ]}
+          sections={[<CodeBlock language={"python"} code={pyiab} />]}
         />
       </SectionContainer>
 
@@ -34,11 +26,7 @@ export default function SinglyLinkedList() {
         <Heading>Insert at end</Heading>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language={"python"} code={pyiae} />
-            </>,
-          ]}
+          sections={[<CodeBlock language={"python"} code={pyiae} />]}
         />
       </SectionContainer>
 
@@ -46,11 +34,7 @@ export default function SinglyLinkedList() {
         <Heading>Insert at index</Heading>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language={"python"} code={pyiai} />
-            </>,
-          ]}
+          sections={[<CodeBlock language={"python"} code={pyiai} />]}
         />
       </SectionContainer>
 
@@ -58,11 +42,7 @@ export default function SinglyLinkedList() {
         <Heading>Delete first</Heading>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language={"python"} code={pydf} />
-            </>,
-          ]}
+          sections={[<CodeBlock language={"python"} code={pydf} />]}
         />
       </SectionContainer>
 
@@ -70,11 +50,7 @@ export default function SinglyLinkedList() {
         <Heading>Delete end</Heading>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language={"python"} code={pyde} />
-            </>,
-          ]}
+          sections={[<CodeBlock language={"python"} code={pyde} />]}
         />
       </SectionContainer>
     </PageContainer>

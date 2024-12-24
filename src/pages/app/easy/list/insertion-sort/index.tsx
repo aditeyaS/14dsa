@@ -29,11 +29,7 @@ export default function InsertionSort() {
         </UL>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language={"python"} code={pyinsertionsort} />
-            </>,
-          ]}
+          sections={[<CodeBlock language={"python"} code={pyinsertionsort} />]}
         />
       </SectionContainer>
       <SectionContainer>

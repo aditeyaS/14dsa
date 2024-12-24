@@ -12,11 +12,7 @@ export default function SlowFast() {
         </Paragraph>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language={"python"} code={pyslowFast} />
-            </>,
-          ]}
+          sections={[<CodeBlock language={"python"} code={pyslowFast} />]}
         />
       </SectionContainer>
     </PageContainer>

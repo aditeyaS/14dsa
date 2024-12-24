@@ -1,5 +1,5 @@
 import {
-  Sidebar,
+  Sidebar as UISidebar,
   SidebarContent,
   SidebarFooter,
   SidebarHeader,
@@ -7,16 +7,17 @@ import {
   SidebarSeparator,
 } from "@/components/ui/sidebar";
 import logo from "@/assets/logo.svg";
-import { Separator } from "../ui/separator";
 import { ModeToggle } from "@/components/mode-toggle";
-import basicRoutes from "@/pages/app/basic";
-import easyRoutes from "@/pages/app/easy";
-import mediumRoutes from "@/pages/app/medium";
 import RouteSidebarGroup from "./route-sidebar-group";
+import { Separator } from "@/components/ui/separator";
+import basicRoutes from "../basic";
+import easyRoutes from "../easy";
+import mediumRoutes from "../medium";
+import hardRoutes from "../hard";
 
-export default function AppSidebar() {
+export default function Sidebar() {
   return (
-    <Sidebar>
+    <UISidebar>
       <SidebarHeader className="flex flex-row justify-center items-center text-2xl text-primary">
         <img src={logo} className="w-10" alt="Logo" />
         14dsa
@@ -28,12 +29,14 @@ export default function AppSidebar() {
         <RouteSidebarGroup label="easy" routes={easyRoutes} />
         <Separator />
         <RouteSidebarGroup label="medium" routes={mediumRoutes} />
+        <Separator />
+        <RouteSidebarGroup label="hard" routes={hardRoutes} />
       </SidebarContent>
       <SidebarSeparator />
       <SidebarFooter>
         <ModeToggle />
       </SidebarFooter>
       <SidebarRail />
-    </Sidebar>
+    </UISidebar>
   );
 }

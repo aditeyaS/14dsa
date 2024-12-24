@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Contributors from "../contributors";
 import { Seo } from "../seo";
 
@@ -14,6 +14,13 @@ export default function PageContainer({
   contributors,
   ...props
 }: PageContainerProps) {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, []);
+
   return (
     <div className="p-4 flex flex-col w-full">
       <Seo title={pageTitle} description={seoDescription} />

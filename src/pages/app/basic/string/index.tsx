@@ -31,11 +31,7 @@ export default function String() {
         <Heading>Initialize</Heading>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language="python" code={pyInit} />
-            </>,
-          ]}
+          sections={[<CodeBlock language="python" code={pyInit} />]}
         />
       </SectionContainer>
 
@@ -43,11 +39,7 @@ export default function String() {
         <Heading>Access</Heading>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language="python" code={pyAccess} />
-            </>,
-          ]}
+          sections={[<CodeBlock language="python" code={pyAccess} />]}
         />
       </SectionContainer>
 
@@ -55,11 +47,7 @@ export default function String() {
         <Heading>Delete</Heading>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language="python" code={pyDel} />
-            </>,
-          ]}
+          sections={[<CodeBlock language="python" code={pyDel} />]}
         />
       </SectionContainer>
 
@@ -67,11 +55,7 @@ export default function String() {
         <Heading>String formatting</Heading>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language="python" code={pyStrFormatting} />
-            </>,
-          ]}
+          sections={[<CodeBlock language="python" code={pyStrFormatting} />]}
         />
       </SectionContainer>
 
@@ -79,11 +63,7 @@ export default function String() {
         <Heading>Others</Heading>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language="python" code={pyOthers} />
-            </>,
-          ]}
+          sections={[<CodeBlock language="python" code={pyOthers} />]}
         />
       </SectionContainer>
 
@@ -91,11 +71,7 @@ export default function String() {
         <Heading>String methods</Heading>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language="python" code={pyStringMethods} />
-            </>,
-          ]}
+          sections={[<CodeBlock language="python" code={pyStringMethods} />]}
         />
       </SectionContainer>
 

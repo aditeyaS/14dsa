@@ -29,11 +29,7 @@ export default function BubbleSort() {
         </UL>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language={"python"} code={pybubblesort} />
-            </>,
-          ]}
+          sections={[<CodeBlock language={"python"} code={pybubblesort} />]}
         />
       </SectionContainer>
       <SectionContainer>

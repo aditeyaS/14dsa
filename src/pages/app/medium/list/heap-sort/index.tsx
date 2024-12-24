@@ -39,11 +39,7 @@ export default function HeapSort() {
         </UL>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language={"python"} code={pyheapsort} />
-            </>,
-          ]}
+          sections={[<CodeBlock language={"python"} code={pyheapsort} />]}
         />
       </SectionContainer>
     </PageContainer>

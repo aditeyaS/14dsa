@@ -29,11 +29,7 @@ export default function SelectionSort() {
         </UL>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language={"python"} code={pyselectionsort} />
-            </>,
-          ]}
+          sections={[<CodeBlock language={"python"} code={pyselectionsort} />]}
         />
       </SectionContainer>
 

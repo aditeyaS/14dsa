@@ -25,11 +25,7 @@ export default function TwoPointer() {
         <Heading>Find if there is a pair with sum x in sorted array</Heading>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language={"python"} code={pypairsumx} />
-            </>,
-          ]}
+          sections={[<CodeBlock language={"python"} code={pypairsumx} />]}
         />
       </SectionContainer>
     </PageContainer>

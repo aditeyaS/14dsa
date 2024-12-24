@@ -41,9 +41,7 @@ export default function Queue() {
         <LanguageSections
           languages={["python"]}
           sections={[
-            <>
-              <CodeBlock language="python" code={pylistImplementation} />
-            </>,
+            <CodeBlock language="python" code={pylistImplementation} />,
           ]}
         />
       </SectionContainer>
@@ -77,11 +75,7 @@ export default function Queue() {
         <Heading>Linked List implementation</Heading>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language="python" code={pyllImplementation} />
-            </>,
-          ]}
+          sections={[<CodeBlock language="python" code={pyllImplementation} />]}
         />
       </SectionContainer>
 
@@ -90,12 +84,7 @@ export default function Queue() {
         <LanguageSections
           languages={["python"]}
           sections={[
-            <>
-              <CodeBlock
-                language="python"
-                code={pycircularListImplementation}
-              />
-            </>,
+            <CodeBlock language="python" code={pycircularListImplementation} />,
           ]}
         />
       </SectionContainer>

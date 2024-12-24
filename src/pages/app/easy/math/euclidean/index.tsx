@@ -15,11 +15,7 @@ export default function Euclidean() {
       <SectionContainer>
         <LanguageSections
           languages={["python"]}
-          sections={[
-            <>
-              <CodeBlock language={"python"} code={pyGcd}></CodeBlock>
-            </>,
-          ]}
+          sections={[<CodeBlock language={"python"} code={pyGcd}></CodeBlock>]}
         />
       </SectionContainer>
       <SectionContainer>
