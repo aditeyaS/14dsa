@@ -7,6 +7,7 @@ import {
   List,
   ListFilter,
   TreePalm,
+  Waypoints,
 } from "lucide-react";
 import AppRouteObject from "@/types/app-route-object";
 
@@ -15,6 +16,7 @@ import matrixRoutes from "./matrix";
 import linkedListRoutes from "./linked-list";
 import treeRoutes from "./tree";
 import mathRoutes from "./math";
+import graphRoutes from "./graph";
 
 const H = lazy(() => import("./heap"));
 const T = lazy(() => import("./trie"));
@@ -61,6 +63,12 @@ const easyRoutes: AppRouteObject[] = [
     icon: <FolderTree />,
     name: "Trie",
     element: <T />,
+  },
+  {
+    path: "graph",
+    icon: <Waypoints />,
+    name: "Graph",
+    children: graphRoutes,
   },
 ];
 
