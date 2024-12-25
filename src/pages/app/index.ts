@@ -1,10 +1,12 @@
-import { RouteObject } from "react-router-dom";
+import AppRouteObject from "@/types/app-route-object";
+import flattenRoutes from "@/lib/flatten-routes";
+
 import basicRoutes from "./basic";
 import easyRoutes from "./easy";
 import mediumRoutes from "./medium";
 import hardRoutes from "./hard";
 
-const appRoutes: RouteObject[] = [
+const appRoutes: AppRouteObject[] = [
   {
     path: "basic",
     children: basicRoutes,
@@ -24,3 +26,5 @@ const appRoutes: RouteObject[] = [
 ];
 
 export default appRoutes;
+
+export const paginationRoutes = flattenRoutes(appRoutes, "/app/");

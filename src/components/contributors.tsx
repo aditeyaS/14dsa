@@ -4,7 +4,7 @@ interface ContributorsProps {
 
 export default function Contributors({ githubUserNames }: ContributorsProps) {
   return (
-    <div className="flex gap-2">
+    <div className="flex gap-2 text-sm">
       Contributors:
       {githubUserNames.map((username) => (
         <a
