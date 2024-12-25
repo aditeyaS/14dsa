@@ -5,12 +5,14 @@ import {
   FileWarning,
   GalleryHorizontalEnd,
   GalleryVerticalEnd,
+  RefreshCcw,
 } from "lucide-react";
 
 const I = lazy(() => import("./introduction"));
 const R = lazy(() => import("./representation"));
 const BFS = lazy(() => import("./breadth-first-search"));
 const DFS = lazy(() => import("./depth-first-search"));
+const CD = lazy(() => import("./cycle-detection"));
 
 const graphRoutes: AppRouteObject[] = [
   {
@@ -36,6 +38,12 @@ const graphRoutes: AppRouteObject[] = [
     name: "Depth First Search",
     icon: <GalleryVerticalEnd />,
     element: <DFS />,
+  },
+  {
+    path: "cycle-detection",
+    name: "Cycle Detection",
+    icon: <RefreshCcw />,
+    element: <CD />,
   },
 ];
 

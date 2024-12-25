@@ -1,9 +1,9 @@
 import React from "react";
-import { PrismLangauge } from "@react-email/code-block";
+import { PrismLanguage } from "@react-email/code-block";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
 
 interface LanguageSectionsProps {
-  languages: PrismLangauge[];
+  languages: PrismLanguage[];
   sections: React.ReactNode[];
 }
 

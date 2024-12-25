@@ -2,8 +2,8 @@ import {
   CodeBlock as CB,
   oneLight,
   oneDark,
-  PrismLangauge,
   Theme,
+  PrismLanguage,
 } from "@react-email/code-block";
 import { useTheme } from "../theme-provider";
 
@@ -28,17 +28,18 @@ const codeDark: Theme = {
 };
 
 interface CodeBlockProps {
-  language: PrismLangauge;
+  language: PrismLanguage;
   code: string;
+  lineNumbers?: boolean;
 }
 
-export function CodeBlock({ language, code }: CodeBlockProps) {
+export function CodeBlock({ language, code, lineNumbers }: CodeBlockProps) {
   const { theme } = useTheme();
 
   return (
     <CB
       language={language}
-      lineNumbers={false}
+      lineNumbers={lineNumbers}
       theme={theme === "light" ? codeLight : codeDark}
       code={code}
     />
