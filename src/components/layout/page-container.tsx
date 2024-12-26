@@ -19,7 +19,7 @@ export default function PageContainer({
   contributors,
   ...props
 }: PageContainerProps) {
-  const { previousRoute, nextRoute } = usePagination();
+  const { previousRoute, nextRoute, page, total } = usePagination();
   useEffect(() => {
     window.scrollTo({
       top: 0,
@@ -40,17 +40,19 @@ export default function PageContainer({
         {previousRoute && (
           <Link to={previousRoute.path}>
             <Button variant={"outline"}>
-              <ChevronLeft />
+              <ChevronLeft className="text-primary" />
               {previousRoute.name}
             </Button>
           </Link>
         )}
-        {/* <div className="flex-grow" /> */}
+        <span className="text-sm text-muted-foreground">
+          {`${page} of ${total}`}
+        </span>
         {nextRoute && (
           <Link to={nextRoute.path}>
             <Button variant={"outline"}>
               {nextRoute.name}
-              <ChevronRight />
+              <ChevronRight className="text-primary" />
             </Button>
           </Link>
         )}
