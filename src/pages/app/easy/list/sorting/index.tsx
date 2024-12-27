@@ -5,7 +5,6 @@ import {
   UL,
   Alert,
   Heading,
-  Paragraph,
   LanguageSections,
   CodeBlock,
 } from "@/components/blocks";
@@ -33,10 +32,7 @@ export default function Sorting() {
               </UL>
               <CodeBlock language={"python"} code={pysort} />
               <Alert type="Important">
-                <Paragraph>
-                  sort() only works for array and sorted() works for any
-                  iterable
-                </Paragraph>
+                sort() only works for array and sorted() works for any iterable
               </Alert>
             </>,
           ]}

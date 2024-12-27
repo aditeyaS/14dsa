@@ -8,7 +8,7 @@ function Heading({
   return (
     <h2
       className={cn(
-        "text-4xl font-bold cursor-default tracking-widest underline-offset-4",
+        "text-2xl font-semibold cursor-default tracking-wide underline-offset-4",
         className
       )}
       {...props}
@@ -23,7 +23,7 @@ function Heading2({
   return (
     <h3
       className={cn(
-        "text-3xl cursor-default tracking-widest font-bold underline-offset-4",
+        "text-xl cursor-default underline-offset-4 text-muted-foreground",
         className
       )}
       {...props}
@@ -35,14 +35,14 @@ function Paragraph({
   className,
   ...props
 }: React.HTMLAttributes<HTMLParagraphElement>) {
-  return <p className={cn("text-xl", className)} {...props} />;
+  return <p className={cn(className)} {...props} />;
 }
 
 function Paragraph2({
   className,
   ...props
 }: React.HTMLAttributes<HTMLParagraphElement>) {
-  return <p className={cn("text-lg", className)} {...props} />;
+  return <p className={cn("text-muted-foreground", className)} {...props} />;
 }
 
 function Strong({

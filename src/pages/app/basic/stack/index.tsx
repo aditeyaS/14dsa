@@ -6,7 +6,6 @@ import {
   Heading,
   LanguageSections,
   LI,
-  Paragraph,
   UL,
 } from "@/components/blocks";
 import {
@@ -53,15 +52,11 @@ export default function Stack() {
             <>
               <CodeBlock language="python" code={pydequeImplementation} />
               <Alert type="Tip">
-                <Paragraph>
-                  Use deque for stack; better performance (uses doubly linked
-                  list)
-                </Paragraph>
+                Use deque for stack; better performance (uses doubly linked
+                list)
               </Alert>
               <Alert type="Note">
-                <Paragraph>
-                  python also has LIFO queue; but its used in multithreading
-                </Paragraph>
+                python also has LIFO queue; but its used in multithreading
                 <CodeBlock
                   language={"python"}
                   code={"from queue import LifoQueue"}

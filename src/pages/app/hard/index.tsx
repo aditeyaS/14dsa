@@ -1,7 +1,8 @@
 import AppRouteObject from "@/types/app-route-object";
-import { List, TreePalm } from "lucide-react";
+import { List, TreePalm, Waypoints } from "lucide-react";
 import listRoutes from "./list";
 import treeRoutes from "./tree";
+import graphRoutes from "./graph";
 
 const hardRoutes: AppRouteObject[] = [
   {
@@ -15,6 +16,12 @@ const hardRoutes: AppRouteObject[] = [
     icon: <TreePalm />,
     name: "Tree",
     children: treeRoutes,
+  },
+  {
+    path: "graph",
+    icon: <Waypoints />,
+    name: "Graph",
+    children: graphRoutes,
   },
 ];
 

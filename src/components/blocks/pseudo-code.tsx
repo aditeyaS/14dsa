@@ -1,18 +1,27 @@
+import { cn } from "@/lib/utils";
 import { CodeBlock } from "./code-block";
-import { Paragraph2 } from "./text";
+import { Paragraph } from "./text";
 
 interface Props {
   text?: string;
   code: string;
   lineNumbers?: boolean;
+  textClass?: string;
 }
 
-export function PseudoCode({ text, code, lineNumbers = false }: Props) {
+export function PseudoCode({
+  text,
+  code,
+  lineNumbers = false,
+  textClass,
+}: Props) {
   return (
     <div className="flex flex-col">
-      <Paragraph2 className="underline text-muted-foreground -mb-2 decoration-foreground underline-offset-4">
-        {text || "Pseudo Code"}
-      </Paragraph2>
+      {text !== "" && (
+        <Paragraph className={cn("-mb-2", textClass)}>
+          {text || "Pseudo Code:"}
+        </Paragraph>
+      )}
       <CodeBlock language="bash" code={code} lineNumbers={lineNumbers} />
     </div>
   );

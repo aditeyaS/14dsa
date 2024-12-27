@@ -6,7 +6,6 @@ import {
   Heading,
   LanguageSections,
   LI,
-  Paragraph,
   UL,
 } from "@/components/blocks";
 import {
@@ -43,9 +42,7 @@ export default function BitMagic() {
           </LI>
           <LI>2's complement - 1. invert all bits; 2. add 1</LI>
         </UL>
-        <Alert type="Important">
-          <Paragraph>leading bit is 1 for negative numbers</Paragraph>
-        </Alert>
+        <Alert type="Important">leading bit is 1 for negative numbers</Alert>
       </SectionContainer>
       <SectionContainer>
         <Heading>Bitwise Operators</Heading>

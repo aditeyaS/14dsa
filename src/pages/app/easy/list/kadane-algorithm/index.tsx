@@ -3,22 +3,19 @@ import SectionContainer from "@/components/layout/section-container";
 import {
   LanguageSections,
   CodeBlock,
-  LI,
-  OL,
   Heading2,
+  PseudoCode,
 } from "@/components/blocks";
-import { pymaxSubArraySum } from "./code";
+import { pymaxSubArraySum, pypseudo } from "./code";
 
 export default function KadaneAlgorithm() {
   return (
     <PageContainer pageTitle="Kadane's Algorithm" contributors={["aditeyaS"]}>
       <SectionContainer>
-        <Heading2>Maximum length even odd subarray</Heading2>
-        <OL>
-          At every element you have 2 choices:
-          <LI>You extend the current window</LI>
-          <LI>Start a new window</LI>
-        </OL>
+        <Heading2 className="underline">
+          Maximum length even odd subarray
+        </Heading2>
+        <PseudoCode code={pypseudo} />
         <LanguageSections
           languages={["python"]}
           sections={[<CodeBlock language={"python"} code={pymaxSubArraySum} />]}

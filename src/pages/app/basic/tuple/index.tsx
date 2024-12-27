@@ -1,7 +1,5 @@
 import PageContainer from "@/components/layout/page-container";
 import SectionContainer from "@/components/layout/section-container";
-
-import { pyAccess, pyImportant, pyInit, pyOthers } from "./code";
 import {
   Alert,
   CodeBlock,
@@ -10,6 +8,8 @@ import {
   LI,
   UL,
 } from "@/components/blocks";
+
+import { pyAccess, pyImportant, pyInit, pyOthers } from "./code";
 
 export default function Tuple() {
   return (

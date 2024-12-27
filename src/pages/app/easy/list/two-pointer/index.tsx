@@ -2,7 +2,7 @@ import PageContainer from "@/components/layout/page-container";
 import SectionContainer from "@/components/layout/section-container";
 import {
   CodeBlock,
-  Heading,
+  Heading2,
   LanguageSections,
   LI,
   UL,
@@ -22,7 +22,9 @@ export default function TwoPointer() {
       </SectionContainer>
 
       <SectionContainer>
-        <Heading>Find if there is a pair with sum x in sorted array</Heading>
+        <Heading2 className="underline">
+          Find if there is a pair with sum x in sorted array
+        </Heading2>
         <LanguageSections
           languages={["python"]}
           sections={[<CodeBlock language={"python"} code={pypairsumx} />]}

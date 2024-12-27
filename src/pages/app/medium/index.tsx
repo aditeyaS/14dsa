@@ -3,6 +3,7 @@ import {
   DatabaseBackup,
   List,
   TreePalm,
+  UtensilsCrossed,
   Waypoints,
   WholeWord,
 } from "lucide-react";
@@ -11,6 +12,7 @@ import treeRoutes from "./tree";
 import stringRoutes from "./string";
 import graphRoutes from "./graph";
 import dpRoutes from "./dp";
+import greedyRoutes from "./greedy";
 
 const mediumRoutes: AppRouteObject[] = [
   {
@@ -36,6 +38,12 @@ const mediumRoutes: AppRouteObject[] = [
     icon: <Waypoints />,
     name: "Graph",
     children: graphRoutes,
+  },
+  {
+    path: "greedy",
+    icon: <UtensilsCrossed />,
+    name: "Greedy",
+    children: greedyRoutes,
   },
   {
     path: "dp",

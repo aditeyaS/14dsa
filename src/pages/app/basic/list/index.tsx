@@ -5,7 +5,6 @@ import {
   CodeBlock,
   Heading,
   LanguageSections,
-  Paragraph,
 } from "@/components/blocks";
 import { pyAccess, pyDel, pyInit, pyInsert, pyOthers } from "./code";
 
@@ -36,9 +35,7 @@ export default function List() {
             <>
               <CodeBlock language="python" code={pyAccess} />
               <Alert type="Caution">
-                <Paragraph>
-                  arr.index(item) gives error if item is not present
-                </Paragraph>
+                arr.index(item) gives error if item is not present
               </Alert>
             </>,
           ]}
@@ -53,14 +50,10 @@ export default function List() {
             <>
               <CodeBlock language="python" code={pyDel} />
               <Alert type="Caution">
-                <Paragraph>
-                  arr.remove(item) gives error if item is not present
-                </Paragraph>
+                arr.remove(item) gives error if item is not present
               </Alert>
               <Alert type="Tip">
-                <Paragraph>
-                  Use another data structure if there are lot of delete
-                </Paragraph>
+                Use another data structure if there are lot of delete
               </Alert>
             </>,
           ]}

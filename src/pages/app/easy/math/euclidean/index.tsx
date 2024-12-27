@@ -1,12 +1,7 @@
 import PageContainer from "@/components/layout/page-container";
 import SectionContainer from "@/components/layout/section-container";
 
-import {
-  Alert,
-  CodeBlock,
-  LanguageSections,
-  Paragraph,
-} from "@/components/blocks";
+import { Alert, CodeBlock, LanguageSections } from "@/components/blocks";
 import { pyGcd } from "./code";
 
 export default function Euclidean() {
@@ -19,9 +14,7 @@ export default function Euclidean() {
         />
       </SectionContainer>
       <SectionContainer>
-        <Alert type="Tip">
-          <Paragraph>To find LCM: a * b = gcd * lcm</Paragraph>
-        </Alert>
+        <Alert type="Tip">To find LCM: a * b = gcd * lcm</Alert>
       </SectionContainer>
     </PageContainer>
   );

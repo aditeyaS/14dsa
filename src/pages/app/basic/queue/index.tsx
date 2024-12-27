@@ -6,7 +6,6 @@ import {
   Heading,
   LanguageSections,
   LI,
-  Paragraph,
   UL,
 } from "@/components/blocks";
 
@@ -53,14 +52,9 @@ export default function Queue() {
           sections={[
             <>
               <CodeBlock language="python" code={pydequeImplementation} />
-              <Alert type="Tip">
-                <Paragraph>Use deque for queue</Paragraph>
-              </Alert>
+              <Alert type="Tip">Use deque for queue</Alert>
               <Alert type="Note">
-                <Paragraph>
-                  python also has Queue; but its used in multithreading
-                </Paragraph>
-
+                python also has Queue; but its used in multithreading
                 <CodeBlock
                   language={"python"}
                   code={"from queue import Queue"}

@@ -7,7 +7,6 @@ import {
   Heading,
   LanguageSections,
   LI,
-  Paragraph,
   UL,
 } from "@/components/blocks";
 import { pyAccess, pyDdTip, pyDel, pyInit, pyInsert, pyOthers } from "./code";
@@ -41,10 +40,8 @@ export default function Dictionary() {
             <>
               <CodeBlock language="python" code={pyInsert} />
               <Alert type="Caution">
-                <Paragraph>
-                  The dictionary key should be immutable. Use tuple instead of
-                  list.
-                </Paragraph>
+                The dictionary key should be immutable. Use tuple instead of
+                list.
               </Alert>
             </>,
           ]}

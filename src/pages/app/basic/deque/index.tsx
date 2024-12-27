@@ -7,7 +7,6 @@ import {
   Heading,
   LanguageSections,
   LI,
-  Paragraph,
   UL,
 } from "@/components/blocks";
 
@@ -62,9 +61,7 @@ export default function Deque() {
           sections={[
             <>
               <CodeBlock language="python" code={pyothers} />
-              <Alert type="Caution">
-                <Paragraph>Slicing is not allowed in deque</Paragraph>
-              </Alert>
+              <Alert type="Caution">Slicing is not allowed in deque</Alert>
             </>,
           ]}
         />

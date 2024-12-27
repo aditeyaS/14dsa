@@ -3,6 +3,7 @@ import SectionContainer from "@/components/layout/section-container";
 import {
   CodeBlock,
   Heading,
+  Heading2,
   LanguageSections,
   QuestionList,
 } from "@/components/blocks";
@@ -13,7 +14,9 @@ export default function PrePostSum() {
   return (
     <PageContainer pageTitle="Prefix/Postfix Sum" contributors={["aditeyaS"]}>
       <SectionContainer>
-        <Heading>find sum of subarray between indexes</Heading>
+        <Heading2 className="underline">
+          find sum of subarray between indexes
+        </Heading2>
         <LanguageSections
           languages={["python"]}
           sections={[<CodeBlock language={"python"} code={pysumbwi} />]}

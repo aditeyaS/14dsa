@@ -1,7 +1,7 @@
 import PageContainer from "@/components/layout/page-container";
 import SectionContainer from "@/components/layout/section-container";
 import { Complexity, Heading, LI, Paragraph, UL } from "@/components/blocks";
-import DataStructureOpTable from "./data-structure-op-table";
+
 import Chart from "./chart";
 
 export default function Analysis() {
@@ -58,10 +58,6 @@ export default function Analysis() {
             i/o)
           </LI>
         </UL>
-      </SectionContainer>
-      <SectionContainer>
-        <Heading>Common Data Structure Operations</Heading>
-        <DataStructureOpTable />
       </SectionContainer>
     </PageContainer>
   );

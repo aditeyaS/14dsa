@@ -3,6 +3,7 @@ import SectionContainer from "@/components/layout/section-container";
 import {
   CodeBlock,
   Heading,
+  Heading2,
   LanguageSections,
   LI,
   QuestionList,
@@ -26,14 +27,16 @@ export default function SlidingWindow() {
         </UL>
       </SectionContainer>
       <SectionContainer>
-        <Heading>Max sum of k consecutive elements</Heading>
+        <Heading2 className="underline">
+          Max sum of k consecutive elements
+        </Heading2>
         <LanguageSections
           languages={["python"]}
           sections={[<CodeBlock language={"python"} code={pymaxksum} />]}
         />
       </SectionContainer>
       <SectionContainer>
-        <Heading>Subarray with given sum</Heading>
+        <Heading2 className="underline">Subarray with given sum</Heading2>
         <LanguageSections
           languages={["python"]}
           sections={[

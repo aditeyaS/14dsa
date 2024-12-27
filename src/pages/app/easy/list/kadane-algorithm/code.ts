@@ -1,3 +1,7 @@
+export const pypseudo = `At every element you have 2 choices:
+    - You extend the current window
+    - Start a new window`;
+
 export const pymaxSubArraySum = `def maxEvenOdd(l):
     res = 1
     curr = 1

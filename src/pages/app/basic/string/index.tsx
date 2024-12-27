@@ -1,5 +1,13 @@
 import PageContainer from "@/components/layout/page-container";
 import SectionContainer from "@/components/layout/section-container";
+import {
+  Alert,
+  CodeBlock,
+  Heading,
+  LanguageSections,
+  LI,
+  UL,
+} from "@/components/blocks";
 
 import {
   pyAccess,
@@ -9,14 +17,6 @@ import {
   pyStrFormatting,
   pyStringMethods,
 } from "./code";
-import {
-  Alert,
-  CodeBlock,
-  Heading,
-  LanguageSections,
-  LI,
-  UL,
-} from "@/components/blocks";
 
 export default function String() {
   return (

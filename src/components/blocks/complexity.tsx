@@ -2,7 +2,7 @@ import { cva, VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const complexityVariants = cva(
-  "text-black text-sm inline-flex items-center rounded-md border px-2.5 py-0.5",
+  "text-black text-xs inline-flex items-center rounded-md border px-2.5 py-0.5",
   {
     variants: {
       level: {
@@ -27,7 +27,7 @@ export function Complexity({ complexity, level }: ComplexityProps) {
 }
 
 const spaceTimeComplexityVariants = cva(
-  "text-black text-sm mr-4 inline-flex items-center rounded-md border px-2.5 py-0.5 font-bold",
+  "text-black text-sm inline-flex items-center rounded-md border px-2.5 py-0.5 mr-4",
   {
     variants: {
       timeLevel: {
