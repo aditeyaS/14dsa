@@ -1,9 +1,10 @@
 import { lazy } from "react";
 import AppRouteObject from "@/types/app-route-object";
-import { Pyramid, Signpost } from "lucide-react";
+import { Banana, Pyramid, Signpost } from "lucide-react";
 
 const TS = lazy(() => import("./topological-sorting"));
 const PA = lazy(() => import("./prims-algorithm"));
+const DA = lazy(() => import("./dijkstra-algorithm"));
 
 const graphRoutes: AppRouteObject[] = [
   {
@@ -17,6 +18,12 @@ const graphRoutes: AppRouteObject[] = [
     name: "Prim's Algorithm",
     icon: <Pyramid />,
     element: <PA />,
+  },
+  {
+    path: "dijkstra-algorithm",
+    name: "Dijkstra's Algorithm",
+    icon: <Banana />,
+    element: <DA />,
   },
 ];
 

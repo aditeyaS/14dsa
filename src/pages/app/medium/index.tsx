@@ -1,9 +1,16 @@
 import AppRouteObject from "@/types/app-route-object";
-import { List, TreePalm, Waypoints, WholeWord } from "lucide-react";
+import {
+  DatabaseBackup,
+  List,
+  TreePalm,
+  Waypoints,
+  WholeWord,
+} from "lucide-react";
 import listRoutes from "./list";
 import treeRoutes from "./tree";
 import stringRoutes from "./string";
 import graphRoutes from "./graph";
+import dpRoutes from "./dp";
 
 const mediumRoutes: AppRouteObject[] = [
   {
@@ -29,6 +36,12 @@ const mediumRoutes: AppRouteObject[] = [
     icon: <Waypoints />,
     name: "Graph",
     children: graphRoutes,
+  },
+  {
+    path: "dp",
+    icon: <DatabaseBackup />,
+    name: "DP",
+    children: dpRoutes,
   },
 ];
 
